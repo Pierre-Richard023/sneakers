@@ -5,11 +5,14 @@ namespace App\Entity;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
+#[UniqueEntity(fields: ['email'], message: 'Il existe déjà un compte avec cet email')]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
@@ -35,9 +38,32 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'customer', targetEntity: Orders::class)]
     private Collection $orders;
 
+    #[ORM\Column(type: 'boolean')]
+    private $isVerified = false;
+
+    #[ORM\Column(length: 255)]
+    private ?string $first_name = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $last_name = null;
+
+    #[ORM\Column(length: 10)]
+    private ?string $client_number = null;
+
+    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    private ?\DateTimeInterface $registered_since = null;
+
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\JoinColumn(nullable: true)]
+    private ?Address $billing_address = null;
+
+    #[ORM\OneToMany(mappedBy: 'user', targetEntity: Address::class, orphanRemoval: true)]
+    private Collection $delivery_address;
+
     public function __construct()
     {
         $this->orders = new ArrayCollection();
+        $this->delivery_address = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -151,6 +177,108 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
             // set the owning side to null (unless already changed)
             if ($order->getCustomer() === $this) {
                 $order->setCustomer(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function isVerified(): bool
+    {
+        return $this->isVerified;
+    }
+
+    public function setIsVerified(bool $isVerified): static
+    {
+        $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    public function getFirstName(): ?string
+    {
+        return $this->first_name;
+    }
+
+    public function setFirstName(string $first_name): static
+    {
+        $this->first_name = $first_name;
+
+        return $this;
+    }
+
+    public function getLastName(): ?string
+    {
+        return $this->last_name;
+    }
+
+    public function setLastName(string $last_name): static
+    {
+        $this->last_name = $last_name;
+
+        return $this;
+    }
+
+    public function getClientNumber(): ?string
+    {
+        return $this->client_number;
+    }
+
+    public function setClientNumber(string $client_number): static
+    {
+        $this->client_number = $client_number;
+
+        return $this;
+    }
+
+    public function getRegisteredSince(): ?\DateTimeInterface
+    {
+        return $this->registered_since;
+    }
+
+    public function setRegisteredSince(\DateTimeInterface $registered_since): static
+    {
+        $this->registered_since = $registered_since;
+
+        return $this;
+    }
+
+    public function getBillingAddress(): ?Address
+    {
+        return $this->billing_address;
+    }
+
+    public function setBillingAddress(Address $billing_address): static
+    {
+        $this->billing_address = $billing_address;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Address>
+     */
+    public function getDeliveryAddress(): Collection
+    {
+        return $this->delivery_address;
+    }
+
+    public function addDeliveryAddress(Address $deliveryAddress): static
+    {
+        if (!$this->delivery_address->contains($deliveryAddress)) {
+            $this->delivery_address->add($deliveryAddress);
+            $deliveryAddress->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDeliveryAddress(Address $deliveryAddress): static
+    {
+        if ($this->delivery_address->removeElement($deliveryAddress)) {
+            // set the owning side to null (unless already changed)
+            if ($deliveryAddress->getUser() === $this) {
+                $deliveryAddress->setUser(null);
             }
         }
 

@@ -1,0 +1,53 @@
+$button-border-radius: 4px;
+$button-padding: 8px 16px;
+$button-font-size: 14px;
+$button-font-weight: bold;
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: $button-border-radius;
+  padding: $button-padding;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+
+  &.primary {
+    background-color: $primary-color;
+    color: $white;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  &.secondary {
+    background-color: $secondary-color;
+    color: $white;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+
+  &.success {
+    background-color: $success-color;
+    color: $white;
+
+    &:hover {
+      background-color: darken($success-color, 10%);
+    }
+  }
+
+  &.danger {
+    background-color: $danger-color;
+    color: $white;
+
+    &:hover {
+      background-color: darken($danger-color, 10%);
+    }
+  }
+
+}

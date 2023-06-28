@@ -6,14 +6,18 @@
   font-style: normal;
 }
 
-$primary-color: #5B2434;
-$secondary-color: #D1920D;
-$neutral-color: #171717;
-$background-color:#94a3b8;
-
+@import "variables";
+@import "mixin";
+@import "columns";
+@import "typography";
 @import "header";
 @import "footer";
+@import "responsive";
+@import "position";
+@import "button";
 @import "product-card";
+@import "form";
+
 
 * {
   padding: 0;
@@ -27,8 +31,14 @@ a {
 }
 
 main{
-
   min-height: 50vh;
   margin: 15px;
   padding: 20px 50px;
+  position: relative;
 }
+
+
+
+
+
+

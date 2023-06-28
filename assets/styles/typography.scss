@@ -1,0 +1,45 @@
+p{
+  display: block;
+  margin: 6px 0;
+
+}
+.title{
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.second-title{
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.link{
+  padding: 8px;
+  color: $blue;
+
+  &.primary{
+    color: $primary-color;
+  }
+
+  &.secondary{
+    color: $secondary-color;
+  }
+}
+
+//Text Align
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+
+.text-danger{
+  color: $red;
+}
+

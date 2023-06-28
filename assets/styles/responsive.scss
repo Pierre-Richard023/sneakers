@@ -1,0 +1,21 @@
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  > .col {
+
+    box-sizing: border-box;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+
+    > .col {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

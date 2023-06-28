@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Connexion
+{% endblock %}
+
+{% block body %}
+
+    {#
+    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+    See https://symfony.com/doc/current/security/remember_me.html
+
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" name="_remember_me"> Remember me
+        </label>
+    </div>
+    #}
+
+    <section class=" item-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            <h1 class="title">DÉJÀ CLIENT ? </h1>
+
+            <div class="row">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 ">
+                    <form method="post">
+                        {% if error %}
+                            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                        {% endif %}
+
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12">
+                            <label for="inputEmail">Email <span class="text-danger">*</span> : </label>
+                            <input type="email" value="{{ last_username }}" name="email" id="inputEmail"
+                                   class="form-control" placeholder="Email"
+                                   autocomplete="email" required autofocus>
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12">
+                            <label for="inputPassword">Mot de passe <span class="text-danger">*</span> : </label>
+                            <input type="password" name="password" id="inputPassword" class="form-control"
+                                   autocomplete="current-password" placeholder="Mot de passe "
+                                   required>
+                        </div>
+                        <input type="hidden" name="_csrf_token"
+                               value="{{ csrf_token('authenticate') }}"
+                        >
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 text-right">
+                            <a class="link" href="{{ path('forgot.password.request') }}">
+                                Vous avez oublié votre mot de passe ?
+                            </a>
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12">
+                            <button type="submit" class="btn primary">
+                                Connexion
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12">
+                    <a class="btn secondary" href="{{ path('register') }}">
+                        S'inscrire
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+{% endblock %}
