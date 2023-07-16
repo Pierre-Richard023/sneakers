@@ -39,6 +39,13 @@ class SneakerRepository extends ServiceEntityRepository
         }
     }
 
+    public function getSneakers(){
+        return $this->createQueryBuilder('s')
+            ->setMaxResults(40)
+            ->getQuery()
+            ->getResult();
+    }
+
 //    /**
 //     * @return Sneaker[] Returns an array of Sneaker objects
 //     */

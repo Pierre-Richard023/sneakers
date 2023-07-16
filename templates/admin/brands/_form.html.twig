@@ -1,0 +1,70 @@
+{{ form_start(form) }}
+
+<div class="text-center my-4">
+
+    <div class="mb-3 ">
+        {% if brand.imageName %}
+            <img id="logo"
+                 class="w-32 h-32 rounded-full mx-auto border border-secondary"
+                 src="{{ vich_uploader_asset(brand)  | imagine_filter('logo_form__') }}"
+
+                 alt="Logo de la marque">
+        {% else %}
+            <img id="logo"
+                 class="w-32 h-32 rounded-full mx-auto border border-secondary"
+                 src="{{ asset('images/question_mark.png') | imagine_filter('logo_form__') }}"
+
+                 alt="Logo de la marque">
+        {% endif %}
+    </div>
+
+
+    <div class="">
+        {{ form_label(form.imageFile,"Logo", {'label_attr': {'class': 'block mb-2 text-sm font-medium text-gray-900'}}) }}
+        {{ form_widget(form.imageFile) }}
+        <p class="mt-1 text-sm text-gray-900 text-left" id="file_input_help">SVG, PNG, JPG or GIF.</p>
+    </div>
+</div>
+
+<div class="my-4">
+    {{ form_label(form.name,null, {'label_attr': {'class': 'block mb-2 text-sm font-medium text-gray-900'}}) }}
+    <div class="relative">
+        {{ form_widget(form.name) }}
+    </div>
+</div>
+
+
+<button
+        type="submit"
+        class="block w-full rounded-lg bg-green-700 px-5 py-3 text-sm font-medium text-white"
+>
+    {{ button_label|default('Ajouter') }}
+</button>
+<a
+        href="{{ path("admin.brands.index") }}"
+        class="block w-full rounded-lg bg-red-700 text-center my-4 px-5 py-3 text-sm font-medium text-white"
+>
+    Retour
+</a>
+{{ form_end(form) }}
+
+
+<script>
+    const fileInput = document.getElementById('brands_imageFile');
+    const imagePreview = document.getElementById('image-preview');
+    const imagePreviewImg = document.getElementById('logo');
+
+    fileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.addEventListener('load', () => {
+                imagePreviewImg.src = reader.result;
+            });
+
+            reader.readAsDataURL(file);
+        }
+    });
+</script>

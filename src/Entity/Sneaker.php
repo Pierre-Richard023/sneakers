@@ -28,8 +28,8 @@ class Sneaker
     #[ORM\Column(length: 40)]
     private ?string $article_number = null;
 
-    #[ORM\Column(type: Types::ARRAY)]
-    private array $shoe_size = [];
+    #[ORM\Column]
+    private ?float $shoe_size;
 
     #[ORM\Column]
     private ?int $stock = null;
@@ -40,12 +40,12 @@ class Sneaker
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $details = null;
 
-    #[ORM\ManyToOne(inversedBy: 'sneakers')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Brands $brand = null;
-
-    #[ORM\OneToMany(mappedBy: 'sneaker', targetEntity: SneakersImages::class, orphanRemoval: true)]
+    #[ORM\OneToMany(mappedBy: 'sneaker', targetEntity: SneakersImages::class, orphanRemoval: true, cascade : ["persist"])]
     private Collection $images;
+
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Models $model = null;
 
     public function __construct()
     {
@@ -105,12 +105,12 @@ class Sneaker
         return $this;
     }
 
-    public function getShoeSize(): array
+    public function getShoeSize(): ?float
     {
         return $this->shoe_size;
     }
 
-    public function setShoeSize(array $shoe_size): static
+    public function setShoeSize(float $shoe_size): static
     {
         $this->shoe_size = $shoe_size;
 
@@ -153,18 +153,6 @@ class Sneaker
         return $this;
     }
 
-    public function getBrand(): ?Brands
-    {
-        return $this->brand;
-    }
-
-    public function setBrand(?Brands $brand): static
-    {
-        $this->brand = $brand;
-
-        return $this;
-    }
-
     /**
      * @return Collection<int, SneakersImages>
      */
@@ -191,6 +179,18 @@ class Sneaker
                 $image->setSneaker(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getModel(): ?Models
+    {
+        return $this->model;
+    }
+
+    public function setModel(?Models $model): static
+    {
+        $this->model = $model;
 
         return $this;
     }

@@ -1,0 +1,30 @@
+{{ form_start(form) }}
+
+<div class="my-4">
+    {{ form_label(form.name,null, {'label_attr': {'class': 'block mb-2 text-sm font-medium text-gray-900'}}) }}
+    <div class="relative">
+        {{ form_widget(form.name) }}
+    </div>
+</div>
+
+<div class="my-4">
+    {{ form_label(form.brands,null, {'label_attr': {'class': 'block mb-2 text-sm font-medium text-gray-900'}}) }}
+    <div class="relative">
+        {{ form_widget(form.brands) }}
+    </div>
+</div>
+
+
+<button
+        type="submit"
+        class="block w-full rounded-lg bg-green-700 px-5 py-3 text-sm font-medium text-white"
+>
+    {{ button_label|default('Ajouter') }}
+</button>
+<a
+        href="{{ path("admin.models.index") }}"
+        class="block w-full rounded-lg bg-red-700 text-center my-4 px-5 py-3 text-sm font-medium text-white"
+>
+    Retour
+</a>
+{{ form_end(form) }}

@@ -1,0 +1,136 @@
+{% extends 'admin/dashboard.html.twig' %}
+
+{% block title %}
+    Admin - Marques
+{% endblock %}
+
+{% block body %}
+
+
+    <section class="pt-6 px-4">
+
+        <div class="container px-4 mx-auto">
+
+            <div class="bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10">
+                <div class="sm:flex items-center justify-between">
+                    <div class="flex items-center">
+                        <a class="rounded-full focus:outline-none focus:ring-2 focus:bg-secondary focus:ring-primary"
+                           href="{{ path('admin.sneaker.index') }}">
+                            <div class="py-2 px-8 text-primary hover:text-white hover:bg-secondary rounded-full">
+                                <p>Sneakers</p>
+                            </div>
+                        </a>
+                        <a class="rounded-full focus:outline-none focus:ring-2  focus:bg-secondary focus:ring-secondary ml-4 sm:ml-8"
+                           href="{{ path('admin.brands.index') }}">
+                            <div class="py-2 px-8 bg-primary text-white rounded-full">
+                                <p>Marques</p>
+                            </div>
+                        </a>
+                        <a class="rounded-full focus:outline-none focus:ring-2 focus:bg-secondary focus:ring-primary ml-4 sm:ml-8"
+                           href="{{ path('admin.models.index') }}">
+                            <div class="py-2 px-8 text-primary hover:text-white hover:bg-secondary rounded-full">
+                                <p>Models</p>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="{{ path('admin.brands.new') }}"
+                       class="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 mt-4 sm:mt-0 inline-flex items-start justify-start px-6 py-3 bg-indigo-700 hover:bg-indigo-600 focus:outline-none rounded">
+                        <p class="text-sm font-medium leading-none text-white">Ajouter une Marque</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col mt-6">
+                <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                        <div class="overflow-hidden border border-gray-200 md:rounded-lg">
+
+                            <table class="min-w-max w-full table-auto ">
+                                <thead>
+                                <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                                    <th class="py-3 px-6 text-left">Nom</th>
+                                    <th class="py-3 px-6 text-center">Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody class="text-gray-600 text-sm font-light">
+                                {% for brand in brands %}
+                                    <tr class="border-b border-gray-200 bg-gray-50 hover:bg-gray-100">
+                                        <td class="py-3 px-6 text-left">{{ brand.name }}</td>
+                                        <td class="py-3 px-6 text-left">
+                                            <div class="flex item-center justify-center">
+
+                                                <div class="w-4 mr-2 transform hover:text-green-700 hover:scale-110">
+                                                    <a href="{{ path('admin.brands.edit', {'id': brand.id}) }}">
+                                                        <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                fill="none"
+                                                                viewBox="0 0 24 24"
+                                                                stroke-width="1.5"
+                                                                stroke="currentColor"
+                                                                class="h-6 w-6"
+                                                                x-tooltip="tooltip"
+                                                        >
+                                                            <path
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
+                                                            />
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                                <div class="w-4 mr-2 transform hover:text-red-700 hover:scale-110">
+
+
+                                                    <form method="post"
+                                                          action="{{ path('admin.brands.delete', {'id': brand.id}) }}"
+                                                          onsubmit="return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');">
+                                                        <input type="hidden" name="_token"
+                                                               value="{{ csrf_token('delete' ~ brand.id) }}">
+                                                        <button type="submit">
+                                                            <svg
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    fill="none"
+                                                                    viewBox="0 0 24 24"
+                                                                    stroke-width="1.5"
+                                                                    stroke="currentColor"
+                                                                    class="h-6 w-6"
+                                                                    x-tooltip="tooltip"
+                                                            >
+                                                                <path
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                                                                />
+                                                            </svg>
+                                                        </button>
+                                                    </form>
+
+
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {% else %}
+                                    <tr class="border-b border-gray-200 bg-gray-50 hover:bg-gray-100">
+                                        <td class="py-3 px-6 text-center" colspan="10">
+                                            Aucun enregistrement trouvé
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+{% endblock %}

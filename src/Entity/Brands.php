@@ -22,9 +22,6 @@ class Brands
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\OneToMany(mappedBy: 'brand', targetEntity: Sneaker::class)]
-    private Collection $sneakers;
-
     #[ORM\OneToMany(mappedBy: 'brands', targetEntity: Models::class)]
     private Collection $models;
 
@@ -39,7 +36,6 @@ class Brands
 
     public function __construct()
     {
-        $this->sneakers = new ArrayCollection();
         $this->models = new ArrayCollection();
     }
 
@@ -56,36 +52,6 @@ class Brands
     public function setName(string $name): static
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Sneaker>
-     */
-    public function getSneakers(): Collection
-    {
-        return $this->sneakers;
-    }
-
-    public function addSneaker(Sneaker $sneaker): static
-    {
-        if (!$this->sneakers->contains($sneaker)) {
-            $this->sneakers->add($sneaker);
-            $sneaker->setBrand($this);
-        }
-
-        return $this;
-    }
-
-    public function removeSneaker(Sneaker $sneaker): static
-    {
-        if ($this->sneakers->removeElement($sneaker)) {
-            // set the owning side to null (unless already changed)
-            if ($sneaker->getBrand() === $this) {
-                $sneaker->setBrand(null);
-            }
-        }
 
         return $this;
     }
