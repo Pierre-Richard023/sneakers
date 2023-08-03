@@ -1,87 +1,156 @@
 header {
 
-  width: 100%;
-  padding: 10px 40px;
-  background-color: #FFFFFF;
-
-  .leading {
-
+  nav {
+    position: relative;
     width: 100%;
-    padding: 10px 40px;
-    transition: all 0.25s ease;
-    z-index: 3;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 14px;
+    transition: all .50s ease;
 
-    img {
-      height: 64px;
-    }
+    .logo {
+      display: flex;
+      align-items: center;
 
-    .name {
-      font-size: 42px;
-      font-weight: 700;
-      color: $neutral-color;
-    }
-
-    .user-details {
+      i {
+        color: $primary-color;
+        font-size: 28px;
+        margin-right: 2px;
+      }
 
       span {
-
-        margin-left: 20px;
-        font-size: 1.2rem;
         color: $neutral-color;
-        padding: 0 15px 10px 15px;
+        font-size: 1.7rem;
+        font-weight: 600;
+      }
+    }
 
-        &:hover {
-          color: #101920;
-          border-bottom: 2px solid $neutral-color;
-          cursor: pointer;
+    .menu {
+      visibility: hidden;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: $white-color;
+      color: $neutral-color;
+      height: 100vh;
+      width: 300px;
+      text-align: center;
+      padding: 4px;
+
+      .nav-menu {
+
+        li {
+          font-size: 24px;
+          padding: 5px;
         }
 
       }
 
+      &.open {
+        visibility: visible;
+        transition: all .50s ease;
+      }
     }
 
+    .main {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+
+      a {
+        align-items: center;
+        color: $neutral-color;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: all .50s ease;
+
+        &:hover {
+          color: $primary-color;
+        }
+
+        i {
+          color: inherit;
+          font-size: 26px;
+        }
+      }
+
+      #menu-icon {
+        font-size: 26px;
+      }
+    }
   }
+}
 
 
-  nav {
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+@media only screen and (min-width: 768px) {
 
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 0 auto;
+}
 
-      li {
-        list-style-type: none;
+/* lg */
+@media only screen and (min-width: 1024px) {
+
+}
+
+/* xl */
+@media only screen and (min-width: 1280px) {
+
+  header {
+
+    nav {
+
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 10px;
+
+      .menu {
+
+        grid-column-start: 3;
+        grid-column-end: 6;
+        visibility: visible;
+        display: flex;
+        position: initial;
+        height: inherit;
+        width: inherit;
+
+        .nav-menu {
+          display: flex;
+        }
 
         a {
-          margin: 0 15px;
-          padding: 10px 5px 15px 5px;
           color: $neutral-color;
-          text-transform: uppercase;
-          letter-spacing: 0.05rem;
-          font-size: 0.8rem;
+          font-size: 1.1rem;
+          font-weight: 500;
+          padding: 5px 0;
+          margin: 0px 30px;
+          transition: all .50s ease;
 
           &:hover {
             color: $primary-color;
-            border-bottom: 2px solid $primary-color;
           }
 
+          &.active {
+            color: $primary-color;
+          }
         }
+
 
       }
 
+      .main {
+        grid-column: 6;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        #menu-icon {
+          display: none;
+        }
+      }
+
+
     }
-
-
   }
+
 }

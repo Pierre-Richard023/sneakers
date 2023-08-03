@@ -15,30 +15,28 @@
 @import "responsive";
 @import "position";
 @import "button";
-@import "product-card";
+@import "products-card";
 @import "form";
+@import "home";
+@import "collections";
+@import "sneaker";
 
+@import "utils";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-a {
   text-decoration: none;
-  color: inherit;
+  list-style: none;
 }
 
-main{
-  min-height: 50vh;
-  margin: 15px;
-  padding: 20px 50px;
-  position: relative;
+main {
+
+  background: $white-color;
+  min-height: 100vh;
+  padding: 2rem;
 }
-
-
-
 
 
 

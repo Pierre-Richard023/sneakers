@@ -6,9 +6,12 @@ use App\Entity\Sneaker;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 class SneakerFixtures extends Fixture implements DependentFixtureInterface
 {
+    public function __construct(private SluggerInterface $slugger){}
+
     public function load(ObjectManager $manager): void
     {
 
@@ -30,7 +33,8 @@ class SneakerFixtures extends Fixture implements DependentFixtureInterface
             for ($i = 0; $i < 10; $i++) {
                 $sneaker = new Sneaker();
 
-                $sneaker->setName($mdls->getName() ." Edition " . $i)
+                $name =$mdls->getName() ." Edition " . $i;
+                $sneaker->setName($name)
                     ->setArticleNumber("ART".$idx.$i.rand(2132,9999))
                     ->setColor($color[rand(0,count($color)-1)])
                     ->setShoeSize($size[rand(0,count($size)-1)])
@@ -39,6 +43,7 @@ class SneakerFixtures extends Fixture implements DependentFixtureInterface
                     ->setModel($mdls)
                     ->setDetails("Test msbf sjgn sddsmlg sdgsjdngsdgsdmfgnsdgnsddhshs")
                     ->setReleaseDate(new \DateTime())
+                    ->setSlug($this->slugger->slug($name)->lower())
                 ;
                 $this->addReference('sneaker' .  $index, $sneaker);
                 $index++;

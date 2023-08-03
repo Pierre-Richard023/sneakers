@@ -5,9 +5,13 @@ namespace App\DataFixtures;
 use App\Entity\Brands;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 class BrandsFixtures extends Fixture
 {
+
+    public function __construct(private SluggerInterface $slugger){}
+
     public function load(ObjectManager $manager): void
     {
         $brands = [
@@ -18,7 +22,9 @@ class BrandsFixtures extends Fixture
 
         foreach ($brands as $b) {
             $brand = new Brands();
-            $brand->setName($b);
+            $brand->setName($b)
+                ->setSlug($this->slugger->slug($b))
+            ;
             $this->addReference('brands' . $i, $brand);
             $manager->persist($brand);
 

@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ sneaker.name }}{% endblock %}
+
+{% block body %}
+
+    <section class="sneaker-views">
+
+                <div class="sneaker-slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/models/models_4.jpg') }}" alt="sneaker"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/models/models_5.jpg') }}" alt="sneaker"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/models/models_4.jpg') }}" alt="sneaker"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/models/models_5.jpg') }}" alt="sneaker"/>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <div class="pagination-sec">
+                        <div class="swiper-button-prev">
+                            <img src="{{ asset('icons/back.svg') }}" alt="précédent"/>
+                        </div>
+                        <div class="swiper-button-next">
+                            <img src="{{ asset('icons/next.svg') }}" alt="suivant">
+                        </div>
+                    </div>
+                </div>
+
+{#        <div class="sneaker-slider"></div>#}
+        <div class="sneaker-informations">
+
+            <h2>{{ sneaker.name }}</h2>
+
+
+            <div class="sneaker-sell-details">
+                <h4>Sélectionner la taille</h4>
+                <div class="sneaker-size">
+                    <div class="size">40</div>
+                    <div class="size">41</div>
+                    <div class="size">42</div>
+                    <div class="size">43</div>
+                    <div class="size">44</div>
+                    <div class="size">45</div>
+                </div>
+
+                <div class="sneaker-actions">
+                    <button type="button" class="cart-action">Ajouter au panier</button>
+                    <button type="button" class="favorites-action">Ajouter au favoris</button>
+                </div>
+            </div>
+
+            <div class="sneaker-details">
+
+                <div class="sneaker-desc">
+                    <div class="accordion" {{ stimulus_controller('accordion') }}>
+                        <div class="accordion-head" {{ stimulus_action('accordion', 'show','click') }}>
+                            <h3>DESCRIPTION</h3>
+                            <i class="ri-add-line" {{ stimulus_target('accordion', 'state') }}></i>
+                        </div>
+                        <div class="accordion-body" {{ stimulus_target('accordion', 'output') }}>
+                            <article>
+                                qdqsknd knqnfqlsnd nqlsd lqsblfq klfqfsqs
+                            </article>
+
+                            <ul>
+                                <li>Couleur : {{ sneaker.color }}</li>
+                                <li>Article : {{ sneaker.articleNumber }} </li>
+                                <li>Date de sortie : {{ sneaker.articleNumber }} </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="sneaker-cgv">
+
+                    <div class="accordion" {{ stimulus_controller('accordion') }}>
+                        <div class="accordion-head" {{ stimulus_action('accordion', 'show','click') }}>
+                            <h3>AUTHENTICITE</h3>
+                            <i class="ri-add-line" {{ stimulus_target('accordion', 'state') }}></i>
+                        </div>
+                        <div class="accordion-body" {{ stimulus_target('accordion', 'output') }}>
+                            <article>
+                                qdqsknd knqnfqlsnd nqlsd lqsblfq klfqfsqs
+                            </article>
+
+                            <ul>
+                                <li>Couleur : {{ sneaker.color }}</li>
+                                <li>Article : {{ sneaker.articleNumber }} </li>
+                                <li>Date de sortie : {{ sneaker.articleNumber }} </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion" {{ stimulus_controller('accordion') }}>
+                        <div class="accordion-head" {{ stimulus_action('accordion', 'show','click') }}>
+                            <h3>LIVRAISON ET RETOUR</h3>
+                            <i class="ri-add-line" {{ stimulus_target('accordion', 'state') }}></i>
+                        </div>
+                        <div class="accordion-body" {{ stimulus_target('accordion', 'output') }}>
+                            <article>
+                                Livraison
+                            </article>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+{% endblock %}

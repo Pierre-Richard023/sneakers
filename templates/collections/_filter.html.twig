@@ -1,0 +1,67 @@
+<div id="filters-form" class="filters-form" {{ stimulus_target('modal', 'modal') }}>
+    <button class="close" id="closeFilterModalbtn" {{ stimulus_action('modal', 'close','click') }}>
+        <i class="ri-close-circle-fill"></i>
+    </button>
+    <div class="filter-body">
+
+        <h3>Filtre</h3>
+
+        <div class="accordion" {{ stimulus_controller('accordion') }}>
+            <div class="accordion-head" {{ stimulus_action('accordion', 'hide','click') }}>
+                <span>Trier par </span>
+                <i class="ri-arrow-down-s-line" {{ stimulus_target('accordion', 'state') }}></i>
+            </div>
+            <div class="accordion-body" {{ stimulus_target('accordion', 'output') }}>
+                <div class="sort-filter">
+                    <select>
+                        <option value="0">En vedette</option>
+                        <option value="1">Les plus récents</option>
+                        <option value="2">Prix : décroissant</option>
+                        <option value="2">Prix : croissant</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion" {{ stimulus_controller('accordion') }}>
+            <div class="accordion-head" {{ stimulus_action('accordion', 'hide','click') }}>
+                <span>Marques </span>
+                <i class="ri-arrow-down-s-line" {{ stimulus_target('accordion', 'state') }}></i>
+            </div>
+            <div class="accordion-body" {{ stimulus_target('accordion', 'output') }}>
+                <div class="brand-filter">
+                    {% for brand in brands %}
+                        <label>
+                            <input type="checkbox" value="{{ brand.name }}">
+                            {{ brand.name }}
+                        </label>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion" {{ stimulus_controller('accordion') }}>
+            <div class="accordion-head" {{ stimulus_action('accordion', 'hide','click') }}>
+                <span>Taille </span>
+                <i class="ri-arrow-down-s-line" {{ stimulus_target('accordion', 'state') }}></i>
+            </div>
+            <div class="accordion-body" {{ stimulus_target('accordion', 'output') }}>
+                <div class="size-filter">
+                    {% for i in range(38, 46.5, 0.5) %}
+                        <div class="size">
+                            <input type="checkbox" id="sneaker-size-{{ i }}" value="{{ i }}" >
+                            <label for="sneaker-size-{{ i }}">
+                                <span>{{ i }}</span>
+                            </label>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-action">
+            <button class="">Appliquer</button>
+        </div>
+
+    </div>
+</div>

@@ -6,9 +6,12 @@ use App\Entity\Models;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 class ModelsFixtures extends Fixture implements DependentFixtureInterface
 {
+    public function __construct(private SluggerInterface $slugger){}
+
     public function load(ObjectManager $manager): void
     {
 
@@ -24,9 +27,12 @@ class ModelsFixtures extends Fixture implements DependentFixtureInterface
 
             for ($i = 0; $i < 5; $i++) {
 
+                $name=$brand." Models  " . $i;
                 $models = new Models();
-                $models->setName($brand." Models  " . $i)
-                    ->setBrands($this->getReference('brands' . $index));
+                $models->setName($name)
+                    ->setBrands($this->getReference('brands' . $index))
+                    ->setSlug($this->slugger->slug($name))
+                ;
                 $this->addReference('models' . $idx, $models);
                 $manager->persist($models);
                 $idx++;

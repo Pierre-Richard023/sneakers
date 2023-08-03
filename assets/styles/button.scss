@@ -16,7 +16,7 @@ $button-font-weight: bold;
 
   &.primary {
     background-color: $primary-color;
-    color: $white;
+    color: $white-color;
 
     &:hover {
       background-color: darken($primary-color, 10%);
@@ -25,7 +25,7 @@ $button-font-weight: bold;
 
   &.secondary {
     background-color: $secondary-color;
-    color: $white;
+    color: $white-color;
 
     &:hover {
       background-color: darken($secondary-color, 10%);
@@ -34,7 +34,7 @@ $button-font-weight: bold;
 
   &.success {
     background-color: $success-color;
-    color: $white;
+    color: $white-color;
 
     &:hover {
       background-color: darken($success-color, 10%);
@@ -43,7 +43,7 @@ $button-font-weight: bold;
 
   &.danger {
     background-color: $danger-color;
-    color: $white;
+    color: $white-color;
 
     &:hover {
       background-color: darken($danger-color, 10%);

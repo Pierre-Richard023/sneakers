@@ -1,4 +1,4 @@
-import { registerReactControllerComponents } from '@symfony/ux-react';
+import {registerReactControllerComponents} from '@symfony/ux-react';
 import './bootstrap.js';
 /*
  * Welcome to your app's main JavaScript file!
@@ -9,5 +9,13 @@ import './bootstrap.js';
 
 // any CSS you import will output into a single css file (app.scss in this case)
 import './styles/app.scss';
+import './js/slider';
 
 registerReactControllerComponents(require.context('./react/controllers', true, /\.(j|t)sx?$/));
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+
+
+})

@@ -9,7 +9,7 @@ form {
     width: 100%;
     padding: 10px;
     border: 1px solid $neutral-color;
-    background-color: $light-gray;
+    background-color: $lightgray-color;
     border-radius: 4px;
 
     &:focus {
@@ -70,11 +70,11 @@ form {
     &:checked{
       & + label{
         &:before{
-          background: $green;
+          background: $green-color;
           box-shadow: none;
         }
         &:after{
-          border-color: $white;
+          border-color: $white-color;
         }
       }
     }

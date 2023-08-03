@@ -41,7 +41,7 @@ class SneakerRepository extends ServiceEntityRepository
 
     public function getSneakers(){
         return $this->createQueryBuilder('s')
-            ->setMaxResults(40)
+            ->setMaxResults(12)
             ->getQuery()
             ->getResult();
     }
