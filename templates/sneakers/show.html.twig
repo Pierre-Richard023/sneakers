@@ -4,42 +4,49 @@
 
 {% block body %}
 
+    <div id="state" class="state">
+        <div>
+            <span>Success</span>
+        </div>
+    </div>
+
     <section class="sneaker-views">
 
-                <div class="sneaker-slider">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="{{ asset('images/models/models_4.jpg') }}" alt="sneaker"/>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="{{ asset('images/models/models_5.jpg') }}" alt="sneaker"/>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="{{ asset('images/models/models_4.jpg') }}" alt="sneaker"/>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="{{ asset('images/models/models_5.jpg') }}" alt="sneaker"/>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
+        <div class="sneaker-slider">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/models/models_4.jpg') }}" alt="sneaker"/>
                     </div>
-
-                    <div class="pagination-sec">
-                        <div class="swiper-button-prev">
-                            <img src="{{ asset('icons/back.svg') }}" alt="précédent"/>
-                        </div>
-                        <div class="swiper-button-next">
-                            <img src="{{ asset('icons/next.svg') }}" alt="suivant">
-                        </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/models/models_5.jpg') }}" alt="sneaker"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/models/models_4.jpg') }}" alt="sneaker"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/models/models_5.jpg') }}" alt="sneaker"/>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
+            </div>
 
-{#        <div class="sneaker-slider"></div>#}
+            <div class="pagination-sec">
+                <div class="swiper-button-prev">
+                    <img src="{{ asset('icons/back.svg') }}" alt="précédent"/>
+                </div>
+                <div class="swiper-button-next">
+                    <img src="{{ asset('icons/next.svg') }}" alt="suivant">
+                </div>
+            </div>
+        </div>
+
         <div class="sneaker-informations">
 
-            <h2>{{ sneaker.name }}</h2>
-
+            <div class="title">
+                <h3>{{ sneaker.name }}</h3>
+                <span>{{ sneaker.price }} €</span>
+            </div>
 
             <div class="sneaker-sell-details">
                 <h4>Sélectionner la taille</h4>
@@ -52,9 +59,13 @@
                     <div class="size">45</div>
                 </div>
 
-                <div class="sneaker-actions">
-                    <button type="button" class="cart-action">Ajouter au panier</button>
-                    <button type="button" class="favorites-action">Ajouter au favoris</button>
+                <div class="sneaker-actions" {{ stimulus_controller('actions') }}>
+                    <a href="{{ path('cart.add') }}"
+                       class="cart-action" {{ stimulus_action('actions', 'addCart','click',{id:sneaker.id}) }}>Ajouter
+                        au panier</a>
+                    <a href="{{ path('cart.add',{ id : sneaker.id}) }}"
+                       class="favorites-action" {{ stimulus_action('actions', 'addFavorites','click',{id:sneaker.id}) }}>Ajouter
+                        au favoris</a>
                 </div>
             </div>
 
@@ -68,13 +79,13 @@
                         </div>
                         <div class="accordion-body" {{ stimulus_target('accordion', 'output') }}>
                             <article>
-                                qdqsknd knqnfqlsnd nqlsd lqsblfq klfqfsqs
+                                {{ sneaker.details|raw }}
                             </article>
 
                             <ul>
                                 <li>Couleur : {{ sneaker.color }}</li>
                                 <li>Article : {{ sneaker.articleNumber }} </li>
-                                <li>Date de sortie : {{ sneaker.articleNumber }} </li>
+                                <li>Date de sortie : {{ sneaker.releaseDate|date('F Y', "Europe/Paris") }} </li>
                             </ul>
                         </div>
                     </div>

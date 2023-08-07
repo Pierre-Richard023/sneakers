@@ -1,7 +1,8 @@
 .collections {
-  min-height: 100vh;
   width: 100%;
-
+  display: block;
+  grid-gap: 8px;
+  margin: 18px 0;
 
   .collections-filter {
 
@@ -116,83 +117,82 @@
 
             }
 
-            .brand-filter {
+            #brands {
 
               margin: 8px 0;
               display: grid;
               grid-template-columns: repeat(2, 1fr);
               grid-gap: 8px;
 
+              label {
+                display: flex;
+                align-items: center;
 
-              input[type="checkbox"] {
-                appearance: none;
-                -webkit-appearance: none;
-                display: inline-block;
-                width: 20px;
-                height: 20px;
-                border: 2px solid #000;
-                background-color: #fff;
-                border-radius: 4px;
-                margin-right: 10px;
+                input[type="checkbox"] {
+                  appearance: none;
+                  -webkit-appearance: none;
+                  display: inline-block;
+                  width: 20px;
+                  height: 20px;
+                  border: 2px solid #000;
+                  background-color: white;
+                  border-radius: 4px;
+                  margin-right: 10px;
 
-                &:checked {
-                  background-color: #000;
+                  &:checked {
+                    background-color: #000;
 
-                  &:after {
-                    content: "\2713";
-                    display: block;
-                    text-align: center;
-                    color: #fff;
+                    &:after {
+                      content: "\2713";
+                      display: block;
+                      text-align: center;
+                      color: white;
+                    }
                   }
                 }
-              }
 
+              }
 
             }
 
-            .size-filter {
+            #size {
+
               margin: 8px 0;
 
               display: grid;
               grid-template-columns: repeat(4, 1fr);
               grid-gap: 8px;
 
-              .size {
-                width: 100%;
+              input[type="radio"] {
+                display: none;
 
-                input[type="checkbox"] {
-                  display: none;
-
-                  &:checked {
-                    + {
-                      label {
-                        border-color: black;
-                      }
+                &:checked {
+                  + {
+                    label {
+                      border-color: black;
                     }
                   }
                 }
+              }
 
-                label {
-                  text-align: center;
-                  display: block;
-                  width: 100%;
+              label {
+                text-align: center;
+                display: block;
+                width: 100%;
 
-                  padding: 8px;
-                  color: black;
-                  border: 2px solid $lightgray-color;
-                  border-radius: 0.375rem;
-                  cursor: pointer;
+                padding: 8px;
+                color: black;
+                border: 2px solid $lightgray-color;
+                border-radius: 0.375rem;
+                cursor: pointer;
 
-                  &:hover {
-                    border-color: black;
-                  }
-
+                &:hover {
+                  border-color: black;
                 }
 
               }
 
             }
-
           }
         }
 
@@ -231,11 +231,10 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 8px;
 
-
     .pagination {
 
       width: 100%;
-      display: block;
+      display: flex;
       align-items: center;
       justify-content: center;
       grid-column: 1/3;
@@ -255,30 +254,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 0.75rem 0.75rem;
+            padding: 14px;
             margin-left: 0;
-            font-size: inherit;
-            color: #718096;
-            background-color: #fff;
-            border: 1px solid #e2e8f0;
-            border-radius: 0.375rem;
+            font-size: 18px;
+            color: $gray-color;
 
             &:hover {
-              background-color: #f7fafc;
-              color: #4a5568;
+              color: $primary-color;
             }
 
-            &[aria-current="page"] {
-              z-index: 10;
-              color: #3b82f6;
-              background-color: #ebf8ff;
-              border-color: #93c5fd;
+            &.current {
 
-              &:hover {
-                background-color: #dbeafe;
-                color: #1e40af;
+              color: $secondary-color;
+              pointer-events: none;
 
-              }
             }
           }
 
@@ -311,7 +300,7 @@
           .accordion {
             .accordion-body {
 
-              .size-filter {
+              #size {
                 margin: 8px 0;
 
                 display: grid;
@@ -322,6 +311,15 @@
           }
 
         }
+      }
+    }
+
+    .collections-list {
+      grid-template-columns: repeat(4, 1fr);
+
+      .pagination {
+
+        grid-column: 1/5;
       }
     }
   }
@@ -361,11 +359,12 @@
 
             .accordion-body {
 
-              .brand-filter {
+              #brands {
                 grid-template-columns: 1fr;
+                font-size: 18px;
               }
 
-              .size-filter {
+              #size {
                 grid-template-columns: repeat(4, 1fr);
               }
             }
@@ -377,14 +376,14 @@
 
     .collections-list {
       grid-column: 2/5;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
 
+      .pagination {
+
+        grid-column: 1/5;
+      }
     }
   }
 
 }
 
-@media only screen and (min-width: 1280px) {
-
-
-}

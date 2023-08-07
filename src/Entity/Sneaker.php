@@ -2,14 +2,26 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
 use App\Entity\Trait\SlugTrait;
 use App\Repository\SneakerRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: SneakerRepository::class)]
+#[ApiResource(
+    operations: [
+        new Get(normalizationContext: ['groups'=>'sneaker:item']),
+        new GetCollection(normalizationContext: ['groups'=>'sneaker:list'])
+    ],
+    order: ['name'=>'DESC'],
+    paginationEnabled: false,
+)]
 class Sneaker
 {
     use SlugTrait;
@@ -17,30 +29,39 @@ class Sneaker
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?string $name = null;
 
     #[ORM\Column]
+    #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?float $price = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?string $color = null;
 
     #[ORM\Column(length: 40)]
+    #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?string $article_number = null;
 
     #[ORM\Column]
+    #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?float $shoe_size;
 
     #[ORM\Column]
+    #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?int $stock = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
+    #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?\DateTimeInterface $release_date = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
+    #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?string $details = null;
 
     #[ORM\OneToMany(mappedBy: 'sneaker', targetEntity: SneakersImages::class, orphanRemoval: true, cascade : ["persist"])]

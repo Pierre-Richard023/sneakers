@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'Chakra Petch';
   src: url('../fonts/ChakraPetch-Bold.ttf') format('truetype');
@@ -7,20 +6,19 @@
 }
 
 @import "variables";
-@import "mixin";
-@import "columns";
 @import "typography";
 @import "header";
 @import "footer";
-@import "responsive";
-@import "position";
 @import "button";
 @import "products-card";
 @import "form";
 @import "home";
 @import "collections";
 @import "sneaker";
-
+@import "carts";
+@import "orders";
+@import "register";
+@import "login";
 @import "utils";
 
 * {
@@ -29,14 +27,32 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  color: black;
 }
 
 main {
 
   background: $white-color;
-  min-height: 100vh;
-  padding: 2rem;
+  padding: 8px;
 }
 
 
+@media only screen and (min-width: 768px) {
+  main {
+    background: $white-color;
+    padding: 10px 64px;
+  }
+}
 
+
+@media only screen and (min-width: 1024px) {
+  main {
+    background: $white-color;
+    padding: 14px 128px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+
+
+}

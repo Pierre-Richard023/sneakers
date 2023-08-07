@@ -8,27 +8,19 @@ form {
     display: block;
     width: 100%;
     padding: 10px;
-    border: 1px solid $neutral-color;
-    background-color: $lightgray-color;
+    border: 1px solid $gray-color;
     border-radius: 4px;
-
+    margin: 4px 0;
     &:focus {
       outline: none;
-      box-shadow: 0 0 5px $secondary-color;
+      border: 1px solid black;
     }
   }
 
-  select {
-    appearance: none;
-    padding-right: 25px;
-    color: $neutral-color;
-  }
-
-
-  .checkbox{
+  .checkbox {
     opacity: 0;
 
-    & + label{
+    & + label {
       display: inline-block;
       position: relative;
       cursor: pointer;
@@ -36,7 +28,7 @@ form {
       padding-left: 30px;
       font-size: 18px;
 
-      &:before{
+      &:before {
         position: absolute;
         display: block;
         left: 0;
@@ -51,7 +43,7 @@ form {
         transition: 200ms ease-in-out all;
       }
 
-      &:after{
+      &:after {
         position: absolute;
         display: block;
         top: 5px;
@@ -67,13 +59,14 @@ form {
       }
     }
 
-    &:checked{
-      & + label{
-        &:before{
+    &:checked {
+      & + label {
+        &:before {
           background: $green-color;
           box-shadow: none;
         }
-        &:after{
+
+        &:after {
           border-color: $white-color;
         }
       }

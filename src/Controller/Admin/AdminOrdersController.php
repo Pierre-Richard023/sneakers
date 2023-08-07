@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/orders')]
+#[Route('/admin/orders')]
 class AdminOrdersController extends AbstractController
 {
     #[Route('/', name: 'admin.orders.index', methods: ['GET'])]

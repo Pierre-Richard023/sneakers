@@ -3,18 +3,65 @@
 {% block title %}Hello CartController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <div id="state" class="state">
+        <div>
+            <span>Success</span>
+        </div>
+    </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/littl/Desktop/sneakers/src/Controller/CartController.php'|file_link(0) }}">src/Controller/CartController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/littl/Desktop/sneakers/templates/cart/index.html.twig'|file_link(0) }}">templates/cart/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <section class="cart">
+
+        <div class="sneakers">
+            {% if sneakers | length > 0 %}
+                {% for data in sneakers %}
+                    <div class="sneaker-cart" {{ stimulus_controller('actions') }} {{ stimulus_target('actions', 'cart') }}>
+                        <div class="sneaker-image">
+                            <img src="" alt={{ data.sneaker.name }}/>
+                        </div>
+                        <div class="sneaker-infs">
+                            <div class="details">
+                                <div class="name">
+                                    <a href={{ path('home') }}>{{ data.sneaker.name }}</a>
+                                    <p>Taille : {{ data.sneaker.shoeSize }}</p>
+                                    <p>Quantité : {{ data.quantity }}</p>
+                                </div>
+                                <div class="price">
+                                    <span>{{ data.sneaker.price }} €</span>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <a>
+                                    <i class="ri-heart-line"></i>
+                                </a>
+                                <a href="{{ path('cart.delete') }}" {{ stimulus_action('actions', 'deleteCart','click',{id:data.sneaker.id}) }}>
+                                    <i class="ri-delete-bin-5-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div>
+                    Aucune données
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="resume-cart">
+            <h2>Récapitulatif</h2>
+            <div class="resume-details">
+                <div class="">
+                    <p class="">Total</p>
+                    <p class="">{{ total }}</p>
+                </div>
+                <div class="resume-actions">
+                    <a href={{ path('home') }}>Passer la commande</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
 {% endblock %}

@@ -1,45 +1,54 @@
-p{
-  display: block;
-  margin: 6px 0;
+a {
 
+  text-decoration: none;
 }
-.title{
+
+h1{
+  margin: 12px 0;
+}
+span {
+  color: black;
+}
+
+.title {
   text-align: center;
   font-size: 32px;
   margin-bottom: 8px;
 }
 
-.second-title{
+.second-title {
   text-align: center;
   font-size: 24px;
   margin-bottom: 8px;
 }
 
-.link{
+.link {
   padding: 8px;
   color: $blue-color;
 
-  &.primary{
+  &.primary {
     color: $primary-color;
   }
 
-  &.secondary{
+  &.secondary {
     color: $secondary-color;
   }
 }
 
 //Text Align
-.text-center{
+.text-center {
   text-align: center;
 }
-.text-left{
+
+.text-left {
   text-align: left;
 }
-.text-right{
+
+.text-right {
   text-align: right;
 }
 
-.text-danger{
+.text-danger {
   color: $red-color;
 }
 

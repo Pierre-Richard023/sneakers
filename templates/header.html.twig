@@ -1,11 +1,11 @@
 <header>
     <nav {{ stimulus_controller('menu') }} >
         <a href="{{ path('home') }}" class="logo">
-            <span>Sneaker Pluss</span>
+            <img src="{{ asset('images/logo.svg') }}" alt="logo Sneaker Pluss"/>
         </a>
 
         <div class="menu" {{ stimulus_target('menu', 'menu') }}>
-            <ul class="nav-menu" >
+            <ul class="nav-menu">
                 <li>
                     <a href="{{ path('home') }}" class="active">Acceuil</a>
                 </li>
@@ -16,13 +16,13 @@
         </div>
 
         <div class="main">
-            <a href="{{ path('home') }}">
+            <a href="{{ path('customer.profile') }}">
                 <i class="ri-user-fill"></i>
             </a>
-            <a href="{{ path('home') }}">
+            <a href="{{ path('cart') }}">
                 <i class="ri-shopping-cart-2-fill"></i>
             </a>
-            <a href="{{ path('home') }}">
+            <a href="{{ path('favorites') }}">
                 <i class="ri-heart-line"></i>
             </a>
             <div class="ri-menu-line"
