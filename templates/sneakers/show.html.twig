@@ -61,10 +61,10 @@
 
                 <div class="sneaker-actions" {{ stimulus_controller('actions') }}>
                     <a href="{{ path('cart.add') }}"
-                       class="cart-action" {{ stimulus_action('actions', 'addCart','click',{id:sneaker.id}) }}>Ajouter
+                       class="cart-action" {{ stimulus_action('actions', 'addSneaker','click',{id:sneaker.id}) }}>Ajouter
                         au panier</a>
-                    <a href="{{ path('cart.add',{ id : sneaker.id}) }}"
-                       class="favorites-action" {{ stimulus_action('actions', 'addFavorites','click',{id:sneaker.id}) }}>Ajouter
+                    <a href="{{ path('favorites.add') }}"
+                       class="favorites-action" {{ stimulus_action('actions', 'addSneaker','click',{id:sneaker.id}) }}>Ajouter
                         au favoris</a>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Favorites;
 use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
@@ -29,6 +30,11 @@ class UserFixtures extends Fixture
         ;
 
         $manager->persist($user);
+
+        $favorites=new Favorites();
+        $favorites->setCustomer($user);
+
+        $manager->persist($favorites);
         $manager->flush();
     }
 }

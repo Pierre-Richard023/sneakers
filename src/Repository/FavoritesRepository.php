@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Favorites;
+use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -37,6 +38,16 @@ class FavoritesRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
+    }
+
+    public function getPersonalFavorites(User $user): ?Favorites
+    {
+
+        return $this->createQueryBuilder('f')
+            ->andWhere('f.customer = :user')
+            ->setParameter('user', $user)
+            ->getQuery()
+            ->getOneOrNullResult();
     }
 
 //    /**

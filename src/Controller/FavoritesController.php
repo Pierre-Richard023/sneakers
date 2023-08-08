@@ -5,7 +5,9 @@ namespace App\Controller;
 use App\Entity\Favorites;
 use App\Form\FavoritesType;
 use App\Repository\FavoritesRepository;
+use App\Repository\SneakerRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -15,66 +17,116 @@ use Symfony\Component\Security\Http\Attribute\IsGranted;
 #[IsGranted('ROLE_USER')]
 class FavoritesController extends AbstractController
 {
+
+    public function __construct(private FavoritesRepository $favoritesRepository, private SneakerRepository $sneakerRepository)
+    {
+    }
+
+
     #[Route('/liste-de-souhaits', name: 'favorites', methods: ['GET'])]
-    public function index(FavoritesRepository $favoritesRepository): Response
+    public function index(): Response
     {
+
+        $favorites = $this->favoritesRepository->getPersonalFavorites($this->getUser());
+
         return $this->render('favorites/index.html.twig', [
-            'favorites' => $favoritesRepository->findAll(),
+            'sneakers' => $favorites->getSneakers(),
         ]);
     }
 
-    #[Route('/new', name: 'app_favorites_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, FavoritesRepository $favoritesRepository): Response
+    #[Route('/liste-de-souhaits/add', name: 'favorites.add')]
+    public function add(Request $request): JsonResponse
     {
-        $favorite = new Favorites();
-        $form = $this->createForm(FavoritesType::class, $favorite);
-        $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $favoritesRepository->save($favorite, true);
 
-            return $this->redirectToRoute('app_favorites_index', [], Response::HTTP_SEE_OTHER);
+        if ($request->getContent()) {
+
+            $data = json_decode($request->getContent(), true);
+
+            $sneaker = $this->sneakerRepository->find($data['id']);
+
+            if ($sneaker) {
+
+                $favorites = $this->favoritesRepository->getPersonalFavorites($this->getUser());
+                $favorites->addSneaker($sneaker);
+
+                $this->favoritesRepository->save($favorites, true);
+
+                return new JsonResponse([
+                    'success' => true,
+                    'message' => "Bravo ! L'article a été ajouté à votre liste de favoris."
+                ]);
+
+            }
         }
 
-        return $this->renderForm('favorites/new.html.twig', [
-            'favorite' => $favorite,
-            'form' => $form,
+
+        return new JsonResponse([
+            'success' => false,
+            'message' => "Malheureusement, l'article n'a pas pu être ajouté à vos favoris. Si le problème persiste, veuillez nous contacter pour obtenir de l'aide."
         ]);
+
     }
 
-    #[Route('/{id}', name: 'app_favorites_show', methods: ['GET'])]
-    public function show(Favorites $favorite): Response
+
+    #[Route('/liste-de-souhaits/remove', name: 'favorites.remove')]
+    public function remove(Request $request): JsonResponse
     {
-        return $this->render('favorites/show.html.twig', [
-            'favorite' => $favorite,
-        ]);
-    }
 
-    #[Route('/{id}/edit', name: 'app_favorites_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Favorites $favorite, FavoritesRepository $favoritesRepository): Response
-    {
-        $form = $this->createForm(FavoritesType::class, $favorite);
-        $form->handleRequest($request);
+        if ($request->getContent()) {
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $favoritesRepository->save($favorite, true);
+            $data = json_decode($request->getContent(), true);
 
-            return $this->redirectToRoute('app_favorites_index', [], Response::HTTP_SEE_OTHER);
+            $sneaker = $this->sneakerRepository->find($data['id']);
+
+            if ($sneaker) {
+
+                $favorites = $this->favoritesRepository->getPersonalFavorites($this->getUser());
+                $favorites->removeSneaker($sneaker);
+
+                $this->favoritesRepository->save($favorites, true);
+
+                return new JsonResponse([
+                    'success' => true,
+                    'message' => "Article retiré ! Vous avez supprimé l'article de votre liste de favoris."
+                ]);
+
+            }
         }
 
-        return $this->renderForm('favorites/edit.html.twig', [
-            'favorite' => $favorite,
-            'form' => $form,
+
+        return new JsonResponse([
+            'success' => false,
+            'message' => "Oops ! Nous n'avons pas pu supprimer l'article pour le moment. Veuillez réessayer plus tard."
         ]);
     }
 
-    #[Route('/{id}', name: 'app_favorites_delete', methods: ['POST'])]
-    public function delete(Request $request, Favorites $favorite, FavoritesRepository $favoritesRepository): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$favorite->getId(), $request->request->get('_token'))) {
-            $favoritesRepository->remove($favorite, true);
-        }
 
-        return $this->redirectToRoute('app_favorites_index', [], Response::HTTP_SEE_OTHER);
+    #[Route('/liste-de-souhaits/clear', name: 'favorites.clear')]
+    public function clear(Request $request): JsonResponse
+    {
+
+        if ($request->getContent()) {
+
+            $data = json_decode($request->getContent(), true);
+
+            if ($this->isCsrfTokenValid('clear', $data['token'])) {
+
+                $favorites = $this->favoritesRepository->getPersonalFavorites($this->getUser());
+                $favorites->clearSneaker();
+                $this->favoritesRepository->save($favorites, true);
+
+                return new JsonResponse([
+                    'success' => true,
+                    'message' => "C'est fait ! Tous les articles ont été retirés de votre liste de favoris."
+                ]);
+            }
+
+        }
+        return new JsonResponse([
+            'success' => false,
+            'message' => "Erreur de vidage : nous rencontrons un problème technique. Veuillez réessayer ultérieurement."
+        ]);
     }
+
 }

@@ -21,7 +21,6 @@ class CartController extends AbstractController
     #[Route('/panier', name: 'cart')]
     public function index(SessionInterface $session): Response
     {
-
         $cart = $session->get('cart', []);
         $sneakers = [];
         $total = 0;
@@ -48,7 +47,7 @@ class CartController extends AbstractController
 
 
     #[Route('/panier/add', name: 'cart.add')]
-    public function add(SessionInterface $session, Request $request)
+    public function add(SessionInterface $session, Request $request): JsonResponse
     {
 
         if ($request->getContent()) {
@@ -79,13 +78,13 @@ class CartController extends AbstractController
 
         return new JsonResponse([
             'success' => false,
-            'message' => "Oh non ! Une erreur s'est produite lors de l'ajout de l'article. Veuillez nous contacter si le problème persiste."
+            'message' => "Désolé, nous n'avons pas pu ajouter l'article à vos favoris pour le moment. Veuillez réessayer plus tard."
         ]);
 
     }
 
     #[Route('/panier/delete', name: 'cart.delete')]
-    public function delete(SessionInterface $session , Request $request)
+    public function delete(SessionInterface $session, Request $request): JsonResponse
     {
 
         if ($request->getContent()) {
@@ -96,6 +95,7 @@ class CartController extends AbstractController
 
             if ($sneaker) {
 
+
                 $id = $sneaker->getId();
                 $cart = $session->get('cart', []);
 
@@ -103,11 +103,19 @@ class CartController extends AbstractController
                     unset($cart[$id]);
                 }
 
+                $total = 0;
+
+                foreach ($cart as $key => $qty) {
+                    $sneaker = $this->sneakerRepository->find($key);
+                    $total += $sneaker->getPrice() * $qty;
+                }
+
                 $session->set('cart', $cart);
 
                 return new JsonResponse([
                     'success' => true,
-                    'message' => 'Votre article a été supprimer avec succès de votre panier.'
+                    'total' => $total,
+                    'message' => "C'est fait ! L'article a été supprimé avec succès de votre panier."
                 ]);
             }
         }
@@ -115,16 +123,35 @@ class CartController extends AbstractController
 
         return new JsonResponse([
             'success' => false,
-            'message' => "Oh non ! Une erreur s'est produite lors de la suppression de l'article. Veuillez nous contacter si le problème persiste."
+            'message' => "Oops ! Nous n'avons pas pu supprimer l'article pour le moment. Veuillez réessayer plus tard."
         ]);
     }
 
     #[Route('/panier/clear', name: 'cart.clear')]
-    public function clear(SessionInterface $session)
+    public function clear(SessionInterface $session, Request $request): JsonResponse
     {
-        $session->remove('cart');
+        if ($request->getContent()) {
 
-        return $this->redirectToRoute('cart');
+            $data = json_decode($request->getContent(), true);
+
+            if ($this->isCsrfTokenValid('clear', $data['token'])) {
+
+                $session->remove('cart');
+
+                return new JsonResponse([
+                    'success' => true,
+                    'total' => 0,
+                    'message' => "Vide réussi ! Votre panier a été vidé avec succès."
+                ]);
+
+            }
+
+
+        }
+        return new JsonResponse([
+            'success' => false,
+            'message' => "Oops ! Nous n'avons pas pu vider votre panier pour le moment. Veuillez réessayer plus tard."
+        ]);
     }
 
 }

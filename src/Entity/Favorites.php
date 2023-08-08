@@ -67,4 +67,12 @@ class Favorites
 
         return $this;
     }
+
+
+    public function clearSneaker(): static
+    {
+        $this->sneakers->clear();
+
+        return $this;
+    }
 }

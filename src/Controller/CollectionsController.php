@@ -29,10 +29,6 @@ class CollectionsController extends AbstractController
         $form=$this->createForm(SneakerFilterType::class,$filter);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-
-        }
-
 
         $sneakers=$paginator->paginate(
             $this->sneakerRepository->getSneakersByFilterAndPages($filter),
@@ -40,6 +36,16 @@ class CollectionsController extends AbstractController
             12
         );
         $brands= $this->brandsRepository->findAll();
+
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            return $this->render('collections/index.html.twig', [
+                'controller_name' => 'CollectionsController',
+                'sneakers'=>$sneakers,
+                'brands'=>$brands,
+                'filter'=>$form
+            ]);
+        }
 
 
         return $this->render('collections/index.html.twig', [
@@ -50,24 +56,5 @@ class CollectionsController extends AbstractController
         ]);
     }
 
-    #[Route('/{slug}', name: 'brands')]
-    public function brands(Brands $brands): Response
-    {
-        $sneakers=[];
-        return $this->render('collections/index.html.twig', [
-            'controller_name' => 'CollectionsController',
-            'sneakers'=>$sneakers,
-        ]);
-    }
-
-    #[Route('/{slug}', name: 'models')]
-    public function models(Models $models): Response
-    {
-        $sneakers=[];
-        return $this->render('collections/index.html.twig', [
-            'controller_name' => 'CollectionsController',
-            'sneakers'=>$sneakers,
-        ]);
-    }
 
 }

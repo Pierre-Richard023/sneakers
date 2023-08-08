@@ -9,7 +9,7 @@
     <section class="main-brand-selected">
 
         {% for brand in brands %}
-            <a href="{{ path('collections.brands',{slug : brand.slug}) }}">
+            <a href="{{ path('collections.index',{'brands[]' : brand.id}) }}">
                 <div class="brand-card">
                     <div>
                         {#                        <img src=" {{ vich_uploader_asset(brand) }}" alt="{{ brand.name }} logo"/> #}
