@@ -29,12 +29,31 @@ class UserFixtures extends Fixture
             ->setRegisteredSince(new \DateTime())
         ;
 
+        $admin = new User();
+        $admin->setEmail("admin@test.com")
+            ->setClientNumber("CLI002456")
+            ->setFirstName("John")
+            ->setLastName("Doe")
+            ->setPassword($this->hasher->hashPassword($user,"Azerty_0"))
+            ->setIsVerified(true)
+            ->setRegisteredSince(new \DateTime())
+            ->setRoles(['ROLE_USER', 'ROLE_ADMIN'])
+        ;
+
+
+
         $manager->persist($user);
+        $manager->persist($admin);
+        $this->addReference('user',$user);
 
         $favorites=new Favorites();
         $favorites->setCustomer($user);
 
+        $favorites2=new Favorites();
+        $favorites2->setCustomer($admin);
+
         $manager->persist($favorites);
+        $manager->persist($favorites2);
         $manager->flush();
     }
 }

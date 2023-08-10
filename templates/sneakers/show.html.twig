@@ -10,23 +10,34 @@
         </div>
     </div>
 
+
+    <nav class="breadcrumb">
+        <ol>
+            <li class="flex items-center">
+                <a rel="noopener noreferrer" href="{{ path('home') }}" title="Accueil">Accueil</a>
+            </li>
+            <li>
+                <span>/</span>
+                <a rel="noopener noreferrer" href="{{ path('collections.index') }}">Collections</a>
+            </li>
+            <li>
+                <span class="dark:text-gray-400">/</span>
+                {{ sneaker.name }}
+            </li>
+        </ol>
+    </nav>
+
+
     <section class="sneaker-views">
 
         <div class="sneaker-slider">
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="{{ asset('images/models/models_4.jpg') }}" alt="sneaker"/>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('images/models/models_5.jpg') }}" alt="sneaker"/>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('images/models/models_4.jpg') }}" alt="sneaker"/>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('images/models/models_5.jpg') }}" alt="sneaker"/>
-                    </div>
+                    {% for image in sneaker.images %}
+                        <div class="swiper-slide">
+                            <img src="{{ vich_uploader_asset(image) }}" alt=" {{ image.imageName }} sneaker"/>
+                        </div>
+                    {% endfor %}
                 </div>
                 <div class="swiper-pagination"></div>
             </div>

@@ -2,7 +2,7 @@
 
   width: 100%;
 
-  .subtitle{
+  .subtitle {
     margin: 8px 0;
   }
 
@@ -53,27 +53,199 @@
 
     }
 
-    .shipping {
-      width: 100%;
-      margin: 12px 0;
+    .address-list {
+
+      margin: 8px 0;
+
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 8px;
 
-      .mode {
-        width: 100%;
-        border: 1px solid black;
-        margin: 10px 0;
-        padding: 8px;
+      input[type="radio"] {
+        display: none;
 
-        h3 {
-          margin-bottom: 8px;
-          color: $secondary-color;
+        &:checked {
+          + {
+            label {
+              border-color: black;
+            }
+          }
         }
       }
 
+      label {
+        text-align: center;
+        display: block;
+        width: 100%;
+
+        padding: 8px;
+        color: black;
+        border: 2px solid $lightgray-color;
+        border-radius: 0.375rem;
+        cursor: pointer;
+
+        &:hover {
+          border-color: black;
+        }
+
+
+        .address-details {
+
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          text-align: justify;
+          padding: 12px;
+          font-size: 14px;
+        }
+
+      }
+
+
+    }
+
+    .transporter-list {
+
+      margin: 8px 0;
+
+      display: grid;
+      grid-template-columns: 1fr;
+
+      input[type="radio"] {
+        display: none;
+
+        &:checked {
+          + {
+            label {
+              border-color: black;
+            }
+          }
+        }
+      }
+
+      label {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        color: black;
+        border: 2px solid $lightgray-color;
+        border-radius: 0.375rem;
+        cursor: pointer;
+        margin: 10px 0;
+
+        &:hover {
+          border-color: black;
+        }
+
+
+        .transporter-details {
+
+          width: 100%;
+          display: block;
+          text-align: justify;
+          padding: 12px;
+          font-size: 14px;
+        }
+
+      }
+    }
+
+    .form-informations {
+      display: none;
+      margin: 8px 0;
+      padding: 15px;
+      border: 1px solid $gray-color;
+
+      .form {
+        margin: 8px 0;
+
+        div {
+          width: 100%;
+          margin: 8px 0;
+        }
+
+        .double {
+          margin: 0;
+        }
+
+        button {
+          width: 100%;
+          padding: 15px 32px;
+          cursor: pointer;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          border-radius: 14px;
+          border: none;
+          font-size: 16px;
+          font-weight: 400;
+          margin: 4px 0;
+          background-color: $secondary-color;
+
+          color: white;
+
+          &:hover {
+            background-color: $primary-color;
+
+          }
+        }
+      }
+
+
+    }
+
+
+  }
+
+
+  .order-recap {
+
+    width: 100%;
+
+    .details {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .sneakers {
+
+      .sneaker {
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        padding: 4px;
+        border: 1px solid black;
+        margin: 4px 0;
+
+        .image {
+          grid-column: 1;
+          position: relative;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+
+        }
+
+        .snkr-informations {
+          grid-column: 2/5;
+          padding: 4px;
+
+          div {
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            margin: 4px 0;
+          }
+        }
+
+      }
     }
 
   }
+
 
   .payment {
 
@@ -81,71 +253,31 @@
     display: grid;
     grid-template-columns: 1fr;
 
-    .details {
-
-
-      .sneakers {
-
-        .sneaker {
-
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-
-          padding: 4px;
-          border: 1px solid black;
-          margin: 4px 0;
-
-          .image {
-            grid-column: 1;
-
-          }
-
-          .snkr-informations {
-            grid-column: 2/5;
-            padding: 4px;
-
-            div {
-              font-size: 14px;
-              display: flex;
-              justify-content: space-between;
-              margin: 4px 0;
-            }
-          }
-
-        }
-      }
-
-      .price {
-
-        margin: 8px 0;
-        font-size: 18px;
-        font-weight: 500;
-
-        div {
-
-          padding: 4px;
-          margin-bottom: 4px;
-          display: flex;
-          justify-content: space-between;
-        }
-
-        hr {
-          margin-bottom: 4px;
-        }
-
-        .prc-details {
-          display: block;
-          margin: 0;
-          padding: 0;
-        }
-
-      }
+    .card {
+      width: 100%;
     }
 
-    .address{
-      margin: 8px 0;
-      padding: 8px 4px;
-      border: 1px solid $gray-color;
+  }
+
+
+  .actions {
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+      padding: 14px 16px;
+      background-color: $primary-color;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 14px;
+      border: none;
+      font-size: 14px;
+      font-weight: 400;
     }
   }
 }
@@ -164,6 +296,59 @@
         grid-gap: 12px;
       }
 
+      .address-list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 12px;
+      }
+
+      .form-informations {
+
+
+        .double {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 10px;
+        }
+      }
+
+
+    }
+
+    .order-recap {
+
+      width: 100%;
+
+      h3 {
+        color: $primary-color;
+
+      }
+
+      .order-recap-details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+
+
+        .details {
+          width: 100%;
+          padding: 8px;
+          text-align: justify;
+          border: 1px solid $gray-color;
+
+
+          .sub-details {
+            padding: 10px;
+
+            h3 {
+              color: black;
+              margin: 4px 0;
+            }
+
+          }
+
+        }
+
+      }
     }
 
 
@@ -185,12 +370,19 @@
 
       }
 
+      .address-list {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 12px;
+      }
+
+      .form-informations {
+
+
+      }
+
+
     }
   }
 
 }
 
-@media only screen and (min-width: 1280px) {
-
-
-}

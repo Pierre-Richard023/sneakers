@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
+use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
@@ -12,6 +14,9 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 
 #[ORM\Entity(repositoryClass: SneakerRepository::class)]
 #[ApiResource(
@@ -22,6 +27,10 @@ use Symfony\Component\Serializer\Annotation\Groups;
     order: ['name'=>'DESC'],
     paginationEnabled: false,
 )]
+#[ApiFilter(
+    SearchFilter::class,properties: ['id'=>'exact']
+)]
+#[Vich\Uploadable]
 class Sneaker
 {
     use SlugTrait;
@@ -35,6 +44,16 @@ class Sneaker
     #[ORM\Column(length: 255)]
     #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?string $name = null;
+
+    #[Vich\UploadableField(mapping: 'sneakerProfiles', fileNameProperty: 'imageName')]
+    private ?File $imageFile = null;
+
+    #[ORM\Column(nullable: true)]
+    #[Groups(['sneaker:list', 'sneaker:item'])]
+    private ?string $imageName = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?\DateTimeImmutable $updatedAt = null;
 
     #[ORM\Column]
     #[Groups(['sneaker:list', 'sneaker:item'])]
@@ -218,4 +237,33 @@ class Sneaker
 
         return $this;
     }
+
+
+
+    public function setImageFile(?File $imageFile = null): void
+    {
+        $this->imageFile = $imageFile;
+
+        if (null !== $imageFile) {
+            // It is required that at least one field changes if you are using doctrine
+            // otherwise the event listeners won't be called and the file is lost
+            $this->updatedAt = new \DateTimeImmutable();
+        }
+    }
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    public function setImageName(?string $imageName): void
+    {
+        $this->imageName = $imageName;
+    }
+
+    public function getImageName(): ?string
+    {
+        return $this->imageName;
+    }
+
 }

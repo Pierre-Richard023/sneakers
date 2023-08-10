@@ -35,7 +35,8 @@ class AddressType extends AbstractType
                 "attr"=>[
                     "class"=>" input ",
                     "placeholder"=>"Société  ",
-                ]
+                ],
+                "required"=>false
             ])
             ->add('address',TextType::class,[
                 "label"=>"Adresse <span class=\"text-danger\">*</span> : ",
@@ -50,7 +51,8 @@ class AddressType extends AbstractType
                 "attr"=>[
                     "class"=>" input ",
                     "placeholder"=>"Complément adresse ",
-                ]
+                ],
+                "required"=>false,
             ])
             ->add('postal_code',TextType::class,[
                 "label"=>"Code Postal <span class=\"text-danger\">*</span> : ",

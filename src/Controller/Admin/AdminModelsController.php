@@ -9,10 +9,16 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
-#[Route('/models')]
+#[Route('admin/models')]
+#[IsGranted('ROLE_ADMIN')]
 class AdminModelsController extends AbstractController
 {
+
+    public function __construct(private SluggerInterface $slugger){}
+
     #[Route('/', name: 'admin.models.index', methods: ['GET'])]
     public function index(ModelsRepository $modelsRepository): Response
     {
@@ -29,6 +35,8 @@ class AdminModelsController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $name=$model->getName();
+            $model->setSlug($this->slugger->slug($name));
             $modelsRepository->save($model, true);
 
             return $this->redirectToRoute('admin.models.index', [], Response::HTTP_SEE_OTHER);

@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CartController!{% endblock %}
+{% block title %}
+Sneaker Pluss | Panier
+{% endblock %}
 
 {% block body %}
 
@@ -17,7 +19,7 @@
                 {% for data in sneakers %}
                     <div class="sneaker-cart" {{ stimulus_target('actions', 'cart') }}>
                         <div class="sneaker-image">
-                            <img src="" alt={{ data.sneaker.name }}/>
+                            <img src="{{ vich_uploader_asset(data.sneaker) }}" alt={{ data.sneaker.name }}/>
                         </div>
                         <div class="sneaker-infs">
                             <div class="details">
@@ -63,7 +65,7 @@
                     <p class="" {{ stimulus_target('actions', 'total') }}>{{ total }} €</p>
                 </div>
                 <div class="resume-actions">
-                    <a href={{ path('home') }}>Passer la commande</a>
+                    <a href={{ path('order') }}>Passer la commande</a>
                 </div>
             </div>
         </div>

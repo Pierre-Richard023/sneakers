@@ -29,17 +29,28 @@ class SneakerImagesFixtures extends Fixture implements DependentFixtureInterface
         $publicDir = $projectDir . '/public';
 
 
-        for ($index = 1; $index < 301; $index++) {
+        for ($index = 1; $index < 17; $index++) {
             $sneaker = $this->getReference('sneaker' . $index);
-            foreach ($pics as $pic) {
+            $brandName = $sneaker->getModel()->getBrands()->getName();
+            $randomNumber = random_int(1, 2);
+
+            for ($i = 1; $i < 4; $i++) {
+
+                $fln = str_replace(' ', '_', $brandName) . '_V' . $randomNumber . '_' . $i;
+
                 $sneakerImage = new SneakersImages();
 
-                $filePath = $publicDir . '/images/models/' . $pic;
-//                $filename = uniqid() . '.jpg';
-//                $file = new UploadedFile($filePath, $filename);
-//                $sneakerImage->setImageName('Nom de l\'image');
+                $filePath = $publicDir . '/images/models/' . $fln . '.webp';
+                $copyPath = $publicDir . '/images/copies/' . basename($filePath);
+                copy($filePath, $copyPath);
 
-                $imageFile = new File($filePath);
+                $imageFile = new UploadedFile(
+                    $copyPath,
+                    basename($copyPath),
+                    'image/png',
+                    null,
+                    true
+                );
 
                 $sneakerImage->setSneaker($sneaker)
                     ->setImageFile($imageFile);

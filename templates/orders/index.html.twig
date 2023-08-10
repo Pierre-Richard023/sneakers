@@ -4,6 +4,11 @@
 
 {% block body %}
 
-    <section class="orders" {{ react_component('OrdersController' ) }}></section>
+    <section class="orders" {{ react_component('OrdersController' ) }}>
+        {% include '_loading.html.twig' %}
+    </section>
+
+
+
 
 {% endblock %}

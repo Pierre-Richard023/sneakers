@@ -20,7 +20,7 @@ class SneakersImages
     #[ORM\JoinColumn(nullable: false)]
     private ?Sneaker $sneaker = null;
 
-    #[Vich\UploadableField(mapping: 'sneakers', fileNameProperty: 'imageName')]
+    #[Vich\UploadableField(mapping: 'sneakerImages', fileNameProperty: 'imageName')]
     private ?File $imageFile = null;
 
     #[ORM\Column(nullable: true)]

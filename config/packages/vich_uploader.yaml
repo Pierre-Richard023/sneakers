@@ -15,9 +15,18 @@ vich_uploader:
             delete_on_remove: true
 
 
-        sneakers:
+        sneakerImages:
             uri_prefix: /images/sneakers
             upload_destination: '%kernel.project_dir%/public/images/sneakers'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+
+        sneakerProfiles:
+            uri_prefix: /images/sneakers/profiles
+            upload_destination: '%kernel.project_dir%/public/images/sneakers/profiles'
             namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
 
             inject_on_load: false

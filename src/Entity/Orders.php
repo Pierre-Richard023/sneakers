@@ -25,6 +25,14 @@ class Orders
     #[ORM\ManyToMany(targetEntity: Sneaker::class)]
     private Collection $sneakers;
 
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Address $address = null;
+
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Transporter $transporter = null;
+
     public function __construct()
     {
         $this->sneakers = new ArrayCollection();
@@ -79,6 +87,30 @@ class Orders
     public function removeSneaker(Sneaker $sneaker): static
     {
         $this->sneakers->removeElement($sneaker);
+
+        return $this;
+    }
+
+    public function getAddress(): ?Address
+    {
+        return $this->address;
+    }
+
+    public function setAddress(?Address $address): static
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    public function getTransporter(): ?Transporter
+    {
+        return $this->transporter;
+    }
+
+    public function setTransporter(?Transporter $transporter): static
+    {
+        $this->transporter = $transporter;
 
         return $this;
     }

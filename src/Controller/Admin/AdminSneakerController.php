@@ -12,10 +12,17 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
-#[Route('admin//sneaker')]
+#[Route('admin/sneaker')]
+#[IsGranted('ROLE_ADMIN')]
 class AdminSneakerController extends AbstractController
 {
+    public function __construct(private SluggerInterface $slugger)
+    {
+    }
+
     #[Route('/', name: 'admin.sneaker.index', methods: ['GET'])]
     public function index(SneakerRepository $sneakerRepository): Response
     {
@@ -41,8 +48,10 @@ class AdminSneakerController extends AbstractController
                 $sneaker->addImage($sneakerImage);
             }
 
+            $name = $sneaker->getName();
 
-            $sneaker->setArticleNumber("ddddbhkkj");
+            $sneaker->setArticleNumber("AAAAAAAADD")
+                ->setSlug($this->slugger->slug($name));;
             $sneakerRepository->save($sneaker, true);
             return $this->redirectToRoute('admin.sneaker.index', [], Response::HTTP_SEE_OTHER);
         }
@@ -82,7 +91,7 @@ class AdminSneakerController extends AbstractController
     #[Route('/{id}', name: 'admin.sneaker.delete', methods: ['POST'])]
     public function delete(Request $request, Sneaker $sneaker, SneakerRepository $sneakerRepository): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$sneaker->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $sneaker->getId(), $request->request->get('_token'))) {
             $sneakerRepository->remove($sneaker, true);
         }
 
@@ -90,17 +99,17 @@ class AdminSneakerController extends AbstractController
     }
 
     #[Route('/{id}', name: 'admin.sneaker.deleteImage', methods: ['DELETE'])]
-    public function deleteImage(Request $request,SneakersImages $sneakersImages, SneakersImagesRepository $sneakersImagesRepository):JsonResponse
+    public function deleteImage(Request $request, SneakersImages $sneakersImages, SneakersImagesRepository $sneakersImagesRepository): JsonResponse
     {
 
-        $data= json_decode($request->getContent(),true);
+        $data = json_decode($request->getContent(), true);
 
-        if($this->isCsrfTokenValid('delete'.$sneakersImages->getId(), $data['_token'])){
-            $sneakersImagesRepository->remove($sneakersImages,true);
+        if ($this->isCsrfTokenValid('delete' . $sneakersImages->getId(), $data['_token'])) {
+            $sneakersImagesRepository->remove($sneakersImages, true);
 
-            return new JsonResponse(['success'=>true],200);
+            return new JsonResponse(['success' => true], 200);
         }
 
-        return new JsonResponse(['error'=>'Token invalide'],400);
+        return new JsonResponse(['error' => 'Token invalide'], 400);
     }
 }

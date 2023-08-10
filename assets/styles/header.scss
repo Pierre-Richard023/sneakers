@@ -11,6 +11,8 @@ header {
     padding: 14px;
     transition: all .50s ease;
 
+    border-bottom: 1px solid $gray-color;
+
     .logo {
       height: 100%;
       img{
@@ -83,12 +85,6 @@ header {
 
 /* lg */
 @media only screen and (min-width: 1024px) {
-
-}
-
-/* xl */
-@media only screen and (min-width: 1280px) {
-
   header {
 
     nav {
@@ -96,6 +92,8 @@ header {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       grid-gap: 10px;
+      align-items: center;
+      padding: 0 120px;
 
       .menu {
 

@@ -17,7 +17,7 @@ class ModelsFixtures extends Fixture implements DependentFixtureInterface
 
 
         $brands = [
-            "Nike", "Adidas", "Air Jordan", "New Balance", "Yeezy", "Asics"
+            "Nike","Jordan", "New Balance", "Reebok"
         ];
 
         $index=1;
@@ -25,7 +25,7 @@ class ModelsFixtures extends Fixture implements DependentFixtureInterface
 
         foreach ($brands as $brand) {
 
-            for ($i = 0; $i < 5; $i++) {
+            for ($i = 0; $i < 2; $i++) {
 
                 $name=$brand." Models  " . $i;
                 $models = new Models();

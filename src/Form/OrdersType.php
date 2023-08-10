@@ -2,7 +2,11 @@
 
 namespace App\Form;
 
+use App\Entity\Address;
 use App\Entity\Orders;
+use App\Entity\Transporter;
+use App\Entity\User;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -11,17 +15,29 @@ class OrdersType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
+        $user = $options['user'];
+
         $builder
-            ->add('number')
-            ->add('customer')
-            ->add('sneakers')
-        ;
+            ->add('address', EntityType::class, [
+                'class' => Address::class,
+                'label' => false,
+                'multiple' => false,
+                'choices' => $user->getDeliveryAddress(),
+                'expanded' => true,
+            ])
+            ->add('transporter', EntityType::class, [
+                'class' => Transporter::class,
+                'label' => false,
+                'multiple' => false,
+                'expanded' => true,
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
             'data_class' => Orders::class,
+            'user' => User::class,
         ]);
     }
 }

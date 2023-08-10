@@ -72,11 +72,20 @@ class SneakerType extends AbstractType
                     'class' => 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '
                 ],
             ])
+            ->add('imageFile', FileType::class, [
+                'required' => false,
+                'attr' => [
+                    'id'=>"image-upload",
+                    'class' => "block w-full text-sm text-gray-900 border border-gray-300 cursor-pointer bg-gray-50 focus:outline-none",
+                    'aria-describedby'=>"file_input_help",
+
+                ],
+            ])
             ->add('images',FileType::class,[
                 'label' => 'Images',
                 'multiple' => true,
                 'mapped' => false,
-                'required' => true,
+                'required' => false,
                 'attr' => [
                     'class' => "block w-full text-sm text-gray-900 border border-gray-300 cursor-pointer bg-gray-50 focus:outline-none",
                     'aria-describedby'=>"file_input_help",

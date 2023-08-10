@@ -154,4 +154,20 @@ class CartController extends AbstractController
         ]);
     }
 
+    #[Route('/panier/details', name: 'cart.get')]
+    public function getSession(SessionInterface $session): JsonResponse
+    {
+        $cart = $session->get('cart', []);
+        $total = 0;
+
+        foreach ($cart as $key => $qty) {
+            $sneaker = $this->sneakerRepository->find($key);
+            $total += $sneaker->getPrice() * $qty;
+        }
+
+        return new JsonResponse([
+            'total' => $total,
+            'cart' => $cart
+        ]);
+    }
 }

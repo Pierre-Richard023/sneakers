@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import InformationsPages from "../pages/informationsPages/informationsPages";
-import OrdersDetailsPages from "../pages/ordersDetailsPages/ordersDetailsPages";
-import PaymentsPages from "../pages/paymentsPages/paymentsPages";
+import {Provider} from "react-redux";
+import store from "../store/store";
+import OrderPages from "../pages/OrderPages/OrderPages";
 
 const OrdersController = () => {
 
@@ -9,25 +9,10 @@ const OrdersController = () => {
 
 
     return (
-        <>
 
-            <p>Paiement de chaussures</p>
-
-            {
-                step === 1 &&
-                <InformationsPages/>
-            }
-
-            {
-                step === 2 &&
-                <OrdersDetailsPages/>
-            }
-
-            {
-                step === 3 &&
-                <PaymentsPages/>
-            }
-        </>
+        <Provider store={store}>
+            <OrderPages/>
+        </Provider>
     )
 }
 
