@@ -6,8 +6,9 @@ const Address = () => {
 
     const dispatch = useDispatch()
     const address = useSelector(state => state.order.address)
-    const addressChoose=useSelector(state => state.order.addressChoose)
+    const addressChoose = useSelector(state => state.order.addressChoose)
 
+    console.log(address)
 
     return (
         <>
@@ -31,9 +32,9 @@ const Address = () => {
                         <li key={idx}>
                             <input type={"radio"} name={"address"} id={"address" + idx} required={true}
                                    defaultChecked={addressChoose === val.id} readOnly
-                                   onClick={(e)=>dispatch(chooseAddress(val.id))}
+                                   onClick={(e) => dispatch(chooseAddress(val.id))}
                             />
-                            <label htmlFor={"address" + idx} >
+                            <label htmlFor={"address" + idx}>
                                 <div className={"address-details"}>
                                     {val.first_name + ' ' + val.last_name} <br/>
                                     {

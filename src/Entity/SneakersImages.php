@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\SneakersImagesRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 #[ORM\Entity(repositoryClass: SneakersImagesRepository::class)]
@@ -21,6 +22,10 @@ class SneakersImages
     private ?Sneaker $sneaker = null;
 
     #[Vich\UploadableField(mapping: 'sneakerImages', fileNameProperty: 'imageName')]
+    #[Assert\File(
+        extensions: ['jpg', 'jpeg','png'],
+        extensionsMessage: 'Veuillez insérer une image valide, s`\'il vous plaît.',
+    )]
     private ?File $imageFile = null;
 
     #[ORM\Column(nullable: true)]

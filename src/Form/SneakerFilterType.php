@@ -31,8 +31,6 @@ class SneakerFilterType extends AbstractType
                 'choice_label'=>'name',
                 'multiple'=>true,
                 'expanded' => true,
-
-
             ])
             ->add('size', ChoiceType::class, [
                 'label' => false,

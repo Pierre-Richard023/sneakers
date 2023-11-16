@@ -9,6 +9,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 #[ORM\Entity(repositoryClass: BrandsRepository::class)]
@@ -29,6 +30,10 @@ class Brands
     private Collection $models;
 
     #[Vich\UploadableField(mapping: 'brands', fileNameProperty: 'imageName')]
+    #[Assert\File(
+        extensions: ['jpg', 'jpeg','png'],
+        extensionsMessage: 'Veuillez insérer une image valide, s`\'il vous plaît.',
+    )]
     private ?File $imageFile = null;
 
     #[ORM\Column(nullable: true)]

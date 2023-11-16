@@ -31,8 +31,8 @@ class UserFixtures extends Fixture
 
         $admin = new User();
         $admin->setEmail("admin@test.com")
-            ->setClientNumber("CLI002456")
-            ->setFirstName("John")
+            ->setClientNumber("CLI002457")
+            ->setFirstName("Jane")
             ->setLastName("Doe")
             ->setPassword($this->hasher->hashPassword($user,"Azerty_0"))
             ->setIsVerified(true)

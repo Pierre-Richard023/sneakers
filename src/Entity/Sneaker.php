@@ -13,6 +13,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -21,14 +22,14 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 #[ORM\Entity(repositoryClass: SneakerRepository::class)]
 #[ApiResource(
     operations: [
-        new Get(normalizationContext: ['groups'=>'sneaker:item']),
-        new GetCollection(normalizationContext: ['groups'=>'sneaker:list'])
+        new Get(normalizationContext: ['groups' => 'sneaker:item']),
+        new GetCollection(normalizationContext: ['groups' => 'sneaker:list'])
     ],
-    order: ['name'=>'DESC'],
+    order: ['name' => 'DESC'],
     paginationEnabled: false,
 )]
 #[ApiFilter(
-    SearchFilter::class,properties: ['id'=>'exact']
+    SearchFilter::class, properties: ['id' => 'exact']
 )]
 #[Vich\Uploadable]
 class Sneaker
@@ -46,6 +47,10 @@ class Sneaker
     private ?string $name = null;
 
     #[Vich\UploadableField(mapping: 'sneakerProfiles', fileNameProperty: 'imageName')]
+    #[Assert\File(
+        extensions: ['jpg', 'jpeg','png'],
+        extensionsMessage: 'Veuillez insérer une image valide, s`\'il vous plaît.',
+    )]
     private ?File $imageFile = null;
 
     #[ORM\Column(nullable: true)]
@@ -83,7 +88,7 @@ class Sneaker
     #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?string $details = null;
 
-    #[ORM\OneToMany(mappedBy: 'sneaker', targetEntity: SneakersImages::class, orphanRemoval: true, cascade : ["persist"])]
+    #[ORM\OneToMany(mappedBy: 'sneaker', targetEntity: SneakersImages::class, orphanRemoval: true, cascade: ["persist"])]
     private Collection $images;
 
     #[ORM\ManyToOne]
@@ -237,7 +242,6 @@ class Sneaker
 
         return $this;
     }
-
 
 
     public function setImageFile(?File $imageFile = null): void

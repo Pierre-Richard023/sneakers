@@ -50,7 +50,7 @@ class SneakerRepository extends ServiceEntityRepository
     }
 
 
-    public function getSneakersByFilterAndPages(SneakerFilter $filter,array $brandFilters = null, int $size = null)
+    public function getSneakersByFilterAndPages(SneakerFilter $filter)
     {
 
         $query = $this->createQueryBuilder('s')
