@@ -4,17 +4,33 @@
 
 {% block body %}
 
-    <section class="item-center">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-            <p>
-                Si un compte correspondant à votre adresse email existe, un email vient d'être envoyé contenant un lien que vous pouvez utiliser pour réinitialiser votre mot de passe.
-                Ce lien expirera dans<strong> {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }} </strong>.
-            </p>
-            <p>Si vous ne recevez pas d'email, veuillez vérifier votre dossier spam ou <a class="link secondary" href="{{ path('forgot.password.request') }}">essayer à nouveau</a>.</p>
+    <section class="mx-auto max-w-screen-xl bg-gray-50 my-4 ">
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0">
+            <a href="{{ path('home') }}" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 ">
+                <img class="w-8 h-8 mr-2" src="{{ asset('images/logo.svg') }}"
+                     alt="logo">
+                Sneaker Pluss
+            </a>
+            <div class="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-xl xl:p-0  ">
+                <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
 
+                    <p>
+                        Si un compte correspondant à votre adresse email existe, un email vient d'être envoyé contenant un lien que vous pouvez utiliser pour réinitialiser votre mot de passe.
+                        Ce lien expirera dans<strong> {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }} </strong>.
+                    </p>
+                    <p>
+                        Si vous ne recevez pas d'email, veuillez vérifier votre dossier spam ou
+                        <a class="text-secondary-normal" href="{{ path('forgot.password.request') }}">
+                            essayer à nouveau
+                        </a>.
+                    </p>
+
+
+                </div>
+
+            </div>
         </div>
     </section>
-
 
 
 {% endblock %}

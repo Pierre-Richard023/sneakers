@@ -1,32 +1,119 @@
-<header>
-    <nav {{ stimulus_controller('menu') }} >
-        <a href="{{ path('home') }}" class="logo">
-            <img src="{{ asset('images/logo.svg') }}" alt="logo Sneaker Pluss"/>
-        </a>
+<nav class="bg-white  antialiased">
+    <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0 py-4 mb-4 border-b-2 border-b-gray-700 ">
+        <div class="flex items-center justify-between">
 
-        <div class="menu" {{ stimulus_target('menu', 'menu') }}>
-            <ul class="nav-menu">
+            <div class="flex items-center space-x-8">
+                <div class="shrink-0">
+                    <a href="{{ path('home') }}" class="logo">
+                        <img class="block w-auto h-8 " src="{{ asset('images/logo.svg') }}" alt="logo Sneaker Pluss"/>
+                    </a>
+                </div>
+
+                <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
+                    <li>
+                        <a href="{{ path('home') }}" title=""
+                           class="flex text-sm font-medium text-gray-900 hover:text-secondary-normal">
+                            Accueil
+                        </a>
+                    </li>
+                    <li class="shrink-0">
+                        <a href="{{ path('collections.index') }}" title=""
+                           class="flex text-sm font-medium text-gray-900 hover:text-secondary-normal  ">
+                            Sneakers
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex items-center lg:space-x-2">
+
+                <button id="myCartDropdownButton1" data-dropdown-toggle="myCartDropdown1" type="button"
+                        class="inline-flex items-center rounded-lg justify-center p-2 hover:text-secondary-normal text-sm font-medium leading-none text-gray-900 ">
+                      <span class="sr-only">
+                        panier
+                      </span>
+                    {{ ux_icon('lucide:shopping-cart',{ class:'h-6 w-6'} ) }}
+                </button>
+
+                {% include '__cart.html.twig' %}
+
+                <a href="{{ path('favorites.index') }}"
+                        class="inline-flex items-center rounded-lg justify-center p-2 hover:text-secondary-normal  text-sm font-medium leading-none text-gray-900 ">
+                      <span class="sr-only">
+                        listes des favoris
+                      </span>
+                    {{ ux_icon('lucide:heart',{ class:'h-6 w-6'} ) }}
+
+                </a>
+
+                {% if app.user == false %}
+                    <a href="{{ path('login') }}"
+                       class="inline-flex items-center rounded-lg justify-center p-2 hover:text-secondary-normal  text-sm font-medium leading-none text-gray-900 ">
+                      <span class="sr-only">
+                        utilisateur
+                      </span>
+                        {{ ux_icon('lucide:user',{ class:'h-6 w-6'} ) }}
+
+                    </a>
+
+                {% else %}
+                    <button id="userDropdownButton1" data-dropdown-toggle="userDropdown1" type="button"
+                            class="inline-flex items-center rounded-lg justify-center p-2 hover:text-secondary-normal  text-sm font-medium leading-none text-gray-900 ">
+                    <span class="sr-only">
+                        utilisateur
+                    </span>
+                        {{ ux_icon('lucide:user',{ class:'h-6 w-6'} ) }}
+
+                    </button>
+
+                    <div id="userDropdown1"
+                         class="hidden z-10 w-56 divide-y divide-gray-100 overflow-hidden overflow-y-auto rounded-lg bg-white antialiased shadow  ">
+                        <ul class="p-2 text-start text-sm font-medium text-gray-900 ">
+                            <li><a href="{{ path('customer.profile') }}" title=""
+                                   class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 ">
+                                    Mon compte </a></li>
+                            <li><a href="{{ path('home') }}" title=""
+                                   class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 ">
+                                    Paramètres </a></li>
+                            <li><a href="{{ path('favorites.index') }}" title=""
+                                   class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 ">
+                                    Mes Favoris </a></li>
+                        </ul>
+                        <div class="p-2 text-sm font-medium text-gray-900 ">
+                            <a href="{{ path('logout') }}" title=""
+                               class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 ">
+                                Se déconnecter</a>
+                        </div>
+                    </div>
+                {% endif %}
+
+
+
+                <button type="button" data-collapse-toggle="ecommerce-navbar-menu-1"
+                        aria-controls="ecommerce-navbar-menu-1" aria-expanded="false"
+                        class="inline-flex lg:hidden items-center justify-center hover:bg-gray-100 rounded-md  p-2 text-gray-900 ">
+                      <span class="sr-only">
+                            Ouvrir le menu
+                      </span>
+                    {{ ux_icon('lucide:align-justify',{ class:'h-6 w-6'} ) }}
+
+                </button>
+            </div>
+        </div>
+
+        <div id="ecommerce-navbar-menu-1" class="bg-gray-50   border border-gray-200 rounded-lg py-3 hidden px-4 mt-4">
+            <ul class="text-gray-900  text-sm font-medium  space-y-3">
                 <li>
-                    <a href="{{ path('home') }}" class="active">Accueil</a>
+                    <a href="#" class="hover:text-secondary-normal ">Accueil</a>
                 </li>
                 <li>
-                    <a href="{{ path('collections.index') }}">Sneakers </a>
+                    <a href="#" class="hover:text-secondary-normal ">Sneakers</a>
                 </li>
             </ul>
         </div>
+    </div>
+</nav>
 
-        <div class="main">
-            <a href="{{ path('customer.profile') }}">
-                <i class="ri-user-fill"></i>
-            </a>
-            <a href="{{ path('cart') }}">
-                <i class="ri-shopping-cart-2-fill"></i>
-            </a>
-            <a href="{{ path('favorites') }}">
-                <i class="ri-heart-line"></i>
-            </a>
-            <div class="ri-menu-line"
-                 id="menu-icon" {{ stimulus_action('menu', 'open', 'click') }} {{ stimulus_target('menu', 'button') }}></div>
-        </div>
-    </nav>
-</header>
+
+
+

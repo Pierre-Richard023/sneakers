@@ -23,7 +23,7 @@ class FavoritesController extends AbstractController
     }
 
 
-    #[Route('/liste-de-souhaits', name: 'favorites', methods: ['GET'])]
+    #[Route('/liste-de-souhaits', name: 'favorites.index', methods: ['GET'])]
     public function index(): Response
     {
 

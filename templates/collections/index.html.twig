@@ -1,45 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    Collections
+    {{ parent() }} - Collections
 {% endblock %}
 
 {% block body %}
-    <h1>Toutes les Sneakers</h1>
 
-    <section class="collections">
-
-        <div class="collections-filter" {{ stimulus_controller('modal') }}>
-            <div class="filter-head">
-                <span>
-                    {{ sneakers|length }} Résultats
-                </span>
-                <button {{ stimulus_action('modal', 'open','click') }}>
-                    <span>Filtre</span>
-                    <i class="ri-equalizer-line"></i>
-                </button>
-            </div>
-            {% include 'collections/_filter.html.twig' %}
-        </div>
-
-        <div class="collections-list">
-
-            {% for sneaker in sneakers %}
-                <a href="{{ path('sneaker.show',{ slug : sneaker.slug }) }}">
-                    <div class="product">
-                        <div class="product-image">
-                            <img src=" {{ vich_uploader_asset(sneaker) }}" alt="{{ sneaker.name }} logo"/>
-                        </div>
-                        <div class="product-info">
-                            <h4 class="product-title"> {{ sneaker.name }}</h4>
-                            <p class="product-price">{{ sneaker.price }} €</p>
-                        </div>
-                    </div>
-                </a>
-            {% endfor %}
-
-            {{ knp_pagination_render(sneakers,'collections/_pagination.html.twig') }}
-        </div>
+    <section class="bg-gray-50 py-8 antialiased dark:bg-gray-900 md:py-12" {{ react_component('CollectionsController' ) }}>
+        {% include '_loading.html.twig' %}
     </section>
 
 {% endblock %}

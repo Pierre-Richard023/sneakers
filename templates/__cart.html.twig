@@ -1,0 +1,33 @@
+<div id="myCartDropdown1"
+     class="hidden z-10 mx-auto max-w-sm space-y-4 overflow-hidden rounded-lg bg-white p-4 antialiased shadow-lg ">
+
+    <div class="grid grid-cols-2">
+        <div>
+            <a href="#"
+               class="truncate text-sm font-semibold leading-none text-gray-900  hover:underline">Apple
+                iMac 20"</a>
+            <p class="mt-0.5 truncate text-sm font-normal text-gray-500 ">$8,997</p>
+        </div>
+
+        <div class="flex items-center justify-end gap-6">
+            <p class="text-sm font-normal leading-none text-gray-500 ">Qty: 3</p>
+
+            <button data-tooltip-target="tooltipRemoveItem5b" type="button"
+                    class="text-red-600 hover:text-red-700  ">
+                <span class="sr-only"> Supprimer </span>
+                {{ ux_icon('lucide:trash-2',{ class : 'h-4 w-4'}) }}
+            </button>
+            <div id="tooltipRemoveItem5b" role="tooltip"
+                 class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 ">
+                Supprimer l'élément
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+        </div>
+    </div>
+
+    <a href="{{ path('cart') }}" title=""
+       class="mb-2 me-2 inline-flex w-full items-center justify-center rounded-lg bg-secondary-normal px-5 py-2.5 text-sm font-medium text-white hover:bg-secondary-normal focus:outline-none focus:ring-4 focus:ring-secondary-normal"
+       role="button">
+        Voir le panier
+    </a>
+</div>

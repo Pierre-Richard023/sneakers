@@ -26,7 +26,8 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
         new GetCollection(normalizationContext: ['groups' => 'sneaker:list'])
     ],
     order: ['name' => 'DESC'],
-    paginationEnabled: false,
+    paginationItemsPerPage: 10,
+//    paginationEnabled: false,
 )]
 #[ApiFilter(
     SearchFilter::class, properties: ['id' => 'exact']
@@ -54,7 +55,6 @@ class Sneaker
     private ?File $imageFile = null;
 
     #[ORM\Column(nullable: true)]
-    #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?string $imageName = null;
 
     #[ORM\Column(nullable: true)]
@@ -270,4 +270,13 @@ class Sneaker
         return $this->imageName;
     }
 
+    #[Groups(['sneaker:list', 'sneaker:item'])]
+    public function getProfileImageUrl(): ?string
+    {
+        if ($this->imageName) {
+            return '/images/sneakers/profiles/' . $this->imageName;
+        }
+
+        return null;
+    }
 }
