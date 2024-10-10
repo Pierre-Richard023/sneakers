@@ -26,7 +26,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
         new GetCollection(normalizationContext: ['groups' => 'sneaker:list'])
     ],
     order: ['name' => 'DESC'],
-    paginationItemsPerPage: 10,
+    paginationItemsPerPage: 12,
 //    paginationEnabled: false,
 )]
 #[ApiFilter(

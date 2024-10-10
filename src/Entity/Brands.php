@@ -2,6 +2,9 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
 use App\Entity\Trait\SlugTrait;
 use App\Repository\BrandsRepository;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -9,11 +12,19 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 #[ORM\Entity(repositoryClass: BrandsRepository::class)]
 #[Vich\Uploadable]
+#[ApiResource(
+    operations: [
+        new GetCollection(normalizationContext: ['groups' => 'brand:list'])
+    ],
+    order: ['name' => 'DESC'],
+    paginationEnabled: false,
+)]
 class Brands
 {
     use SlugTrait;
@@ -21,9 +32,11 @@ class Brands
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['brand:list'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['brand:list'])]
     private ?string $name = null;
 
     #[ORM\OneToMany(mappedBy: 'brands', targetEntity: Models::class)]
@@ -31,7 +44,7 @@ class Brands
 
     #[Vich\UploadableField(mapping: 'brands', fileNameProperty: 'imageName')]
     #[Assert\File(
-        extensions: ['jpg', 'jpeg','png'],
+        extensions: ['jpg', 'jpeg', 'png'],
         extensionsMessage: 'Veuillez insérer une image valide, s`\'il vous plaît.',
     )]
     private ?File $imageFile = null;
