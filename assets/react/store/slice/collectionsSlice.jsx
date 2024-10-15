@@ -3,8 +3,8 @@ import {getBrandsService, getSneakersService} from "../../services/collections";
 import axios from "axios";
 
 
-export const getSneakers = createAsyncThunk('collections/getSneakers', async (page) => {
-    return await getSneakersService(page)
+export const getSneakers = createAsyncThunk('collections/getSneakers', async (filter) => {
+    return await getSneakersService(filter.filter, filter.page, filter.sort)
 })
 
 export const getBrands = createAsyncThunk('collections/getBrands', async () => {
@@ -32,12 +32,21 @@ export const collectionsSlice = createSlice({
     name: "collections",
     initialState: {
         loading: false,
-        loadingSneaker:false,
-        loadingAlert:false,
+        loadingSneaker: false,
+        loadingAlert: false,
         sneakers: [],
-        brands:[],
+        brands: [],
+        filter: "",
+        brandsFilter: [],
+        sneakerSizeFilter: null,
+        sneakerColorFilter: [],
         currentPage: 1,
         nbPages: 1,
+        sortBy: {
+            champ: 'release_date',
+            by: 'desc',
+        },
+        needSearch: true,
         hasData: false,
         alertAddFavorite: false,
         messageAlert: "",
@@ -49,23 +58,46 @@ export const collectionsSlice = createSlice({
         hideAddFavorites: (state) => {
             state.alertAddFavorite = false
         },
-
         nextPages: (state) => {
-            if (state.currentPage < state.nbPages)
+            if (state.currentPage < state.nbPages) {
                 state.currentPage = state.currentPage + 1
+                state.needSearch = true
+            }
         },
         previousPages: (state) => {
-            if (state.currentPage > 1)
+            if (state.currentPage > 1) {
                 state.currentPage = state.currentPage - 1
+                state.needSearch = true
+            }
         },
         goPages: (state, action) => {
             if (Number.isInteger(action.payload))
                 if (action.payload !== state.currentPage)
-                    if (action.payload <= state.nbPages && action.payload >= 1)
+                    if (action.payload <= state.nbPages && action.payload >= 1) {
                         state.currentPage = action.payload
+                        state.needSearch = true
+                    }
+
         },
+        sortBy: (state, action) => {
 
+            if (action.payload === 'increasing_price') {
+                state.sortBy.champ = 'price'
+                state.sortBy.by = 'asc'
+            } else if (action.payload === 'decreasing_price') {
+                state.sortBy.champ = 'price'
+                state.sortBy.by = 'desc'
+            } else if (action.payload === 'most_recent') {
+                state.sortBy.champ = 'date'
+                state.sortBy.by = 'desc'
+            }
+            state.needSearch = true
 
+        },
+        setFilter: (state, action) => {
+            state.filter = action.payload
+            state.needSearch = true
+        }
     },
     extraReducers: (builder) => {
 
@@ -74,14 +106,10 @@ export const collectionsSlice = createSlice({
         })
         builder.addCase(getSneakers.fulfilled, (state, action) => {
             state.loadingSneaker = false
+            state.needSearch = false
             state.sneakers = action.payload['hydra:member']
-
-            if (!state.hasData) {
-                let nbRst = action.payload['hydra:totalItems']
-                state.nbPages =Math.ceil(nbRst / 12)
-                state.hasData = true
-            }
-
+            let nbRst = action.payload['hydra:totalItems']
+            state.nbPages = Math.ceil(nbRst / 12)
         })
 
         builder.addCase(getBrands.pending, (state, action) => {
@@ -89,7 +117,7 @@ export const collectionsSlice = createSlice({
         })
         builder.addCase(getBrands.fulfilled, (state, action) => {
             state.loading = false
-            state.brands=action.payload['hydra:member']
+            state.brands = action.payload['hydra:member']
         })
 
 
@@ -120,7 +148,8 @@ export const collectionsSlice = createSlice({
 
 export const {
     hideAddFavorites, nextPages,
-    previousPages, goPages
+    previousPages, goPages,
+    sortBy, setFilter
 } = collectionsSlice.actions
 
 

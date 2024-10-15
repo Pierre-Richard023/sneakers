@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Entity\Trait\SlugTrait;
 use App\Repository\ModelsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: ModelsRepository::class)]
 class Models
@@ -17,6 +18,7 @@ class Models
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?string $name = null;
 
     #[ORM\ManyToOne(inversedBy: 'models')]

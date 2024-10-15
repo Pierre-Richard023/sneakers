@@ -1,7 +1,12 @@
 import React from 'react';
 import FilterMenu from "../filterMenu/filterMenu";
+import {useDispatch} from "react-redux";
+import {sortBy} from "../../store/slice/collectionsSlice";
 
 const Filter = () => {
+
+    const dispatch = useDispatch()
+
 
 
     return (
@@ -101,28 +106,28 @@ const Filter = () => {
                         aria-labelledby="sortDropdownButton"
                     >
                         <li>
-                            <a
-                                href="#"
+                            <button
+                                type="button" onClick={(e) => dispatch(sortBy('most_recent'))}
                                 className="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900   "
                             >
-                                Le plus récent
-                            </a>
+                                Les plus récents
+                            </button>
                         </li>
                         <li>
-                            <a
-                                href="#"
+                            <button
+                                type="button" onClick={(e) => dispatch(sortBy('increasing_price'))}
                                 className="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900   "
                             >
                                 Prix croissant
-                            </a>
+                            </button>
                         </li>
                         <li>
-                            <a
-                                href="#"
+                            <button
+                                type="button" onClick={(e) => dispatch(sortBy('decreasing_price'))}
                                 className="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900   "
                             >
                                 Prix décroissant
-                            </a>
+                            </button>
                         </li>
                     </ul>
                 </div>

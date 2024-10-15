@@ -2,12 +2,14 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Doctrine\Orm\Filter\OrderFilter;
 use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
 use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
 use App\Entity\Trait\SlugTrait;
+use App\Filter\BrandFilter;
 use App\Repository\SneakerRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -25,12 +27,21 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
         new Get(normalizationContext: ['groups' => 'sneaker:item']),
         new GetCollection(normalizationContext: ['groups' => 'sneaker:list'])
     ],
-    order: ['name' => 'DESC'],
+    order: ['release_date' => 'desc'],
     paginationItemsPerPage: 12,
-//    paginationEnabled: false,
 )]
 #[ApiFilter(
-    SearchFilter::class, properties: ['id' => 'exact']
+    SearchFilter::class,
+    properties: [
+        'id' => 'exact',
+        'shoe_size' => 'exact',
+        'color' => 'exact',
+//        'model.brands.name' => 'ipartial'
+    ]
+)]
+#[ApiFilter(BrandFilter::class, properties: ["brands"])]
+#[ApiFilter(
+    OrderFilter::class, properties: ['price', 'date'], arguments: ['orderParameterName' => 'order']
 )]
 #[Vich\Uploadable]
 class Sneaker
@@ -49,7 +60,7 @@ class Sneaker
 
     #[Vich\UploadableField(mapping: 'sneakerProfiles', fileNameProperty: 'imageName')]
     #[Assert\File(
-        extensions: ['jpg', 'jpeg','png'],
+        extensions: ['jpg', 'jpeg', 'png'],
         extensionsMessage: 'Veuillez insérer une image valide, s`\'il vous plaît.',
     )]
     private ?File $imageFile = null;
@@ -93,6 +104,7 @@ class Sneaker
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
+    #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?Models $model = null;
 
     public function __construct()

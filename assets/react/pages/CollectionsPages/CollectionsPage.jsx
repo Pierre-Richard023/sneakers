@@ -13,7 +13,10 @@ const CollectionsPage = () => {
     const dispatch = useDispatch()
 
     const sneakers = useSelector(state => state.collections.sneakers)
+    const sortBy = useSelector(state => state.collections.sortBy)
     const currentPage = useSelector(state => state.collections.currentPage)
+    const filter = useSelector(state => state.collections.filter)
+    const needSearch = useSelector(state => state.collections.needSearch)
     const loadingSneaker = useSelector(state => state.collections.loadingSneaker)
     const alertAddFavorites = useSelector(state => state.collections.alertAddFavorite)
     const messageAlert = useSelector(state => state.collections.messageAlert)
@@ -22,9 +25,12 @@ const CollectionsPage = () => {
 
     useEffect(() => {
         dispatch(getBrands())
-        dispatch(getSneakers(currentPage))
-    }, [currentPage]);
+    }, []);
 
+    useEffect(() => {
+        if (needSearch)
+            dispatch(getSneakers({page: currentPage, filter: filter, sort: sortBy}))
+    }, [currentPage, sortBy, filter]);
 
     return (
         <>
