@@ -39,9 +39,6 @@ class Brands
     #[Groups(['brand:list'])]
     private ?string $name = null;
 
-    #[ORM\OneToMany(mappedBy: 'brands', targetEntity: Models::class)]
-    private Collection $models;
-
     #[Vich\UploadableField(mapping: 'brands', fileNameProperty: 'imageName')]
     #[Assert\File(
         extensions: ['jpg', 'jpeg', 'png'],
@@ -54,11 +51,6 @@ class Brands
 
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $updatedAt = null;
-
-    public function __construct()
-    {
-        $this->models = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -73,36 +65,6 @@ class Brands
     public function setName(string $name): static
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Models>
-     */
-    public function getModels(): Collection
-    {
-        return $this->models;
-    }
-
-    public function addModel(Models $model): static
-    {
-        if (!$this->models->contains($model)) {
-            $this->models->add($model);
-            $model->setBrands($this);
-        }
-
-        return $this;
-    }
-
-    public function removeModel(Models $model): static
-    {
-        if ($this->models->removeElement($model)) {
-            // set the owning side to null (unless already changed)
-            if ($model->getBrands() === $this) {
-                $model->setBrands(null);
-            }
-        }
 
         return $this;
     }

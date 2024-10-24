@@ -22,8 +22,7 @@ class BrandFilter extends AbstractFilter
         $rootAlias = $queryBuilder->getRootAliases()[0];
 
         $queryBuilder
-            ->innerJoin(sprintf('%s.model', $rootAlias), 'm' )
-            ->innerJoin('m.brands', 'b')
+            ->innerJoin(sprintf('%s.brands', $rootAlias), 'b' )
             ->andWhere(sprintf('b.id IN (:%s)', $parameterName))
             ->setParameter($parameterName, $brands);
     }

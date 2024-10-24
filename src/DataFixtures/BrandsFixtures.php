@@ -5,54 +5,54 @@ namespace App\DataFixtures;
 use App\Entity\Brands;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
 class BrandsFixtures extends Fixture
 {
 
-    public function __construct(private SluggerInterface $slugger, private KernelInterface $kernel)
+    public function __construct(private SluggerInterface $slugger, private ParameterBagInterface $parameterBag)
     {
     }
 
     public function load(ObjectManager $manager): void
     {
-        $brands = [
-            "Nike","Jordan", "New Balance", "Reebok"
-        ];
+        $jsonFile = $this->parameterBag->get('kernel.project_dir') . '/public/utils/sneakers.json';
+        $jsonData = file_get_contents($jsonFile);
+        $data = json_decode($jsonData, true);
 
-        $i = 1;
+        if (isset($data['brands'])) {
 
-        $projectDir = $this->kernel->getProjectDir();
-        $publicDir = $projectDir . '\public';
-
-
-        foreach ($brands as $b) {
-
-            $filePath = $publicDir . '/images/Logo/' . str_replace(' ', '_', $b) . '.png';
-            $copyPath = $publicDir . '/images/copies/' . basename($filePath);
-            copy($filePath, $copyPath);
-
-            $imageFile = new UploadedFile(
-                $copyPath,
-                basename($copyPath),
-                'image/png',
-                null,
-                true
-            );
+            $publicDir = $this->parameterBag->get('kernel.project_dir') . "/public";
 
 
-            $brand = new Brands();
-            $brand->setName($b)
-                ->setSlug($this->slugger->slug($b))
-                ->setImageFile($imageFile);
-            $this->addReference('brands' . $i, $brand);
-            $manager->persist($brand);
+            foreach ($data['brands'] as $b) {
 
-            $i++;
+                $filePath = $publicDir . '/utils/Sneakers/' . $b['logo'];
+                $extension = pathinfo($filePath, PATHINFO_EXTENSION);
+                $copyPath = $publicDir . '/images/copies/' . basename($filePath);
+                copy($filePath, $copyPath);
+
+                $imageFile = new UploadedFile(
+                    $copyPath,
+                    basename($copyPath),
+                    'image/' . $extension,
+                    null,
+                    true
+                );
+
+                $brand = new Brands();
+                $brand->setName($b['name'])
+                    ->setSlug($this->slugger->slug($b['name']))
+                    ->setImageFile($imageFile);
+                $this->addReference('brands_' . $b['id'], $brand);
+                $manager->persist($brand);
+            }
+
+            $manager->flush();
+
         }
 
-        $manager->flush();
     }
 }

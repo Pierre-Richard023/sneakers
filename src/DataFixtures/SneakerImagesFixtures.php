@@ -6,58 +6,61 @@ use App\Entity\SneakersImages;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Symfony\Component\HttpKernel\KernelInterface;
 
 class SneakerImagesFixtures extends Fixture implements DependentFixtureInterface
 {
 
-    public function __construct(private KernelInterface $kernel)
+    public function __construct(private ParameterBagInterface $parameterBag)
     {
 
     }
 
     public function load(ObjectManager $manager): void
     {
+        $jsonFile = $this->parameterBag->get('kernel.project_dir') . '/public/utils/sneakers.json';
+        $jsonData = file_get_contents($jsonFile);
+        $data = json_decode($jsonData, true);
 
-        $pics = [
-            'models_1.jpg', 'models_2.jpg', 'models_3.jpg', 'models_4.jpg', 'models_5.jpg'
-        ];
+        if (isset($data['sneakers'])) {
 
-        $projectDir = $this->kernel->getProjectDir();
-        $publicDir = $projectDir . '/public';
+            $publicDir = $this->parameterBag->get('kernel.project_dir') . "/public";
+
+            foreach ($data['sneakers'] as $sneaker) {
 
 
-        for ($index = 1; $index < 17; $index++) {
-            $sneaker = $this->getReference('sneaker' . $index);
-            $brandName = $sneaker->getModel()->getBrands()->getName();
-            $randomNumber = random_int(1, 2);
+                foreach ($sneaker['images'] as $image) {
+                    $sneakersImage = new SneakersImages();
 
-            for ($i = 1; $i < 4; $i++) {
+                    $filePath = $publicDir . '/utils/Sneakers/' . $image;
+                    $extension = pathinfo($filePath, PATHINFO_EXTENSION);
+                    $copyPath = $publicDir . '/images/copies/' . basename($filePath);
+                    copy($filePath, $copyPath);
 
-                $fln = str_replace(' ', '_', $brandName) . '_V' . $randomNumber . '_' . $i;
+                    $imageFile = new UploadedFile(
+                        $copyPath,
+                        basename($copyPath),
+                        'image/' . $extension,
+                        null,
+                        true
+                    );
 
-                $sneakerImage = new SneakersImages();
+                    $sneakersImage
+                        ->setSneaker($this->getReference('sneaker_' . $sneaker['id']))
+                        ->setImageFile($imageFile);
+                    $manager->persist($sneakersImage);
 
-                $filePath = $publicDir . '/images/models/' . $fln . '.webp';
-                $copyPath = $publicDir . '/images/copies/' . basename($filePath);
-                copy($filePath, $copyPath);
+                }
 
-                $imageFile = new UploadedFile(
-                    $copyPath,
-                    basename($copyPath),
-                    'image/png',
-                    null,
-                    true
-                );
 
-                $sneakerImage->setSneaker($sneaker)
-                    ->setImageFile($imageFile);
-                $manager->persist($sneakerImage);
+
             }
+
+            $manager->flush();
         }
-        $manager->flush();
+
     }
 
     public function getDependencies()

@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\SneakersImagesRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
@@ -77,4 +78,13 @@ class SneakersImages
         return $this->imageName;
     }
 
+    #[Groups(['sneaker:list', 'sneaker:item'])]
+    public function getImageUrl(): ?string
+    {
+        if ($this->imageName) {
+            return '/images/sneakers/' . $this->imageName;
+        }
+
+        return null;
+    }
 }

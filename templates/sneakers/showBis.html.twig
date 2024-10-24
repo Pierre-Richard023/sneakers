@@ -1,0 +1,146 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ sneaker.name }}{% endblock %}
+
+{% block body %}
+
+    <div id="state" class="state">
+        <div>
+            <span>Success</span>
+        </div>
+    </div>
+
+
+    <nav class="breadcrumb">
+        <ol>
+            <li class="flex items-center">
+                <a rel="noopener noreferrer" href="{{ path('home') }}" title="Accueil">Accueil</a>
+            </li>
+            <li>
+                <span>/</span>
+                <a rel="noopener noreferrer" href="{{ path('collections.index') }}">Collections</a>
+            </li>
+            <li>
+                <span class="dark:text-gray-400">/</span>
+                {{ sneaker.name }}
+            </li>
+        </ol>
+    </nav>
+
+
+    <section class="sneaker-views">
+
+        <div class="sneaker-slider">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {% for image in sneaker.images %}
+                        <div class="swiper-slide">
+                            <img src="{{ vich_uploader_asset(image) }}" alt=" {{ image.imageName }} sneaker"/>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="pagination-sec">
+                <div class="swiper-button-prev">
+                    <img src="{{ asset('icons/back.svg') }}" alt="précédent"/>
+                </div>
+                <div class="swiper-button-next">
+                    <img src="{{ asset('icons/next.svg') }}" alt="suivant">
+                </div>
+            </div>
+        </div>
+
+        <div class="sneaker-informations">
+
+            <div class="title">
+                <h3>{{ sneaker.name }}</h3>
+                <span>{{ sneaker.price }} €</span>
+            </div>
+
+            <div class="sneaker-sell-details">
+                <h4>Sélectionner la taille</h4>
+                <div class="sneaker-size">
+                    <div class="size">40</div>
+                    <div class="size">41</div>
+                    <div class="size">42</div>
+                    <div class="size">43</div>
+                    <div class="size">44</div>
+                    <div class="size">45</div>
+                </div>
+
+                <div class="sneaker-actions" {{ stimulus_controller('actions') }}>
+                    <a href="{{ path('cart.add') }}"
+                       class="cart-action" {{ stimulus_action('actions', 'addSneaker','click',{id:sneaker.id}) }}>Ajouter
+                        au panier</a>
+                    <a href="{{ path('favorites.add') }}"
+                       class="favorites-action" {{ stimulus_action('actions', 'addSneaker','click',{id:sneaker.id}) }}>Ajouter
+                        au favoris</a>
+                </div>
+            </div>
+
+            <div class="sneaker-details">
+
+                <div class="sneaker-desc">
+                    <div class="accordion" {{ stimulus_controller('accordion') }}>
+                        <div class="accordion-head" {{ stimulus_action('accordion', 'show','click') }}>
+                            <h3>DESCRIPTION</h3>
+                            <i class="ri-add-line" {{ stimulus_target('accordion', 'state') }}></i>
+                        </div>
+                        <div class="accordion-body" {{ stimulus_target('accordion', 'output') }}>
+                            <article>
+                                {{ sneaker.details|raw }}
+                            </article>
+
+                            <ul>
+                                <li>Couleur : {{ sneaker.color }}</li>
+                                <li>Article : {{ sneaker.articleNumber }} </li>
+                                <li>Date de sortie : {{ sneaker.releaseDate|date('F Y', "Europe/Paris") }} </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="sneaker-cgv">
+
+                    <div class="accordion" {{ stimulus_controller('accordion') }}>
+                        <div class="accordion-head" {{ stimulus_action('accordion', 'show','click') }}>
+                            <h3>AUTHENTICITE</h3>
+                            <i class="ri-add-line" {{ stimulus_target('accordion', 'state') }}></i>
+                        </div>
+                        <div class="accordion-body" {{ stimulus_target('accordion', 'output') }}>
+                            <article>
+                                qdqsknd knqnfqlsnd nqlsd lqsblfq klfqfsqs
+                            </article>
+
+                            <ul>
+                                <li>Couleur : {{ sneaker.color }}</li>
+                                <li>Article : {{ sneaker.articleNumber }} </li>
+                                <li>Date de sortie : {{ sneaker.articleNumber }} </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion" {{ stimulus_controller('accordion') }}>
+                        <div class="accordion-head" {{ stimulus_action('accordion', 'show','click') }}>
+                            <h3>LIVRAISON ET RETOUR</h3>
+                            <i class="ri-add-line" {{ stimulus_target('accordion', 'state') }}></i>
+                        </div>
+                        <div class="accordion-body" {{ stimulus_target('accordion', 'output') }}>
+                            <article>
+                                Livraison
+                            </article>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+{% endblock %}

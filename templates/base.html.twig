@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,12 +17,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href={{ asset("ico/favicon-16x16.png") }}>
     <link rel="manifest" href={{ asset("ico/site.webmanifest") }}>
 
-
-
-
-
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
@@ -33,8 +27,6 @@
             {% block body %}{% endblock %}
         </main>
         {% include('footer.html.twig') %}
-
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}

@@ -1,0 +1,326 @@
+{
+  "brands": [
+    {
+      "id": 1,
+      "name": "Nike",
+      "logo": "Nike.png"
+    },
+    {
+      "id": 3,
+      "name": "Jordan",
+      "logo": "Jordan.png"
+    },
+    {
+      "id": 4,
+      "name": "Asics",
+      "logo": "Asics.png"
+    },
+    {
+      "id": 5,
+      "name": "Adidas",
+      "logo": "Adidas.png"
+    }
+  ],
+  "sneakers": [
+    {
+      "id": 1,
+      "name": "Nike Air Force 1 '07",
+      "details": "Le charme continue d'opérer avec la Nike Air Force 1 ’07. Cette chaussure de basketball OG revisite ses éléments les plus célèbres : les renforts cousus résistants, les finitions sobres et juste ce qu'il faut d'éclat pour vous faire briller.",
+      "brand": 1,
+      "colors": "Blanc",
+      "release_date": "09/12/20",
+      "price": 150.0,
+      "profileImage": "AIR_FORCE_1_'07__profile.png",
+      "images": [
+        "AIR_FORCE_1_'07_1.png",
+        "AIR_FORCE_1_'07_2.png",
+        "AIR_FORCE_1_'07_3.png"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Nike Air Max 1",
+      "details": "Découvre la star incontestée. La Air Max 1 allie design intemporel, confort et amorti. Avec elle, marche sur les nuages. Unité Max Air, renfort latéral ondulé : cette icône a marqué la scène sneakers en 1987. Aujourd'hui encore, elle incarne l'âme de la franchise.",
+      "brand": 1,
+      "colors": "Gris,Blanc",
+      "release_date": "17/12/18",
+      "price": 150.0,
+      "profileImage": "NIKE_AIR_MAX_1_profile.png",
+      "images": [
+        "NIKE_AIR_MAX_1__1.png",
+        "NIKE_AIR_MAX_1__2.jpeg",
+        "NIKE_AIR_MAX_1__3.png"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Nike Air Max Plus",
+      "details": "Revendique ton côté rebelle avec la Air Max Plus. Sa cage spéciale enflamme ton look et le mesh respirant te garde au frais. La semelle intermédiaire vintage et les couleurs feutrées rappellent le style des années 2000. Avec la Air Max Plus, profite de l'expérience Tuned Air. Pour une stabilité et un amorti exceptionnels.",
+      "brand": 1,
+      "colors": "Gris",
+      "release_date": "24/4/22",
+      "price": 189.9,
+      "profileImage": "Nike_Air_Max_Plus_profile.png",
+      "images": [
+        "Nike_Air_Max_Plus_1.png",
+        "Nike_Air_Max_Plus_2.png",
+        "Nike_Air_Max_Plus_3.png"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Nike Air Max 97",
+      "details": "Revisitant le style ondulé du modèle d'origine inspiré des trains à grande vitesse japonais, la Nike Air Max 97 affiche un style fulgurant qui en met plein la vue. Elle reprend l'unité Nike Air révolutionnaire sur toute la longueur qui a secoué le monde du running et affiche des couleurs tendance et des détails élégants pour vous permettre d'évoluer dans le plus grand confort.",
+      "brand": 1,
+      "colors": "Blanc,Noir",
+      "release_date": "21/12/21",
+      "price": 190.0,
+      "profileImage": "Nike_Air_Max_97_profile.png",
+      "images": [
+        "Nike_Air_Max_97_1.png",
+        "Nike_Air_Max_97_2.png",
+        "Nike_Air_Max_97_3.png"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Nike Air Max 90 SE",
+      "details": "Aucun modèle n'est aussi aérien, confortable et reconnu. Matières superposées. Semelle gaufrée culte. Unité Max Air visible pour toujours plus de confort. La Air Max 90 reste fidèle au modèle de running d'origine. Et en plus, cette édition spéciale est vendue avec des porte-bonheur métalliques pour personnaliser ta paire.",
+      "brand": 1,
+      "colors": "Gris,Blanc",
+      "release_date": "21/6/17",
+      "price": 140.0,
+      "profileImage": "Nike_Air_Max_90_SE_profile.png",
+      "images": [
+        "Nike_Air_Max_90_SE_1.png",
+        "Nike_Air_Max_90_SE_2.png",
+        "Nike_Air_Max_90_SE_3.png"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Nike Air Max 90",
+      "details": "Enfilez-la et entrez dans la légende. Avec sa conception à la croisée de l'art, de la musique et de la culture, cette chaussure de running vedette a contribué à forger le style des années 90. Portée par des présidents, révolutionnée par différentes collaborations et célébrée à travers des coloris rares, elle présente des touches visuelles saisissantes, une semelle extérieure gaufrée et un amorti Air visible pour une chaussure qui sait se renouveler et rester dans l'air du temps.",
+      "brand": 1,
+      "colors": "Blanc,Orange,Gris",
+      "release_date": "20/1/09",
+      "price": 150.0,
+      "profileImage": "Nike_Air_Max_90_profile.png",
+      "images": [
+        "Nike_Air_Max_90_1.png",
+        "Nike_Air_Max_90_2.png",
+        "Nike_Air_Max_90_3.png"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Asics UB4S Gel 1130",
+      "details": "Résultat d'une conception en constante évolution depuis des décennies, la GEL-1130 est un hommage à la neuvième version de la série GEL-1000. La chaussure de running stabilité de 2008 maintient parfaitement vos pieds où que votre esprit vous mène.",
+      "brand": 4,
+      "colors": "Bleu,Blanc,Gris",
+      "release_date": "1/7/22",
+      "price": 120.0,
+      "profileImage": "Asics_UB4S_Gel_1130_profile.jpg",
+      "images": [
+        "Asics_UB4S_Gel_1130_1.jpg",
+        "Asics_UB4S_Gel_1130_2.jpg",
+        "Asics_UB4S_Gel_1130_3.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Asics Gel Lyte III",
+      "details": "ASICS et la boutique japonaise atmos ont uni leurs forces pour créer cette itération unique de la silhouette classique Gel-Lyte 3 qui présente un design à languette fendue. La tige en mesh balistique noir de la sneaker est recouverte de panneaux à motifs Duck Camo, avec des touches d'orange pour une touche de couleur. Le co-marquage personnalisé atmos et ASICS apparaît sur la semelle intérieure, tandis que la technologie Gel assure l'amorti.",
+      "brand": 4,
+      "colors": "Noir",
+      "release_date": "25/6/16",
+      "price": 130.0,
+      "profileImage": "Asics_Gel_Lyte_III_profile.jpg",
+      "images": [
+        "Asics_Gel_Lyte_III_1.jpg",
+        "Asics_Gel_Lyte_III_2.jpg",
+        "Asics_Gel_Lyte_III_3.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Asics Gel Sonoma 15-50",
+      "details": "La basket GEL-SONOMA 15-50 est ancrée dans le concept d'exploration en plein air.Ce style tire son inspiration de l'empeigne de la chaussure de course de fond 15-50. Elle a été conçue à l'origine pour les coureurs et les coureuses de compétition évoluant sur des terrains très variés. Elle est désormais retravaillée pour vous permettre de marcher dans les rues de la ville et les sentiers de montagne.",
+      "brand": 4,
+      "colors": "Noir",
+      "release_date": "5/11/22",
+      "price": 120.0,
+      "profileImage": "Asics_Gel_Sonoma_15-50_profile.jpg",
+      "images": [
+        "Asics_Gel_Sonoma_15-50_1.jpg",
+        "Asics_Gel_Sonoma_15-50_2.jpg",
+        "Asics_Gel_Sonoma_15-50_3.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Asics Gel 1090 V2",
+      "details": "La basket GEL-1090™ V2 de 2003 a été repensée avec une touche moderne. Elle est retravaillée avec des superpositions en daim et des boucles à l'arrière pour un look plus contemporain.",
+      "brand": 4,
+      "colors": "Gris",
+      "release_date": "31/05/23",
+      "price": 120.0,
+      "profileImage": "Asics_Gel_1090_V2_profile.jpg",
+      "images": [
+        "Asics_Gel_1090_V2_1.jpg",
+        "Asics_Gel_1090_V2_2.jpg",
+        "Asics_Gel_1090_V2_3.jpg"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Nike Air Max 95",
+      "details": "S'inspirant du corps humain et du style sportif des années 90, son design ondulé culte marie haute performance et style dynamique. Cette version présente un mélange de matières et un amorti Max Air visible. Un look superposé incroyablement confortable.",
+      "brand": 1,
+      "colors": "Noir",
+      "release_date": "21/4/23",
+      "price": 190.0,
+      "profileImage": "Nike_Air_Max_95_profile.png",
+      "images": [
+        "Nike_Air_Max_95_1.png",
+        "Nike_Air_Max_95_2.png",
+        "Nike_Air_Max_95_3.png"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Adidas NMD V3",
+      "details": "Le futur est déjà là. Inspirée du running, la chaussure adidas NMD_R1 est un remix stylé de la sneaker adidas classique, conçu avec une technologie tactique. Les empiècements métallisés et le TPU semi-transparent ajoutent une touche brillante et futuriste. Les longs trajets et les trottoirs glissants ne sont plus un problème, grâce à la semelle extérieure en caoutchouc adhérent et à l'amorti BOOST sous tes pieds.",
+      "brand": 5,
+      "colors": "Noir",
+      "release_date": "28/8/22",
+      "price": 140.0,
+      "profileImage": "Adidas_NMD_V3_profile.jpg",
+      "images": [
+        "Adidas_NMD_V3_1.jpg",
+        "Adidas_NMD_V3_2.jpg",
+        "Adidas_NMD_V3_3.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Adidas ZX 22 Boost",
+      "details": "Épurée, simple, confortable. Cette chaussure adidas junior transforme une icône d'inspiration running en une sneaker stylée et confortable à porter en toute occasion. Les inserts JET BOOST sur la semelle intermédiaire en EVA offrent un retour d'énergie supplémentaire.",
+      "brand": 5,
+      "colors": "Blanc",
+      "release_date": "5/1/22",
+      "price": 110.0,
+      "profileImage": "Adidas_ZX_22_Boost_profile.jpg",
+      "images": [
+        "Adidas_ZX_22_Boost_1.jpg",
+        "Adidas_ZX_22_Boost_2.jpg",
+        "Adidas_ZX_22_Boost_3.jpg"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Adidas 4D Futurecraft",
+      "details": "Avec sa semelle intermédiaire en treillis imprimée en 3D, l'adidas Futurecraft 4D « Crystal White » offre une compression d'impact optimale grâce à une combinaison révolutionnaire de résine liquide, d'oxygène et de lumière. La tige présente un coloris neutre en Primeknit blanc sur une semelle extérieure en caoutchouc noire pour une traction optimale. La zone des orteils perforée assure la ventilation et le logo apparaît via trois bandes ivoire sur le panneau latéral.",
+      "brand": 5,
+      "colors": "Blanc,Gris",
+      "release_date": "7/9/21",
+      "price": 220.0,
+      "profileImage": "Adidas_4D_Futurecraft_profile.jpg",
+      "images": [
+        "Adidas_4D_Futurecraft_1.jpg",
+        "Adidas_4D_Futurecraft_2.jpg",
+        "Adidas_4D_Futurecraft_3.jpg"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Adidas Oznova",
+      "details": "Outrageusement confortable. Impertinente et audacieuse. La chaussure adidas OZNOVA ne fait pas les choses à moitié. Elle offre encore plus de confort grâce à l'amorti Adiplus qui est si doux que tu auras l'impression de marcher sur un nuage. Avec ses proportions exagérées et ses lignes fluides, elle crée la surprise. Tu peux la porter avec toutes tes tenues, partout où tu vas.",
+      "brand": 5,
+      "colors": "Bleu,Noir",
+      "release_date": "2/2/23",
+      "price": 110.0,
+      "profileImage": "Adidas_Oznova_profile.jpg",
+      "images": [
+        "Adidas_Oznova_1.jpg",
+        "Adidas_Oznova_2.jpg",
+        "Adidas_Oznova_2.jpg"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Adidas Ultraboost Web DNA",
+      "details": "Créée pour les runners, convoitée par les sneakerheads. Cette chaussure Ultraboost DNA reste fidèle à l'originale avec des détails qui vont au-delà de la piste. Sa tige adidas PRIMEKNIT ajustée est ornée d'un motif original pour un look stylé. Le renfort moulé au talon ajoute une touche iconique, tandis que l'amorti BOOST assure un confort ultime.",
+      "brand": 5,
+      "colors": "Blanc,Gris",
+      "release_date": "5/3/22",
+      "price": 170.0,
+      "profileImage": "Adidas_Ultraboost_Web_DNA_profile.jpg",
+      "images": [
+        "Adidas_Ultraboost_Web_DNA_1.jpg",
+        "Adidas_Ultraboost_Web_DNA_2.jpg",
+        "Adidas_Ultraboost_Web_DNA_3.jpg"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Adidas Ultra4D",
+      "details": "Parfaite pour te promener dans le parc ou pour un run entre amis le week-end, cette chaussure adidas Ultraboost 1.0 est conçue pour t'offrir un confort supérieur. Sa tige adidas PRIMEKNIT épouse les formes du pied et la technologie BOOST dans la semelle intermédiaire assure un amorti exceptionnel de la première foulée jusqu'au dernier kilomètre. La semelle extérieure Stretchweb s'adapte aux mouvements du pied pour une foulée dynamique tandis que la gomme Continental™ garantit l'accroche dont tu as besoin pour rester énergique.",
+      "brand": 5,
+      "colors": "Gris,Gold",
+      "release_date": "15/8/23",
+      "price": 220.0,
+      "profileImage": "Adidas_Ultra4D_profile.jpg",
+      "images": [
+        "Adidas_Ultra4D_1.jpg",
+        "Adidas_Ultra4D_2.jpg",
+        "Adidas_Ultra4D_3.jpg"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Nike Air Max 96 II",
+      "details": "Reprenant l'esthétique sportive rétro imaginée par un célèbre designer Nike, cette version revisitée de la Nike Air Max 96 II s'impose d'elle-même.La conception classique des années 90 revêt des couleurs hivernales, associant style sophistiqué et détails dynamiques, inspirés de la piste.La grande unité Nike Air apporte une touche de style décontracté parfaite, tout en offrant un confort longue durée.",
+      "brand": 1,
+      "colors": "Blanc,Noir",
+      "release_date": "9/4/22",
+      "price": 170.0,
+      "profileImage": "Nike_Air_Max_96_II_profile.jpg",
+      "images": [
+        "Nike_Air_Max_96_II_1.jpg",
+        "Nike_Air_Max_96_II_2.jpg",
+        "Nike_Air_Max_96_II_3.jpg"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Asics Gel Nimbus 9",
+      "details": "La GEL-NIMBUS 9 a été initialement pensée comme une chaussure pour les longues distances pour les coureurs aux pieds neutres et supinés.Sortie pour la première fois en 2007, cette chaussure refait surface avec des matériaux originaux et des détails clés. Son aspect industriel des années 2000 est également compensé par un contraste audacieux et des blocs de couleur",
+      "brand": 4,
+      "colors": "Blanc,Noir",
+      "release_date": "1/1/24",
+      "price": 150.0,
+      "profileImage": "Asics_Gel_Nimbus_9_profile.jpg",
+      "images": [
+        "Asics_Gel_Nimbus_9_1.jpg",
+        "Asics_Gel_Nimbus_9_2.jpg",
+        "Asics_Gel_Nimbus_9_3.jpg"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Jordan Delta 2",
+      "details": "La Jordan Delta 2 revisite de manière innovante et audacieuse les fonctionnalités que vous aimez : durabilité, confort et un style 100 % Jordan.Nous avons réimaginé la silhouette et remplacé certains éléments, mais cette nouvelle version reste fidèle à la Delta d'origine.Elle reprend la même combinaison de matières résistantes et futuristes jouant avec les textures et des coutures visibles pour créer un look contrasté, à la fois original et emblématique.",
+      "brand": 3,
+      "colors": "Noir,Vert",
+      "release_date": "2/9/22",
+      "price": 130.0,
+      "profileImage": "Jordan_Delta_2_profile.png",
+      "images": [
+        "Jordan_Delta_2_1.jpeg",
+        "Jordan_Delta_2_2.jpeg",
+        "Jordan_Delta_2_3.png"
+      ]
+    }
+  ]
+}

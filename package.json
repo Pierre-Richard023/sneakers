@@ -40,6 +40,7 @@
         "datatables.net-dt": "^1.13.4",
         "flowbite": "^2.5.2",
         "lucide-react": "^0.451.0",
-        "react-redux": "^8.1.2"
+        "react-redux": "^8.1.2",
+        "swiper": "^11.1.14"
     }
 }

@@ -36,10 +36,10 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
         'id' => 'exact',
         'shoe_size' => 'exact',
         'color' => 'exact',
-//        'model.brands.name' => 'ipartial'
+        'brand' => 'exact'
     ]
 )]
-#[ApiFilter(BrandFilter::class, properties: ["brands"])]
+//#[ApiFilter(BrandFilter::class, properties: ["brands"])]
 #[ApiFilter(
     OrderFilter::class, properties: ['price', 'date'], arguments: ['orderParameterName' => 'order']
 )]
@@ -75,22 +75,10 @@ class Sneaker
     #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?float $price = null;
 
-    #[ORM\Column(length: 255)]
-    #[Groups(['sneaker:list', 'sneaker:item'])]
-    private ?string $color = null;
-
     #[ORM\Column(length: 40)]
     #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?string $article_number = null;
-
-    #[ORM\Column]
-    #[Groups(['sneaker:list', 'sneaker:item'])]
-    private ?float $shoe_size;
-
-    #[ORM\Column]
-    #[Groups(['sneaker:list', 'sneaker:item'])]
-    private ?int $stock = null;
-
+    
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?\DateTimeInterface $release_date = null;
@@ -100,16 +88,26 @@ class Sneaker
     private ?string $details = null;
 
     #[ORM\OneToMany(mappedBy: 'sneaker', targetEntity: SneakersImages::class, orphanRemoval: true, cascade: ["persist"])]
+    #[Groups(['sneaker:list', 'sneaker:item'])]
     private Collection $images;
+
+    /**
+     * @var Collection<int, SneakerSizeStock>
+     */
+    #[ORM\OneToMany(mappedBy: 'sneaker', targetEntity: SneakerSizeStock::class, orphanRemoval: true)]
+    private Collection $sneakerSizeStocks;
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
-    #[Groups(['sneaker:list', 'sneaker:item'])]
-    private ?Models $model = null;
+    private ?Brands $brand = null;
+
+    #[ORM\Column(length: 100)]
+    private ?string $color = null;
 
     public function __construct()
     {
         $this->images = new ArrayCollection();
+        $this->sneakerSizeStocks = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -141,18 +139,6 @@ class Sneaker
         return $this;
     }
 
-    public function getColor(): ?string
-    {
-        return $this->color;
-    }
-
-    public function setColor(string $color): static
-    {
-        $this->color = $color;
-
-        return $this;
-    }
-
     public function getArticleNumber(): ?string
     {
         return $this->article_number;
@@ -161,30 +147,6 @@ class Sneaker
     public function setArticleNumber(string $article_number): static
     {
         $this->article_number = $article_number;
-
-        return $this;
-    }
-
-    public function getShoeSize(): ?float
-    {
-        return $this->shoe_size;
-    }
-
-    public function setShoeSize(float $shoe_size): static
-    {
-        $this->shoe_size = $shoe_size;
-
-        return $this;
-    }
-
-    public function getStock(): ?int
-    {
-        return $this->stock;
-    }
-
-    public function setStock(int $stock): static
-    {
-        $this->stock = $stock;
 
         return $this;
     }
@@ -243,19 +205,6 @@ class Sneaker
         return $this;
     }
 
-    public function getModel(): ?Models
-    {
-        return $this->model;
-    }
-
-    public function setModel(?Models $model): static
-    {
-        $this->model = $model;
-
-        return $this;
-    }
-
-
     public function setImageFile(?File $imageFile = null): void
     {
         $this->imageFile = $imageFile;
@@ -286,9 +235,63 @@ class Sneaker
     public function getProfileImageUrl(): ?string
     {
         if ($this->imageName) {
-            return '/images/sneakers/profiles/' . $this->imageName;
+            return '/images/sneakers/' . $this->imageName;
         }
 
         return null;
+    }
+
+    /**
+     * @return Collection<int, SneakerSizeStock>
+     */
+    public function getSneakerSizeStocks(): Collection
+    {
+        return $this->sneakerSizeStocks;
+    }
+
+    public function addSneakerSizeStock(SneakerSizeStock $sneakerSizeStock): static
+    {
+        if (!$this->sneakerSizeStocks->contains($sneakerSizeStock)) {
+            $this->sneakerSizeStocks->add($sneakerSizeStock);
+            $sneakerSizeStock->setSneaker($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSneakerSizeStock(SneakerSizeStock $sneakerSizeStock): static
+    {
+        if ($this->sneakerSizeStocks->removeElement($sneakerSizeStock)) {
+            // set the owning side to null (unless already changed)
+            if ($sneakerSizeStock->getSneaker() === $this) {
+                $sneakerSizeStock->setSneaker(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getBrand(): ?Brands
+    {
+        return $this->brand;
+    }
+
+    public function setBrand(?Brands $brand): static
+    {
+        $this->brand = $brand;
+
+        return $this;
+    }
+
+    public function getColor(): ?string
+    {
+        return $this->color;
+    }
+
+    public function setColor(string $color): static
+    {
+        $this->color = $color;
+
+        return $this;
     }
 }

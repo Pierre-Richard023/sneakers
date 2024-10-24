@@ -4,7 +4,6 @@ namespace App\Repository;
 
 use App\Entity\Brands;
 use App\Entity\Sneaker;
-use App\Entity\SneakerFilter;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -49,30 +48,6 @@ class SneakerRepository extends ServiceEntityRepository
             ->getResult();
     }
 
-
-    public function getSneakersByFilterAndPages(SneakerFilter $filter)
-    {
-
-        $query = $this->createQueryBuilder('s')
-            ->select('s');
-
-        if ($filter->getBrands()->count() > 0) {
-            $query->addSelect("m")
-                ->join("s.model", "m");
-            foreach ($filter->getBrands() as $key => $brand) {
-                $query->orWhere(":bds$key = m.brands")
-                    ->setParameter(":bds$key", $brand);;
-            }
-        }
-
-        if ($filter->getSize()) {
-            $query->andWhere("s.shoe_size = :size")
-                ->setParameter(":size", $filter->getSize());
-        }
-
-
-        return $query->getQuery();
-    }
 
 //    /**
 //     * @return Sneaker[] Returns an array of Sneaker objects

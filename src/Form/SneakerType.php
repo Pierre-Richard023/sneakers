@@ -3,7 +3,6 @@
 namespace App\Form;
 
 use App\Entity\Brands;
-use App\Entity\Models;
 use App\Entity\Sneaker;
 use App\Entity\SneakersImages;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
@@ -64,8 +63,8 @@ class SneakerType extends AbstractType
                     //...
                 ),
             ])
-            ->add('model',EntityType::class,[
-                'class'=>Models::class,
+            ->add('brand',EntityType::class,[
+                'class'=>Brands::class,
                 'choice_label'=> 'name',
                 'multiple'=> false,
                 'attr' => [

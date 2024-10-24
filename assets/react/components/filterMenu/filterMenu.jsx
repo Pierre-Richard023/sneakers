@@ -43,7 +43,7 @@ const filterMenu = () => {
         let link = ""
 
         if (formData.brands.length > 0) {
-            link += "brands="
+            link += "brand="
             formData.brands.forEach((brand, i) => {
                 link += brand
                 if (i <= formData.brands.length - 2)
@@ -188,8 +188,6 @@ const filterMenu = () => {
                                         ))
                                     }
                                 </ul>
-
-
                             </div>
                         </div>
                         <h2 id="accordion-flush-heading-3">
@@ -236,6 +234,8 @@ const filterMenu = () => {
 
                     <div className="bottom-0 left-0 flex justify-center w-full pb-4 mt-6 space-x-4 md:px-4 md:absolute">
                         <button type="submit"
+                                data-drawer-dismiss="drawer-filter"
+                                aria-controls="drawer-filter"
                                 className="w-full px-5 py-2 text-xs font-medium text-center text-white rounded-lg bg-secondary-normal hover:bg-secondary-light focus:ring-4 focus:outline-none focus:ring-primary-300 ">
                             Appliquer des filtres
                         </button>
