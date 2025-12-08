@@ -2,6 +2,8 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Sneaker;
+use App\Entity\SneakerSize;
 use App\Entity\SneakerSizeStock;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -10,9 +12,7 @@ use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
 class SneakerSizeStockFixtures extends Fixture implements DependentFixtureInterface
 {
-    public function __construct(private ParameterBagInterface $parameterBag)
-    {
-    }
+    public function __construct(private ParameterBagInterface $parameterBag) {}
 
     public function load(ObjectManager $manager): void
     {
@@ -29,8 +29,8 @@ class SneakerSizeStockFixtures extends Fixture implements DependentFixtureInterf
                 for ($size = 40; $size <= 46; $size += 0.5) {
 
                     $sneakerSizeStock = new SneakerSizeStock();
-                    $sneakerSizeStock->setSneakerSize($this->getReference('sneaker_size_' . $size))
-                        ->setSneaker($this->getReference('sneaker_' . $sneaker["id"]))
+                    $sneakerSizeStock->setSneakerSize($this->getReference('sneaker_size_' . $size, SneakerSize::class))
+                        ->setSneaker($this->getReference('sneaker_' . $sneaker["id"], Sneaker::class))
                         ->setStock(rand(0, 4));
 
                     $manager->persist($sneakerSizeStock);
@@ -38,12 +38,10 @@ class SneakerSizeStockFixtures extends Fixture implements DependentFixtureInterf
             }
 
             $manager->flush();
-
         }
-
     }
 
-    public function getDependencies()
+    public function getDependencies(): array
     {
         return [
             SneakerFixtures::class,

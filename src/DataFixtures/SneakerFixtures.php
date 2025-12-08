@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Brands;
 use App\Entity\Sneaker;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -13,9 +14,7 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 
 class SneakerFixtures extends Fixture implements DependentFixtureInterface
 {
-    public function __construct(private SluggerInterface $slugger, private ParameterBagInterface $parameterBag)
-    {
-    }
+    public function __construct(private SluggerInterface $slugger, private ParameterBagInterface $parameterBag) {}
 
     public function load(ObjectManager $manager): void
     {
@@ -51,7 +50,7 @@ class SneakerFixtures extends Fixture implements DependentFixtureInterface
                     ->setReleaseDate(date_create_from_format("d/m/y", $s["release_date"]))
                     ->setPrice($s["price"])
                     ->setColor($s["colors"])
-                    ->setBrand($this->getReference('brands_' . $s["brand"]))
+                    ->setBrand($this->getReference('brands_' . $s["brand"], Brands::class))
                     ->setSlug($this->slugger->slug($s["name"])->lower())
                     ->setArticleNumber("ART" . $s["id"] . rand(2132, 9999))
                     ->setImageFile($imageFile);
@@ -64,15 +63,13 @@ class SneakerFixtures extends Fixture implements DependentFixtureInterface
 
             $manager->flush();
         }
-
     }
 
-    public function getDependencies()
+    public function getDependencies(): array
     {
         return [
             BrandsFixtures::class,
             SneakerSizeFixtures::class,
         ];
     }
-
 }

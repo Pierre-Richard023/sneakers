@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Sneaker;
 use App\Entity\SneakersImages;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -13,10 +14,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 class SneakerImagesFixtures extends Fixture implements DependentFixtureInterface
 {
 
-    public function __construct(private ParameterBagInterface $parameterBag)
-    {
-
-    }
+    public function __construct(private ParameterBagInterface $parameterBag) {}
 
     public function load(ObjectManager $manager): void
     {
@@ -48,22 +46,17 @@ class SneakerImagesFixtures extends Fixture implements DependentFixtureInterface
                     );
 
                     $sneakersImage
-                        ->setSneaker($this->getReference('sneaker_' . $sneaker['id']))
+                        ->setSneaker($this->getReference('sneaker_' . $sneaker['id'], Sneaker::class))
                         ->setImageFile($imageFile);
                     $manager->persist($sneakersImage);
-
                 }
-
-
-
             }
 
             $manager->flush();
         }
-
     }
 
-    public function getDependencies()
+    public function getDependencies(): array
     {
         return [
             SneakerFixtures::class
