@@ -21,6 +21,7 @@ class HomeController extends AbstractController
         $brands = $this->brandsRepository->findAll();
         $sneakers = $this->sneakerRepository->getSneakers();
 
+        
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'sneakers' => $sneakers,
