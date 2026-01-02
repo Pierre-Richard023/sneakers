@@ -1,5 +1,5 @@
-import {registerReactControllerComponents} from '@symfony/ux-react';
 import './bootstrap.js';
+import {registerReactControllerComponents} from '@symfony/ux-react';
 /*
  * Welcome to your app's main JavaScript file!
  *
