@@ -11,6 +11,7 @@ use Faker\Factory;
 
 class AddressFixtures extends Fixture implements DependentFixtureInterface
 {
+    
     public function load(ObjectManager $manager): void
     {
 

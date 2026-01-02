@@ -8,6 +8,7 @@ use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\QueryParameter;
 use App\Entity\Trait\SlugTrait;
 use App\Filter\BrandFilter;
 use App\Repository\SneakerRepository;
@@ -18,7 +19,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\HttpFoundation\File\File;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Vich\UploaderBundle\Mapping\Attribute as Vich;
 
 
 #[ORM\Entity(repositoryClass: SneakerRepository::class)]
@@ -41,7 +42,9 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 )]
 //#[ApiFilter(BrandFilter::class, properties: ["brands"])]
 #[ApiFilter(
-    OrderFilter::class, properties: ['price', 'date'], arguments: ['orderParameterName' => 'order']
+    OrderFilter::class,
+    properties: ['price', 'date'],
+    arguments: ['orderParameterName' => 'order']
 )]
 #[Vich\Uploadable]
 class Sneaker
@@ -78,7 +81,7 @@ class Sneaker
     #[ORM\Column(length: 40)]
     #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?string $article_number = null;
-    
+
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     #[Groups(['sneaker:list', 'sneaker:item'])]
     private ?\DateTimeInterface $release_date = null;
