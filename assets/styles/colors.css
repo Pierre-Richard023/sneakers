@@ -1,0 +1,31 @@
+@theme {
+
+    --color-primary-normal: #5B2434;
+    --color-primary-light: #7A3E51;
+    --color-primary-dark: #451B29 ;
+               
+    --color-secondary-normal:#D1920D ;
+    --color-secondary-light:#E0AB3F ;
+    --color-secondary-dark:#A86E0A ;
+
+    --color-danger-normal:#E11D48 ;
+    --color-danger-light: #E7476D;
+    --color-danger-dark: #B0193A;
+
+    --color-success-normal:#059669 ;
+    --color-success-light:#33B187 ;
+    --color-success-dark:#047753 ;
+               
+
+    --color-sneaker_red: #FF0000;
+    --color-sneaker_blue: #0000FF;
+    --color-sneaker_yellow: #FFFF00;
+    --color-sneaker_green: #008000;
+    --color-sneaker_orange: #FFA500;
+    --color-sneaker_purple: #800080;
+    --color-sneaker_pink: #FFC0CB;
+    --color-sneaker_brown: #A52A2A;
+    --color-sneaker_black: #000000;
+    --color-sneaker_white: #FFFFFF,
+    --color-sneaker-gray:#808080;
+}

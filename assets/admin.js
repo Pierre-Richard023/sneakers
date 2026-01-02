@@ -2,7 +2,7 @@ import { registerReactControllerComponents } from '@symfony/ux-react';
 import './bootstrap.js';
 
 
-import './styles/admin.scss';
+import './styles/admin.css';
 import DataTable from 'datatables.net-dt';
 
 let table = new DataTable('#table', {
