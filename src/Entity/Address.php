@@ -2,64 +2,42 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Metadata\ApiResource;
-use ApiPlatform\Metadata\Get;
-use ApiPlatform\Metadata\GetCollection;
 use App\Repository\AddressRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: AddressRepository::class)]
-#[ApiResource(
-    operations: [
-        new Get(normalizationContext: ['groups'=>'address:item']),
-        new GetCollection(normalizationContext: ['groups'=>'address:list'])
-    ],
-    order: ['id'=>'DESC'],
-    paginationEnabled: false,
-)]
 class Address
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(['user:list', 'user:item','address:list', 'address:item'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['user:list', 'user:item','address:list', 'address:item'])]
     private ?string $first_name = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['user:list', 'user:item','address:list', 'address:item'])]
     private ?string $last_name = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    #[Groups(['user:list', 'user:item','address:list', 'address:item'])]
     private ?string $company_name = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['user:list', 'user:item','address:list', 'address:item'])]
     private ?string $address = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    #[Groups(['user:list', 'user:item','address:list', 'address:item'])]
     private ?string $additional_address = null;
 
     #[ORM\Column(length: 5)]
-    #[Groups(['user:list', 'user:item','address:list', 'address:item'])]
     private ?string $postal_code = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['user:list', 'user:item','address:list', 'address:item'])]
     private ?string $city = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['user:list', 'user:item','address:list', 'address:item'])]
     private ?string $country = null;
 
     #[ORM\Column(length: 20)]
-    #[Groups(['user:list', 'user:item','address:list', 'address:item'])]
     private ?string $phone_number = null;
 
     #[ORM\ManyToOne(inversedBy: 'delivery_address')]

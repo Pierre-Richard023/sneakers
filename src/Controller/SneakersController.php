@@ -17,7 +17,7 @@ class SneakersController extends AbstractController
         ]);
     }
 
-    #[Route('collections/sneakers/{slug}', name: 'sneaker.show', methods: ['GET'])]
+    #[Route('collections/sneakers/{slug:sneaker}', name: 'sneaker.show', methods: ['GET'])]
     public function show(Sneaker $sneaker): Response
     {
         return $this->render('sneakers/show.html.twig', [
