@@ -2,15 +2,7 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Doctrine\Orm\Filter\OrderFilter;
-use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
-use ApiPlatform\Metadata\ApiFilter;
-use ApiPlatform\Metadata\ApiResource;
-use ApiPlatform\Metadata\Get;
-use ApiPlatform\Metadata\GetCollection;
-use ApiPlatform\Metadata\QueryParameter;
 use App\Entity\Trait\SlugTrait;
-use App\Filter\BrandFilter;
 use App\Repository\SneakerRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -23,29 +15,6 @@ use Vich\UploaderBundle\Mapping\Attribute as Vich;
 
 
 #[ORM\Entity(repositoryClass: SneakerRepository::class)]
-#[ApiResource(
-    operations: [
-        new Get(normalizationContext: ['groups' => 'sneaker:item']),
-        new GetCollection(normalizationContext: ['groups' => 'sneaker:list'])
-    ],
-    order: ['release_date' => 'desc'],
-    paginationItemsPerPage: 12,
-)]
-#[ApiFilter(
-    SearchFilter::class,
-    properties: [
-        'id' => 'exact',
-        'shoe_size' => 'exact',
-        'color' => 'exact',
-        'brand' => 'exact'
-    ]
-)]
-//#[ApiFilter(BrandFilter::class, properties: ["brands"])]
-#[ApiFilter(
-    OrderFilter::class,
-    properties: ['price', 'date'],
-    arguments: ['orderParameterName' => 'order']
-)]
 #[Vich\Uploadable]
 class Sneaker
 {

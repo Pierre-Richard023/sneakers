@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Attribute\Route;
 class CollectionsController extends AbstractController
 {
 
-    public function __construct(private SneakerRepository $sneakerRepository, private BrandsRepository $brandsRepository,private EntityManagerInterface $entityManager)
+    public function __construct(private  readonly SneakerRepository $sneakerRepository, private readonly BrandsRepository $brandsRepository,private readonly EntityManagerInterface $entityManager)
     {
     }
 

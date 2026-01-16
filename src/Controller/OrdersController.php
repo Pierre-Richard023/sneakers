@@ -22,7 +22,7 @@ use Symfony\Component\Security\Http\Attribute\IsGranted;
 class OrdersController extends AbstractController
 {
 
-    public function __construct(private AddressRepository $addressRepository)
+    public function __construct(private readonly AddressRepository $addressRepository)
     {
         Stripe::setApiKey($_ENV['STRIPE_SECRET_KEY']);
     }

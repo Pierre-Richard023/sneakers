@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Attribute\Route;
 class CartController extends AbstractController
 {
 
-    public function __construct(private SneakerRepository $sneakerRepository)
+    public function __construct(private readonly SneakerRepository $sneakerRepository)
     {
     }
 

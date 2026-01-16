@@ -2,14 +2,8 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Metadata\ApiResource;
-use ApiPlatform\Metadata\Get;
-use ApiPlatform\Metadata\GetCollection;
 use App\Entity\Trait\SlugTrait;
 use App\Repository\BrandsRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Serializer\Attribute\Groups;
@@ -18,13 +12,6 @@ use Vich\UploaderBundle\Mapping\Attribute as Vich;
 
 #[ORM\Entity(repositoryClass: BrandsRepository::class)]
 #[Vich\Uploadable]
-#[ApiResource(
-    operations: [
-        new GetCollection(normalizationContext: ['groups' => 'brand:list'])
-    ],
-    order: ['name' => 'DESC'],
-    paginationEnabled: false,
-)]
 class Brands
 {
     use SlugTrait;

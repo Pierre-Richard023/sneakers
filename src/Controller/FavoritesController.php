@@ -18,7 +18,7 @@ use Symfony\Component\Security\Http\Attribute\IsGranted;
 class FavoritesController extends AbstractController
 {
 
-    public function __construct(private FavoritesRepository $favoritesRepository, private SneakerRepository $sneakerRepository)
+    public function __construct(private readonly FavoritesRepository $favoritesRepository, private readonly SneakerRepository $sneakerRepository)
     {
     }
 

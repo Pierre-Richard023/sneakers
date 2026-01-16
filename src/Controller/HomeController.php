@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class HomeController extends AbstractController
 {
-    public function __construct(private SneakerRepository $sneakerRepository, private BrandsRepository $brandsRepository)
+    public function __construct(private readonly SneakerRepository $sneakerRepository, private readonly BrandsRepository $brandsRepository)
     {
 
     }

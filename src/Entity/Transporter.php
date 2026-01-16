@@ -2,23 +2,12 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Metadata\ApiResource;
-use ApiPlatform\Metadata\Get;
-use ApiPlatform\Metadata\GetCollection;
 use App\Repository\ShippingRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Attribute\Groups;
 
 #[ORM\Entity(repositoryClass: ShippingRepository::class)]
-#[ApiResource(
-    operations: [
-        new Get(normalizationContext: ['groups' => 'transporter:item']),
-        new GetCollection(normalizationContext: ['groups' => 'transporter:list'])
-    ],
-    order: ['id' => 'DESC'],
-    paginationEnabled: false,
-)]
 class Transporter
 {
     #[ORM\Id]
