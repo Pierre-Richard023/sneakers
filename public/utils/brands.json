@@ -1,0 +1,22 @@
+[
+    {
+        "id": "nike",
+        "name": "Nike",
+        "logo": "Nike.png"
+    },
+    {
+        "id": "jordan",
+        "name": "Jordan",
+        "logo": "Jordan.png"
+    },
+    {
+        "id": "new-balance",
+        "name": "New Balance",
+        "logo": "Balance.png"
+    },
+    {
+        "id": "adidas",
+        "name": "Adidas",
+        "logo": "Adidas.png"
+    }
+]

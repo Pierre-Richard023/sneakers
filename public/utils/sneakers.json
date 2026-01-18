@@ -1,326 +1,1906 @@
 {
-  "brands": [
+  "nike": [
     {
-      "id": 1,
-      "name": "Nike",
-      "logo": "Nike.png"
+      "image": "Air_Force_1_07_Triple_White.jpg",
+      "name": "AIR FORCE 1 '07 'TRIPLE WHITE'",
+      "price": "69",
+      "description": "La Nike Air Force 1 '07 'Triple White' rafraîchit le design classique avec un look entièrement blanc qui met en valeur son style intemporel. La traction au point pivot de la semelle extérieure en caoutchouc s'associe à une semelle en caoutchouc blanc avec un amorti au talon. La tige de la chaussure est confectionnée en cuir blanc et présente des éléments classiques comme des lacets argentés brillants, un bout perforé et des lacets réglables.",
+      "color": "Blanc/Blanc/Blanc",
+      "release": "12/9/20"
     },
     {
-      "id": 3,
-      "name": "Jordan",
-      "logo": "Jordan.png"
+      "image": "Supreme_X_Air_Force_1_Low_Box_Logo_Black.jpg",
+      "name": "SUPREME X AIR FORCE 1 LOW 'BOX LOGO - BLACK'",
+      "price": "136",
+      "description": "Faisant ses débuts à l'origine dans le cadre de la collection Printemps/Été 2020 de Supreme, la Supreme x Air Force 1 Low « Box Logo - Black » est sortie en mars 2020. La tige en cuir pleine fleur de la chaussure apparaît en noir, accentuée par le logo de la boîte rouge de Supreme sur le talon latéral. La semelle intérieure personnalisée et le jeu de lacets supplémentaire arborent davantage la marque Supreme, tandis que la semelle intermédiaire abrite l'Air habituel pour l'amorti.",
+      "color": "",
+      "release": "3/5/20"
     },
     {
-      "id": 4,
-      "name": "Asics",
-      "logo": "Asics.png"
+      "image": "Supreme_X_Air_Force_1_Low_Box_Logo_White.jpg",
+      "name": "SUPREME X AIR FORCE 1 LOW 'BOX LOGO - WHITE'",
+      "price": "139",
+      "description": "La Supreme x Air Force 1 Low 'Box Logo - White' est sortie dans le cadre de la collection Printemps/Été 2020 de la marque new-yorkaise. La tige de la chaussure est fabriquée en cuir, finie en blanc et mise en valeur par le logo en forme de boîte emblématique de Supreme sur le talon latéral. La semelle intérieure personnalisée et un deuxième jeu de lacets arborent davantage la marque Supreme, tandis que l'Air dans le talon de la semelle intermédiaire offre un amorti.",
+      "color": "Blanc/Blanc",
+      "release": "3/5/20"
     },
     {
-      "id": 5,
-      "name": "Adidas",
-      "logo": "Adidas.png"
+      "image": "Zoom_Kobe_6_Protro_Grinch_2020.jpg",
+      "name": "ZOOM KOBE 6 PROTRO 'GRINCH' 2020",
+      "price": "588",
+      "description": "Initialement lancée en 2010 pour une collection le jour de Noël, la Zoom Kobe 6 Protro 'Grinch' est sortie en décembre 2020. La tige de la chaussure présente un look Green Apple et Volt, avec des détails en polyuréthane créant une texture de style peau de serpent tout au long de la construction. Le pourpre sur la marque et les lacets ajoute à l'esthétique des vacances, tandis que sous le pied, la semelle intercalaire intègre Zoom Air pour offrir un amorti.",
+      "color": "Pomme verte/noir/volt/cramoisi",
+      "release": "12/24/20"
+    },
+    {
+      "image": "Ben_Jerrys_X_Dunk_Low_Sb_Chunky_Dunky.jpg",
+      "name": "BEN & JERRY'S X DUNK LOW SB 'CHUNKY DUNKY'",
+      "price": "891",
+      "description": "Le Dunk Low SB 'Chunky Dunky' est sorti dans le cadre d'une collaboration avec Ben & Jerry's. S'inspirant de la saveur Chunky Monkey de la société de crème glacée, la chaussure émerge avec un look calqué sur l'emballage de cette saveur, mis en valeur par le ciel bleu et les pâturages verts sur la base en cuir de la chaussure. Les superpositions de poils de poney apparaissent avec un imprimé de vache, tandis que la marque Swoosh arbore un motif de crème glacée fondante. Une légende Chunky Dunky sur l'étiquette de la langue complète le look thématique.",
+      "color": "Blanc/Impulsion Lagon/Noir/Or Université",
+      "release": "5/23/20"
+    },
+    {
+      "image": "Air_Max_95_Essential_Triple_Black.jpg",
+      "name": "AIR MAX 95 ESSENTIAL 'TRIPLE BLACK'",
+      "price": "94",
+      "description": "La Air Max 95 Essential « Triple Black » noircit le coureur rétro. Construite avec un mélange de cuir, de synthétique et de daim, la tige apparaît entièrement en noir, avec des détails réfléchissants sur le talon et le couvre-lacets. Sous le pied, la semelle intermédiaire poursuit le look ton sur ton, avec Max Air visible à l'avant-pied et au talon pour l'amorti, cédant la place à une semelle extérieure avec des rainures de flexion pour la traction.",
+      "color": "Noir/Gris foncé/Noir",
+      "release": "3/17/20"
+    },
+    {
+      "image": "Air_Max_95_Og_Neon_2020.jpg",
+      "name": "AIR MAX 95 OG 'NEON' 2020",
+      "price": "324",
+      "description": "Sortie en décembre 2020, la Air Max 95 OG 'Neon' 2020 présente le coloris OG de la silhouette. La construction en couches emblématique de la chaussure apparaît dans une mode en niveaux de gris, avec des œillets côtelés jaune fluo accentuant le design. Plus de jaune fluo apparaît sur la marque Swoosh, tandis que la languette et le talon ajoutent des détails réfléchissants. Sous le pied, la semelle intercalaire noire abrite Max Air visible à l'avant-pied et au talon pour fournir un amorti, cédant la place à une semelle extérieure en caoutchouc gaufré pour la traction.",
+      "color": "Noir/Jaune fluo/Graphite clair",
+      "release": "12/17/20"
+    },
+    {
+      "image": "Air_Max_90_Triple_Black.jpg",
+      "name": "AIR MAX 90 'TRIPLE BLACK'",
+      "price": "54",
+      "description": "Sortie pour le 30e anniversaire de la silhouette, la Air Max 90 'Triple Black' apparaît avec un look noirci. La tige de la chaussure est construite avec un mélange de maille et de cuir, le look ton sur ton se poursuivant sur les badges et les œillets en TPU. Sous le pied, la semelle intermédiaire abrite le Max Air visible habituel dans le talon pour un amorti.",
+      "color": "Noir/Noir/Noir",
+      "release": "1/9/20"
+    },
+    {
+      "image": "Nike_Mag_Back_To_The_Future.jpg",
+      "name": "NIKE MAG 'BACK TO THE FUTURE'",
+      "price": "21000",
+      "description": "Le Nike Mag a finalement été rendu public en septembre 2011, immortalisé dans le film de 1989 « Retour vers le futur II ». Bien que la chaussure n'ait pas la fonction d'auto-laçage, elle correspond esthétiquement à son homologue du film, avec un logo Nike électroluminescent sur la sangle et des réseaux de LED lumineuses sur la semelle intermédiaire et le talon. La production pour 2011 a été limitée à 1 500 paires et distribuées via des ventes aux enchères caritatives sur eBay, dont les bénéfices ont été directement reversés à la fondation Michael J. Fox pour trouver un remède à la maladie de Parkinson.",
+      "color": "Jetstream/Blanc/Bleu photo",
+      "release": "9/8/11"
+    },
+    {
+      "image": "Travis_Scott_X_Dunk_Low_Premium_Qs_Sb_Cactus_Jack.jpg",
+      "name": "TRAVIS SCOTT X DUNK LOW PREMIUM QS SB 'CACTUS JACK'",
+      "price": "749",
+      "description": "Travis Scott s'est associé à Nike pour créer la Travis Scott x SB Dunk Low PRM QS « Cactus Jack ». Dotée d'un design patchwork, la tige de la chaussure émerge avec une base en daim beige accentuée par un motif écossais sur le panneau latéral et un motif cachemire sur les superpositions. Les superpositions elles-mêmes sont conçues pour s'user et révéler un imprimé éléphant, tandis que le Swoosh latéral arbore une finition rose. La marque Cactus Jack apparaît sur l'étiquette de la languette, tandis qu'une semelle extérieure en caoutchouc est incluse pour la traction.",
+      "color": "Noir/Beige Parachute/Marron Petra",
+      "release": "2/29/20"
+    },
+    {
+      "image": "Zoom_Kobe_5_Protro_Bruce_Lee_2020.jpg",
+      "name": "ZOOM KOBE 5 PROTRO ‘BRUCE LEE’ 2020",
+      "price": "380",
+      "description": "Sorti en novembre 2020, le Zoom Kobe 5 Protro 'Bruce Lee' ramène un coloris 2010. Inspirée par Bruce Lee, dont le style et l'état d'esprit ont à leur tour inspiré Kobe Bryant, la tige de la chaussure s'inspire de la combinaison de Lee dans Enter the Dragon. Le look noir et Del Sol est mis en valeur par des rayures Comet Red sur l'avant-pied, tandis que les câbles Flywire soutiennent l'ajustement. Sous le pied, la semelle intercalaire bicolore abrite Zoom Air à l'avant-pied pour un amorti.",
+      "color": "Del Sol/ Argent Métallisé/ Rouge Comète/Noir",
+      "release": "11/24/20"
+    },
+    {
+      "image": "Sean_Wotherspoon_X_Air_Max_197.jpg",
+      "name": "SEAN WOTHERSPOON X AIR MAX 1/97",
+      "price": "624",
+      "description": "En tant que gagnant de la campagne « Vote Forward », cet hybride conçu par Sean Wotherspoon mélange la tige d'une Air Max 97 avec la semelle d'une Air Max 1 et a été (naturellement) lancé lors de l'Air Max Day en 2018. La tige et les languettes multicolores de la sneaker sont ornées de velours côtelé, et complètent le look par des languettes en velcro et une unité d'air infrarouge.",
+      "color": "Fureur bleu clair/lavage citron",
+      "release": "3/26/18"
+    },
+    {
+      "image": "Dunk_Low_Premium_Sb_Qs_De_La_Soul.jpg",
+      "name": "DUNK LOW PREMIUM SB QS 'DE LA SOUL'",
+      "price": "655",
+      "description": "Une refonte basse d'un coloris haut de gamme de 2005 réalisée en collaboration avec De La Soul, la SB Dunk Low 'De La Soul' présente un look vibrant inspiré de la couverture de l'album 3 Feet High and Rising. Arborant une tige en daim marron baroque avec un imprimé éléphant Altitude Green sur la pointe et les œillets, le talon arbore un motif graphique en vinyle. Une semelle intercalaire Altitude Green et une semelle extérieure Baroque Brown complètent le look.",
+      "color": "Safari/Vert altitude/Marron baroque",
+      "release": "5/16/15"
+    },
+    {
+      "image": "Air_Vapormax_Plus_Triple_Black.jpg",
+      "name": "AIR VAPORMAX PLUS 'TRIPLE BLACK'",
+      "price": "144",
+      "description": "Lancée en janvier 2018 aux côtés des autres coloris « Cargo Khaki », « Sunset » et « Photo Blue », la variante « Triple Black » de l'hybride Air VaporMax Plus arbore une tige en néoprène dégradé, une cage en TPU moulée, une semelle intercalaire en mousse et une semelle extérieure VaporMax translucide sur toute la longueur, le tout en noir. La marque réfléchissante 3M sur la languette et la marque « VM Air » sur le talon complètent le look.",
+      "color": "Noir/Noir-Gris Foncé",
+      "release": "1/25/18"
+    },
+    {
+      "image": "Off-white_X_Air_Force_1_Low_07_Mca.jpg",
+      "name": "OFF-WHITE X AIR FORCE 1 LOW '07 'MCA'",
+      "price": "1163",
+      "description": "La OFF-WHITE x Air Force 1 Low '07 'MCA' a été lancée pour célébrer l'exposition de Virgil Abloh au Musée d'art contemporain de Chicago en juin 2019. Le classique du basket-ball de Bruce Kilgore est réinventé avec le look déconstruit emblématique d'Abloh, avec des coutures proéminentes sur le Swoosh et une languette et un col en mousse apparente. La tige en cuir apparaît principalement en bleu universitaire, tandis que la marque habituelle apparaît sur les lacets et le côté médial. Une unité de semelle ton sur ton comprend l'amorti Air habituel et le motif de traction concentrique.",
+      "color": "Bleu université/Blanc-Rouge université-Argent métallique",
+      "release": "7/20/19"
+    },
+    {
+      "image": "Concepts_X_Dunk_Low_Sb_Purple_Lobster.jpg",
+      "name": "CONCEPTS X DUNK LOW SB 'PURPLE LOBSTER'",
+      "price": "727",
+      "description": "Concepts et Nike SB sont de retour avec une nouvelle itération inspirée du « Lobster ». Semblable aux trois exécutions précédentes, la Dunk Low Premium SB 'Purple Lobster' est influencée par des spécimens de couleurs étranges découverts dans la nature, en partie à cause d'anomalies génétiques qui font apparaître leur exosquelette dans des couleurs distinctes, telles que le jaune, le bleu et le violet. Les détails spéciaux incluent un motif à carreaux sur la doublure, rouge et blanc, et une bande élastique enroulée autour de l'avant-pied comparable à la façon dont les pinces de homard sont fixées.",
+      "color": "Tension Violet/Cour Violet-Voltage Violet",
+      "release": "12/14/18"
+    },
+    {
+      "image": "Air_Foamposite_Pro_Gym_Red.jpg",
+      "name": "AIR FOAMPOSITE PRO 'GYM RED'",
+      "price": "311",
+      "description": "La Nike Air Foamposite Pro « Gym Red » a un maillage rouge monochromatique et une coque Foamposite avec un Swoosh aux tons rouges, en ligne avec la tendance rouge sur rouge lancée par la Nike Air Yeezy 2 « Red October ». Le design a également des aglets dorés, une tige en fibre de carbone noire et rouge et une semelle extérieure Gym Red.",
+      "color": "Rouge Gym/Rouge Gym-Noir",
+      "release": "4/11/15"
+    },
+    {
+      "image": "Air_Yeezy_2_Sp_Red_October.jpg",
+      "name": "AIR YEEZY 2 SP 'RED OCTOBER'",
+      "price": "7900",
+      "description": "Au moment où la Air Yeezy 2 SP « Red October » a finalement été lancée en ligne sans préavis en février 2014, Kanye West avait déjà rompu tout lien avec Nike. Bien que le chaos ait entouré la sortie très retardée de la chaussure, les Octobre Rouges se démarquent de ses deux coloris compagnons. Il y a la finition écarlate monochrome, contrastée uniquement par des pointes de dentelle dorées métalliques, et il y a le design unique, qui voit les panneaux latéraux abandonner la texture anaconda standard au profit de rangées et de rangées de petits clous triangulaires.",
+      "color": "Rouge",
+      "release": "2/9/14"
+    },
+    {
+      "image": "Blazer_Mid_77_Vintage_White_Black.jpg",
+      "name": "BLAZER MID '77 VINTAGE 'WHITE BLACK'",
+      "price": "53",
+      "description": "Le Blazer Mid '77 Vintage 'White Black' fait un clin d'œil à la longue histoire de la silhouette du basket-ball. La tige de la chaussure est construite en cuir blanc, complétée par un Swoosh noir OG sur le panneau latéral. La languette adopte une construction déconstruite avec un branding vintage, tandis que du daim poilu émerge sur l'avant-pied. Une construction autoclave soutient l'ajustement sous le pied.",
+      "color": "Blanc/Noir",
+      "release": "3/28/19"
+    },
+    {
+      "image": "Air_Max_97_Triple_Black.jpg",
+      "name": "AIR MAX 97 'TRIPLE BLACK'",
+      "price": "80",
+      "description": "La Nike Air Max 97 se démarque comme un exemple de l'innovation de la marque avec son design inspiré des ondulations de l'eau. Cette édition « Triple Black » correspond à l'héritage de l'AM97 en tant qu'offre de style de vie, habillée de cuir et de matériaux en maille haut de gamme. Les bandes 3M Scotchlite apportent une touche réfléchissante à la tige monochromatique. Une semelle intercalaire Air multi-fenêtres et une traction résistante aux éraflures font un clin d'œil au modèle signature.",
+      "color": "Noir/Noir-Noir",
+      "release": "12/14/18"
+    },
+    {
+      "image": "Zoom_Kobe_5_Protro_Chaos_2020.jpg",
+      "name": "ZOOM KOBE 5 PROTRO 'CHAOS' 2020",
+      "price": "441",
+      "description": "Commémorant son 10e anniversaire, la Nike Zoom Kobe 5 Protro a refait surface en janvier 2020 avec son hommage au super-vilain de DC Comics, le Joker. Cette variante « Chaos » rappelle le costume emblématique du personnage avec une tige multicolore en mélange de matériaux avec des textures de peau de lézard accrocheuses, des lacets mouchetés et un embout robuste. La marque vert fluo fait allusion aux cheveux du personnage. La sneaker arbore une semelle intercalaire éclaboussée et une semelle extérieure en caoutchouc vif.",
+      "color": "Violet/Cyber/Blanc/Noir",
+      "release": "1/3/20"
+    },
+    {
+      "image": "Travis_Scott_X_Sb_Dunk_Low_Prm_Qs_Cactus_Jack_Special_Box.jpg",
+      "name": "TRAVIS SCOTT X SB DUNK LOW PRM QS 'CACTUS JACK - SPECIAL BOX'",
+      "price": "1110",
+      "description": "Faisant partie d'une collaboration entre le rappeur de Houston et Nike, la Travis Scott x SB Dunk Low PRM QS 'Cactus Jack - Special Box' présente une série d'imprimés tout au long de sa construction. Construite en daim et en textile, la tige comprend du daim marron sur la pointe, avec du tartan sur le panneau latéral et un motif cachemire déchirable sur l'avant-pied et les empiècements du talon. Une semelle bicolore ancre le design, tandis que la chaussure est présentée dans une boîte spéciale conçue comme la chaussure elle-même.",
+      "color": "Noir/Beige Parachute/Marron Petra",
+      "release": "2/29/20"
+    },
+    {
+      "image": "Air_More_Uptempo_Black_White_2020.jpg",
+      "name": "AIR MORE UPTEMPO 'BLACK WHITE' 2020",
+      "price": "202",
+      "description": "",
+      "color": "Noir/Blanc/Noir",
+      "release": "11/10/20"
+    },
+    {
+      "image": "Foamposite_Pro_Gym_Green.jpg",
+      "name": "FOAMPOSITE PRO 'GYM GREEN'",
+      "price": "303",
+      "description": "",
+      "color": "Noir/Vert sportif",
+      "release": "6/20/12"
+    },
+    {
+      "image": "Off-White_X_Air_Rubber_Dunk_Green_Strike.jpg",
+      "name": "OFF-WHITE X AIR RUBBER DUNK 'GREEN STRIKE'",
+      "price": "358",
+      "description": "La Off-White x Air Rubber Dunk 'Green Strike' est sortie dans le cadre d'une collaboration avec la marque de streetwear de luxe de Virgil Abloh. Actualisant la silhouette classique, la tige de la chaussure présente le design superposé du P-6000. Finie en noir et Green Strike, la tige est mise en évidence en orange sur l'étiquette volante. « Nike Off » apparaît sur l'étiquette de la languette, tandis que « Shoelaces » marque les lacets. Sous le pied, la semelle intermédiaire comprend de l'Air visible dans le talon pour un amorti.",
+      "color": "Noir/Blanc/Vert Strike",
+      "release": "10/1/20"
+    },
+    {
+      "image": "Air_Cb_34_Godzilla_2016.jpg",
+      "name": "AIR CB 34 'GODZILLA' 2016",
+      "price": "630",
+      "description": "Cette réédition 2017 de l'Air CB 34 ramène la chaussure signature de Charles Barkley dans le coloris noir OG, rendue célèbre par une publicité Nike mettant en vedette Godzilla. Le milieu du haut présente un mélange de nubuck et de cuir sur la tige, fini en noir avec une subtile touche de Varsity Purple sur le col. La caractéristique la plus distinctive de la chaussure prend la forme du lettrage « Sir Charles » caché sur la semelle extérieure.",
+      "color": "Noir/Blanc-Varsity Purple",
+      "release": "10/17/16"
+    },
+    {
+      "image": "Air_Force_1_Low_Flax_2019.jpg",
+      "name": "AIR FORCE 1 LOW 'FLAX' 2019",
+      "price": "84",
+      "description": "",
+      "color": "Lin/Gomme Brun Clair/Noir/Blé",
+      "release": "9/17/19"
+    },
+    {
+      "image": "Off-White_X_Air_Max_90_Black.jpg",
+      "name": "OFF-WHITE X AIR MAX 90 'BLACK'",
+      "price": "441",
+      "description": "Faisant partie d'une collaboration entre Virgil Abloh et Nike, la OFF-WHITE x Air Max 90 « Black » émerge avec une version audacieuse du coureur classique. La tige de la chaussure est construite avec un mélange de cuir, de daim et de nubuck, le tout fini en noir. La marque Swoosh contraste le look, tandis que les lacets et le côté médial arborent la marque textuelle habituelle d'Abloh. Sous le pied, une semelle intercalaire noire abrite une unité Air visible dans le talon pour un amorti.",
+      "color": "Noir/Noir/Cône/Blanc",
+      "release": "2/7/19"
+    },
+    {
+      "image": "Total_Air_Foamposite_Max_Metallic_Silver_2011.jpg",
+      "name": "TOTAL AIR FOAMPOSITE MAX 'METALLIC SILVER' 2011",
+      "price": "4000",
+      "description": "Portée à l'origine par Tim Duncan lorsqu'il est devenu le visage de la silhouette en 1998, la Total Air Foamposite Max « Metallic Silver » 2011 émerge avec un rendu argenté métallique sur toute sa coque extérieure sans couture. Le noir sur les œillets, la languette et la semelle intérieure en nubuck offre un contraste, tandis que le logo irisé sur le col et l'unité Photo Blue Max Air sous le pied apportent de la couleur au design.",
+      "color": "Argent métallisé/noir/bleu photo",
+      "release": "9/30/11"
+    },
+    {
+      "image": "Travis_Scott_X_Air_Force_1_Low_Cactus_Jack.jpg",
+      "name": "TRAVIS SCOTT X AIR FORCE 1 LOW 'CACTUS JACK'",
+      "price": "235",
+      "description": "La Travis Scott x Air Force 1 Low « Cactus Jack » présente une construction patchwork unique sur la tige, reflétant l'éducation et le style personnel du rappeur de Houston. Les matériaux robustes font un clin d'œil aux vêtements de travail traditionnels, y compris une superposition zippée amovible au-dessus de la languette, tandis que les différents tons terre s'inspirent des grands espaces. Une semelle extérieure en caoutchouc gomme ancre le design éclectique.",
+      "color": "Multicolore/Bronze sourd/Fossile",
+      "release": "11/16/19"
+    },
+    {
+      "image": "Off-White_X_Dunk_Low_University_Red.jpg",
+      "name": "OFF-WHITE X DUNK LOW 'UNIVERSITY RED'",
+      "price": "297",
+      "description": "Faisant partie d'une collaboration plus large entre Virgil Abloh et Nike, la OFF-WHITE x Dunk Low « University Red » offre une version unique de la Dunk Low. La tige de la chaussure est fabriquée en cuir rouge université et gris loup, accentuée par une deuxième superposition de laçage sur le dessus des lacets traditionnels. La mousse apparente sur la languette et le surmarquage sur le côté latéral contribuent à l'esthétique, tandis qu'une semelle cuvette en caoutchouc bicolore soutient l'ajustement sous le pied.",
+      "color": "Rouge université/Rouge université/Gris loup",
+      "release": "12/20/19"
+    },
+    {
+      "image": "Off-White_X_Air_Force_1_Low_Black.jpg",
+      "name": "OFF-WHITE X AIR FORCE 1 LOW 'BLACK'",
+      "price": "382",
+      "description": "Virgil Abloh lance une refonte assez franche de la silhouette de Bruce Kilgore avec cette OFF-WHITE x Air Force 1 Low. Pourtant, la reconstruction comporte de nombreuses nouveautés : en plus d'un mélange de ripstop et de daim, la tige utilise des coutures scellées et un Swoosh blanc fixé par des coutures en zigzag. De la mousse apparente et des étiquettes inhabituellement placées apparaissent sur la languette, tandis que la touche postmoderne finale arrive avec le mot «LOGO» imprimé sur la languette du talon.",
+      "color": "Noir/Blanc/Cône/Noir",
+      "release": "12/19/18"
+    },
+    {
+      "image": "Off-White_X_Rubber_Dunk_Ps_University_Blue.jpg",
+      "name": "OFF-WHITE X RUBBER DUNK PS 'UNIVERSITY BLUE'",
+      "price": "164",
+      "description": "Fabriquée en collaboration avec Virgil Abloh, la Off-White x Rubber Dunk PS 'University Blue' s'inspire de la ligne Pegasus. Limitée à l'Europe, à l'Afrique et au Moyen-Orient, la tige de la chaussure est construite avec une base en maille blanche, recouverte de cuir argenté métallisé et soulignée d'orange sur le drapeau du quart de panneau et l'étiquette volante. Sous le pied, une semelle extérieure en caoutchouc gomme ancre le design.",
+      "color": "Gris/Bleu université",
+      "release": "10/1/20"
+    },
+    {
+      "image": "Kobe_8_Premium_What_The_Kobe.jpg",
+      "name": "KOBE 8 PREMIUM 'WHAT THE KOBE'",
+      "price": "400",
+      "description": "Le Kobe 8 Premium « What The Kobe » combine près de 30 coloris des versions précédentes de Kobe 8. La bonne chaussure apparaît avec une base Electric Orange complétée par un Volt Swoosh, avec diverses nuances de rouge et de vert partout. La chaussure gauche la plus foncée arbore une base Deep Night avec un Swoosh orange électrique, avec diverses nuances de bleu partout.",
+      "color": "Orange électrique/Nuit profonde/Violet/Agrumes brillants",
+      "release": "12/6/13"
+    },
+    {
+      "image": "Off-White_X_Air_Presto_Black.jpg",
+      "name": "OFF-WHITE X AIR PRESTO 'BLACK'",
+      "price": "436",
+      "description": "Deuxième collaboration entre Virgil Abloh et Nike sur la Air Presto, la OFF-WHITE x Air Presto « Black » présente l'esthétique déconstruite emblématique du designer. Lancée peu de temps après la sortie de son prédécesseur dans le cadre de la collection The Ten, la tige en maille noire de la chaussure est accentuée par un Swoosh blanc avec des coutures proéminentes. La marque « Air » apparaît sur le talon, avec le texte de la marque sur le panneau central médial. Soutenue par une cage de laçage, une semelle intercalaire ton sur ton en Phylon offre un amorti.",
+      "color": "Noir/Blanc/Cône",
+      "release": "7/27/18"
+    },
+    {
+      "image": "Air_Vapormax_Plus_White_Platinum.jpg",
+      "name": "AIR VAPORMAX PLUS 'WHITE PLATINUM'",
+      "price": "104",
+      "description": "S'écartant du chemin de ses prédécesseurs (l'Air Max Plus de 1998 et le VaporMax de 2017), l'Air VaporMax Plus « White Platinum » présente une tige en nubuck et en néoprène perforé, des empiècements en TPU pour un confort supplémentaire et des designs inspirés des flammes, le tout en blanc. Le look est complété par une unité Vapormax Air translucide brumeuse et entièrement exposée, ainsi que par une marque cachée sur la languette et le talon.",
+      "color": "Blanc/Platine pur",
+      "release": "2/9/18"
+    },
+    {
+      "image": "Strangelove_X_Dunk_Low_Sb_Valentines_Day.jpg",
+      "name": "STRANGELOVE X DUNK LOW SB 'VALENTINE'S DAY'",
+      "price": "719",
+      "description": "Le StrangeLove x Dunk Low SB QS 'Valentine's Day' est sorti dans le cadre d'une collaboration avec la marque de skate de Sean Cliver. Sortie en février 2020, la tige est construite en velours écrasé blanc, recouverte de daim rose et complétée par un Swoosh en velours rouge. Le talon latéral arbore le graphisme Cliver's Heart Skull, tandis que sous le pied, une série de cœurs rouges et bleus sont visibles à travers la semelle extérieure en caoutchouc translucide.",
+      "color": "Melon vif/Rouge gym/Rose tendre moyen",
+      "release": "2/8/20"
+    },
+    {
+      "image": "Undefeated_X_Zoom_Kobe_5_Protro_What_If_Pack_Special_Box.jpg",
+      "name": "UNDEFEATED X ZOOM KOBE 5 PROTRO 'WHAT IF PACK' SPECIAL BOX",
+      "price": "598",
+      "description": "Faisant partie du pack What If, la boîte spéciale Undefeated x Zoom Kobe 5 Protro 'What If Pack' a été conçue avec l'aide du détaillant de Los Angeles. Inspirée du repêchage de la NBA de 1996, la première chaussure s'inspire des 12 équipes qui ont remplacé Kobe Bryant cette année-là, en incorporant les couleurs de ces équipes sur sa construction. Le second rend hommage à l’équipe qui l’a effectivement repêché, les Charlotte Hornets. Les touches d'or métallisé sur les deux chaussures rappellent ses cinq titres.",
+      "color": "Multicolore/Multicolore",
+      "release": "8/27/20"
+    },
+    {
+      "image": "Air_Zoom_Flight_The_Glove.jpg",
+      "name": "AIR ZOOM FLIGHT 'THE GLOVE'",
+      "price": "365",
+      "description": "La silhouette emblématique de Gary Payton de la fin des années 90 est rééditée avec le Air Zoom Flight « The Glove ». Clin d'œil au surnom de Gary Payton, qui lui a été donné pour ses prouesses défensives, la chaussure est dotée d'une fermeture éclair qui cache le système de laçage, tandis que la chaussure elle-même arbore la technologie Monkey Paw sur sa construction intérieure de chausson. Des accents rouges uniques sur le talon apportent de la couleur au look, tandis que Zoom Air offre un amorti sous le pied.",
+      "color": "Noir/Blanc-Rouge Universitaire",
+      "release": "10/5/13"
+    },
+    {
+      "image": "Total_Air_Foamposite_Max_Tim_Duncan.jpg",
+      "name": "TOTAL AIR FOAMPOSITE MAX 'TIM DUNCAN'",
+      "price": "459",
+      "description": "",
+      "color": "Bleu courant/bleu courant noir",
+      "release": "9/20/12"
+    },
+    {
+      "image": "Air_Foamposite_Pro_Prm_Area_72.jpg",
+      "name": "AIR FOAMPOSITE PRO PRM 'AREA 72'",
+      "price": "395",
+      "description": "",
+      "color": "Feu/Noir",
+      "release": "12/20/13"
+    },
+    {
+      "image": "Class_Of_97_Pack.jpg",
+      "name": "CLASS OF '97 PACK",
+      "price": "580",
+      "description": "",
+      "color": "Multicolore/Multicolore",
+      "release": "12/19/15"
+    },
+    {
+      "image": "Air_Foamposite_Pro_University_Red_2016.jpg",
+      "name": "AIR FOAMPOSITE PRO 'UNIVERSITY RED' 2016",
+      "price": "375",
+      "description": "L'Air Foamposite Pro « University Red » présente un look inspiré d'un coloris « Varsity Red » de 2002, avec un rouge universitaire brillant présent sur toute la tige Foamposite. Contrasté par un bijou Swoosh noir, davantage de noir émerge sur le reste de la construction en cuir et en maille haut de gamme. Une tige en fibre de carbone soutient l'ajustement et une semelle extérieure en caoutchouc noir solide assure la traction.",
+      "color": "Rouge université/Noir/Noir",
+      "release": "4/16/16"
+    },
+    {
+      "image": "Air_Max_Plus_Triple_Black.jpg",
+      "name": "AIR MAX PLUS 'TRIPLE BLACK'",
+      "price": "128",
+      "description": "",
+      "color": "Noir/Noir-Noir",
+      "release": "12/19/17"
+    },
+    {
+      "image": "Wmns_P6000_Cnpt_Metallic_Silver_Red.jpg",
+      "name": "WMNS P-6000 CNPT 'METALLIC SILVER RED'",
+      "price": "63",
+      "description": "La Wmns P-6000 CNPT « Metallic Silver Red » emprunte des éléments de design aux Pegasus 25 et Pegasus 2006. Ce modèle décontracté est construit avec un mélange de daim et de cuir sur la tige, avec une finition principalement en noir, blanc et argent métallisé. University Red émerge sur le Swoosh en cuir verni, qui est souligné d'or. Sous le pied, une semelle intermédiaire Cushlon offre un amorti.",
+      "color": "Argent métallisé/blanc-rouge université",
+      "release": "3/2/19"
+    },
+    {
+      "image": "Zoom_Spiridon_Caged_2_Metallic_Silver.jpg",
+      "name": "ZOOM SPIRIDON CAGED 2 'METALLIC SILVER'",
+      "price": "42",
+      "description": "La Zoom Spiridon Caged 2 'Metallic Silver' apporte un look rétrofuturiste au coureur de 2003. Construite avec un mélange de mesh et de cuir synthétique, la tige apparaît en argent métallisé, le noir soulignant la marque Swoosh en relief. Sous le pied, une semelle intercalaire en mousse blanche abrite une unité Zoom Air en cage dans le talon pour un amorti. La semelle extérieure en caoutchouc ajoute des touches de rouge pour apporter de la couleur au look.",
+      "color": "Gris fumée clair/argent métallique",
+      "release": "4/13/20"
+    },
+    {
+      "image": "Zoom_Kobe_5_Protro_Demar_Derozan_Pe.jpg",
+      "name": "ZOOM KOBE 5 PROTRO 'DEMAR DEROZAN' PE",
+      "price": "260",
+      "description": "Le Zoom Kobe 5 Protro 'DeMar DeRozan' PE est un coloris PE conçu pour DeMar DeRozan de San Antonio. Le look neutre de la chaussure s'inspire des couleurs de l'équipe, construit en synthétique léger et accentué par des motifs en damier et zèbre. Un Swoosh et un contrefort de talon noirs offrent un contraste, ce dernier étant également inclus pour la stabilité, tandis que Zoom Air sous le pied offre un amorti.",
+      "color": "Gris Loup/Blanc/Noir",
+      "release": "9/18/20"
+    },
+    {
+      "image": "Air_Yeezy_2_Nrg_Solar_Red.jpg",
+      "name": "AIR YEEZY 2 NRG 'SOLAR RED'",
+      "price": "4500",
+      "description": "Accentuée de détails spéciaux conçus spécifiquement pour Kanye, la Air Yeezy 2 NRG « Solar Red » partage une palette de couleurs familière avec son prédécesseur Air Yeezy « Blink », bien que le modèle le plus récent se démarque par une silhouette plus raffinée. Une caractéristique reprise de l'Air Yeezy originale est la semelle extérieure qui brille dans le noir, qui est issue de l'Air Challenge II. La sneaker comprend également un talon en caoutchouc moulé, un panneau latéral texturé anaconda et des références égyptologiques sur la languette et la sangle au milieu du pied.",
+      "color": "Noir/Noir-Rouge Solaire",
+      "release": "6/9/12"
+    },
+    {
+      "image": "Dunk_Low_Sb_Jpack_Chicago.jpg",
+      "name": "DUNK LOW SB 'J-PACK CHICAGO'",
+      "price": "115",
+      "description": "La Nike Dunk Low SB 'J-Pack Chicago' s'inspire du design de la Air Jordan 1, en utilisant une base blanche avec des empiècements rouges sur l'avant-pied et le talon. Un Swoosh noir contrastant et une languette arrière de marque Nike ajoutent les couleurs finales inspirées des Bulls. La semelle intercalaire en mousse contient une unité Zoom Air dans le talon pour une sensation de légèreté, tandis qu'une semelle cuvette en caoutchouc s'associe à des parois latérales blanches et à une semelle extérieure en caoutchouc rouge.",
+      "color": "",
+      "release": "10/28/20"
+    },
+    {
+      "image": "Off-White_X_Air_Presto_The_Ten.jpg",
+      "name": "OFF-WHITE X AIR PRESTO 'THE TEN'",
+      "price": "1360",
+      "description": "Faisant partie de la capsule The Ten de Virgil Abloh et Nike, la OFF-WHITE x Air Presto « The Ten » émerge avec un look déconstruit. La tige respirante de la chaussure présente des coutures proéminentes, avec une languette exposée et un Swoosh cousu, qui émerge sous la cage de laçage blanche. La bride de talon et le panneau latéral médial arborent une marque proéminente, avec une étiquette volante à fermeture éclair ajoutant une touche de rouge sur la chaussure gauche.",
+      "color": "Noir/Noir-Mousseline",
+      "release": "9/6/17"
+    },
+    {
+      "image": "Air_Max_270_Triple_Black.jpg",
+      "name": "AIR MAX 270 'TRIPLE BLACK'",
+      "price": "75",
+      "description": "S'inspirant de ses prédécesseurs (Air Max 180 et Air Max 93), la Air Max 270 monochrome « ​​Triple Black » présente une tige en mesh, des matériaux contrastés sur la pointe et le milieu du pied, une semelle intercalaire en mousse double densité et une unité de talon Air Max surdimensionnée, le tout habillé de noir.",
+      "color": "Noir/Noir-Noir",
+      "release": "3/16/18"
+    },
+    {
+      "image": "Air_Max_1_Evergreen.jpg",
+      "name": "AIR MAX 1 'EVERGREEN'",
+      "price": "112",
+      "description": "Arborant un color blocking inspiré des OG, la Air Max 1 « Hunter Green » est sortie en juillet 2020. Construite avec une base en mesh blanc, la tige est recouverte de daim synthétique gris, avec du vert sur le garde-boue et la marque. Sous le pied, la semelle intermédiaire abrite de l'air visible dans le talon pour un amorti, cédant la place à une semelle extérieure en caoutchouc gaufré pour la traction.",
+      "color": "Blanc/Evergreen Auro/Gris neutre/Noir",
+      "release": "7/30/20"
+    },
+    {
+      "image": "Air_Yeezy_2_Nrg_Pure_Platinum.jpg",
+      "name": "AIR YEEZY 2 NRG 'PURE PLATINUM'",
+      "price": "3732",
+      "description": "Lancée en juin 2012, la Air Yeezy 2 NRG « Pure Platinum » présente un coloris sobre qui mélange différentes nuances de gris sur la tige et une touche contrastée de rouge vif sur la doublure du col. La texture peau de serpent sur les panneaux latéraux et les crêtes proéminentes sur le talon en caoutchouc moulé contribuent à rehausser le design. Utilisant la semelle intercalaire Air Tech Challenge II pour garder la chaussure ancrée dans l'héritage du Swoosh, le design unique lui permet de chevaucher la frontière entre le sport et la mode.",
+      "color": "Gris loup/Platine pur",
+      "release": "6/9/12"
+    },
+    {
+      "image": "Foamposite_One_Tianjin.jpg",
+      "name": "FOAMPOSITE ONE 'TIANJIN'",
+      "price": "5771",
+      "description": "Le Foamposite One « Tianjin » fait un clin d'œil à Tianjin, en Chine, un foyer de culture du basket-ball et des baskets. La tige en coque Foamposite emblématique de la chaussure est ornée de graphismes chinois traditionnels, tandis que la marque 1 Cent sur la languette a été remplacée par une fleur de lotus rose. Soutenu par une voûte plantaire en fibre de carbone, le maillage sur les œillets et la manche intérieure est inclus pour plus de respirabilité.",
+      "color": "Noir/Noir-Lava Glow-Lakeside",
+      "release": "2/7/15"
+    },
+    {
+      "image": "Dunk_High_Premium_Sb_Northern_Lights.jpg",
+      "name": "DUNK HIGH PREMIUM SB 'NORTHERN LIGHTS'",
+      "price": "460",
+      "description": "Inspirée des aurores boréales, la Dunk High Premium SB 'Northern Lights' présente une tige en nubuck noir et gris accentuée par des détails en forme d'étoile et une finition réfléchissante 3M sur le Swoosh et le talon. La semelle extérieure prend une application qui brille dans le noir, avec une semelle intérieure Hyper Pink complétant le look.",
+      "color": "Anthrct/Blk-Hypr Pnk-Crystl Mn",
+      "release": "11/29/14"
+    },
+    {
+      "image": "Air_Max_97_Black_Terry_Cloth.jpg",
+      "name": "AIR MAX 97 'BLACK TERRY CLOTH'",
+      "price": "115",
+      "description": "La Nike Air Max 97 « Black Terry Cloth » déploie une tige en mesh noir renforcée par un garde-boue en cuir foulonné assorti et des empiècements synthétiques réfléchissants. Un Swoosh blanc brodé orne un panneau latéral ondulé argenté et gris enveloppé dans un tissu éponge moelleux. La semelle intercalaire en mousse contient une unité Air-sole qui s'étend sur toute la longueur de la semelle extérieure en caoutchouc.",
+      "color": "Noir/Blanc-Anthracite",
+      "release": "6/17/19"
+    },
+    {
+      "image": "Air_Max_90_Infrared_2020.jpg",
+      "name": "AIR MAX 90 'INFRARED' 2020",
+      "price": "108",
+      "description": "Sortie pour célébrer les 30 ans de la silhouette, la Air Max 90 « Infrared » 2020 présente le coloris OG de la silhouette. Construite avec une base en mesh blanc, la tige de la chaussure comprend des empiècements en daim synthétique gris et un garde-boue en cuir noir. Les badges en TPU et les œillets inférieurs soulignent le look en Radiant Red, assorti sous le pied à la fenêtre Max Air qui entoure le système d'amorti signature. Une semelle extérieure en caoutchouc gaufré est incluse pour la traction.",
+      "color": "Blanc/Noir/Gris froid/Rouge radieux",
+      "release": "11/9/20"
+    },
+    {
+      "image": "Off-White_X_Air_Rubber_Dunk_University_Blue.jpg",
+      "name": "OFF-WHITE X AIR RUBBER DUNK 'UNIVERSITY BLUE'",
+      "price": "224",
+      "description": "La marque de streetwear de luxe de Virgil Abloh s'est associée à Nike pour créer la Off-White x Air Rubber Dunk « University Blue ». La construction basse de la chaussure s'inspire de la P-6000, avec une construction en couches qui comprend une base en mesh recouverte de cuir. University Blue met en valeur le look partout, tandis que le texte Helvetica marque le côté médial. Sous le pied, la semelle en gomme de caoutchouc abrite de l'air visible dans le talon pour un amorti.",
+      "color": "Gris/Bleu université",
+      "release": "10/1/20"
+    },
+    {
+      "image": "Air_Foamposite_One_Pearlized_Pink.jpg",
+      "name": "AIR FOAMPOSITE ONE 'PEARLIZED PINK'",
+      "price": "497",
+      "description": "La Nike Air Foamposite One « Pearlized Pink » adopte une finition accrocheuse, qui met en valeur les contours sculptés de la coque futuriste en Foamposite de la silhouette. La teinte vibrante est compensée par des détails noirs contrastés sur le dessus et une plaque de tige noire assortie sous les pieds. Les succès de la marque traditionnelle incluent le logo 1 Cent signature de Penny Hardaway sur la languette et le talon.",
+      "color": "Plrzd Pnk/Mtllc-Silvr-Blk-Blanc",
+      "release": "11/21/12"
+    },
+    {
+      "image": "Cactus_Plant_Flea_Market_X_Swarovski_X_Dunk_Low_Pure_Platinum.jpg",
+      "name": "CACTUS PLANT FLEA MARKET X SWAROVSKI X DUNK LOW 'PURE PLATINUM'",
+      "price": "4801",
+      "description": "Le Cactus Plant Flea Market x Swarovski x Dunk Low 'Pure Platinum' est sorti dans le cadre d'une collaboration avec la marque de streetwear de Los Angeles et la société de joaillerie autrichienne. La tige de la chaussure est construite en daim, recouverte de cristaux Swarovski de manière intégrale. Un Swoosh surdimensionné, emprunté à la collaboration Blazer 2019 de Cactus Plant Flea Market, marque la paroi latérale, tandis que sous le pied, une semelle cuvette en caoutchouc ton sur ton ancre la construction.",
+      "color": "Platine pur/Platine pur",
+      "release": "11/17/20"
     }
   ],
-  "sneakers": [
+  "adidas": [
     {
-      "id": 1,
-      "name": "Nike Air Force 1 '07",
-      "details": "Le charme continue d'opérer avec la Nike Air Force 1 ’07. Cette chaussure de basketball OG revisite ses éléments les plus célèbres : les renforts cousus résistants, les finitions sobres et juste ce qu'il faut d'éclat pour vous faire briller.",
-      "brand": 1,
-      "colors": "Blanc",
-      "release_date": "09/12/20",
-      "price": 150.0,
-      "profileImage": "AIR_FORCE_1_'07__profile.png",
-      "images": [
-        "AIR_FORCE_1_'07_1.png",
-        "AIR_FORCE_1_'07_2.png",
-        "AIR_FORCE_1_'07_3.png"
-      ]
+      "image": "Yeezy_Boost_350_V2_Bred.jpg",
+      "name": "YEEZY BOOST 350 V2 'BRED'",
+      "price": "189",
+      "description": "Le Yeezy Boost 350 V2 'Bred' apporte un coloris classique à sa construction minimaliste. La tige de la chaussure est construite en Primeknit, finie en noir et mise en valeur par la marque SPLY-350 sur la paroi latérale. Plus de rouge marque la boucle de traction du talon, tandis que les lacets en corde assurent l'ajustement. Sous le pied, une semelle intercalaire Boost sur toute la longueur enveloppée dans une cage en caoutchouc noir offre un amorti. Une semelle extérieure en caoutchouc avec des découpes assure la traction.",
+      "color": "Noir Noyau/Noir Noyau/Rouge",
+      "release": "12/5/20"
     },
     {
-      "id": 2,
-      "name": "Nike Air Max 1",
-      "details": "Découvre la star incontestée. La Air Max 1 allie design intemporel, confort et amorti. Avec elle, marche sur les nuages. Unité Max Air, renfort latéral ondulé : cette icône a marqué la scène sneakers en 1987. Aujourd'hui encore, elle incarne l'âme de la franchise.",
-      "brand": 1,
-      "colors": "Gris,Blanc",
-      "release_date": "17/12/18",
-      "price": 150.0,
-      "profileImage": "NIKE_AIR_MAX_1_profile.png",
-      "images": [
-        "NIKE_AIR_MAX_1__1.png",
-        "NIKE_AIR_MAX_1__2.jpeg",
-        "NIKE_AIR_MAX_1__3.png"
-      ]
+      "image": "Mens_Yeezy_Boost_700_Utility_Black_2019.jpg",
+      "name": "MEN'S YEEZY BOOST 700 'UTILITY BLACK' 2019",
+      "price": "135",
+      "description": "Le Yeezy Boost 700 'Utility Black' 2019 apporte un look bicolore surélevé à sa construction emblématique. La tige de la chaussure est construite avec une base en mesh, recouverte de daim et de cuir lisse pour le maintien. Finie en noir, la semelle intercalaire volumineuse poursuit le look tout en abritant une unité Boost pour l'amorti. La semelle extérieure arbore une construction en caoutchouc gomme pour une traction et une finition luxueuse.",
+      "color": "Noir utilitaire/Noir utilitaire/Noir utilitaire",
+      "release": "6/28/19"
     },
     {
-      "id": 3,
-      "name": "Nike Air Max Plus",
-      "details": "Revendique ton côté rebelle avec la Air Max Plus. Sa cage spéciale enflamme ton look et le mesh respirant te garde au frais. La semelle intermédiaire vintage et les couleurs feutrées rappellent le style des années 2000. Avec la Air Max Plus, profite de l'expérience Tuned Air. Pour une stabilité et un amorti exceptionnels.",
-      "brand": 1,
-      "colors": "Gris",
-      "release_date": "24/4/22",
-      "price": 189.9,
-      "profileImage": "Nike_Air_Max_Plus_profile.png",
-      "images": [
-        "Nike_Air_Max_Plus_1.png",
-        "Nike_Air_Max_Plus_2.png",
-        "Nike_Air_Max_Plus_3.png"
-      ]
+      "image": "Yeezy_Desert_Boot_Salt.jpg",
+      "name": "YEEZY DESERT BOOT 'SALT'",
+      "price": "90",
+      "description": "La Yeezy Desert Boot « Salt » est sortie en septembre 2019 aux côtés des coloris « Rock » et « Oil ». Cette paire présente une finition gris pâle monochrome, exécutée sur une tige qui combine une maille respirante avec des superpositions de nubuck et de daim. Une languette réfléchissante s'étend sur toute la longueur de la languette en maille rembourrée. Sous le pied, une semelle extérieure à crampons en caoutchouc offre une traction durable.",
+      "color": "Sel/Sel/Sel",
+      "release": "9/14/19"
     },
     {
-      "id": 4,
-      "name": "Nike Air Max 97",
-      "details": "Revisitant le style ondulé du modèle d'origine inspiré des trains à grande vitesse japonais, la Nike Air Max 97 affiche un style fulgurant qui en met plein la vue. Elle reprend l'unité Nike Air révolutionnaire sur toute la longueur qui a secoué le monde du running et affiche des couleurs tendance et des détails élégants pour vous permettre d'évoluer dans le plus grand confort.",
-      "brand": 1,
-      "colors": "Blanc,Noir",
-      "release_date": "21/12/21",
-      "price": 190.0,
-      "profileImage": "Nike_Air_Max_97_profile.png",
-      "images": [
-        "Nike_Air_Max_97_1.png",
-        "Nike_Air_Max_97_2.png",
-        "Nike_Air_Max_97_3.png"
-      ]
+      "image": "Yeezy_Desert_Boot_Oil_2019.jpg",
+      "name": "YEEZY DESERT BOOT 'OIL' 2019",
+      "price": "174",
+      "description": "La Yeezy Desert Boot 'Oil' ajoute une construction de botte à la ligne signature de Kanye West. Empruntant la pointe en daim et les empiècements ovales du Yeezy 500, la tige trois-quarts de la chaussure est construite avec un mélange de daim lisse et de maille, avec une finition ton sur ton en pétrole. Des lacets en corde épais soutiennent l'ajustement, tout comme le garde-boue exagéré. Sous le pied, une semelle intermédiaire en mousse volumineuse offre un amorti, laissant la place à une semelle extérieure robuste pour la traction.",
+      "color": "Huile/Huile/Huile",
+      "release": "4/19/19"
     },
     {
-      "id": 5,
-      "name": "Nike Air Max 90 SE",
-      "details": "Aucun modèle n'est aussi aérien, confortable et reconnu. Matières superposées. Semelle gaufrée culte. Unité Max Air visible pour toujours plus de confort. La Air Max 90 reste fidèle au modèle de running d'origine. Et en plus, cette édition spéciale est vendue avec des porte-bonheur métalliques pour personnaliser ta paire.",
-      "brand": 1,
-      "colors": "Gris,Blanc",
-      "release_date": "21/6/17",
-      "price": 140.0,
-      "profileImage": "Nike_Air_Max_90_SE_profile.png",
-      "images": [
-        "Nike_Air_Max_90_SE_1.png",
-        "Nike_Air_Max_90_SE_2.png",
-        "Nike_Air_Max_90_SE_3.png"
-      ]
+      "image": "Yeezy_Boost_350_V2_Red.jpg",
+      "name": "YEEZY BOOST 350 V2 'RED'",
+      "price": "114",
+      "description": "Sorti aux côtés de deux autres coloris, le Yeezy Boost 350 V2 « Rouge » est sorti en novembre 2016. La tige Primeknit de la chaussure apparaît principalement en noir, avec des mouchetures rouges partout. Une bande rouge proéminente s'étend du talon à la pointe, avec la marque SPLY-350 en noir supplémentaire. Sous le pied, une cage en caoutchouc noir recouvre une semelle intercalaire Boost sur toute la longueur, cédant la place à une semelle extérieure en caoutchouc qui arbore des découpes pour révéler l'amorti.",
+      "color": "Noir Noyau/Rouge/Noir Noyau",
+      "release": "11/23/16"
     },
     {
-      "id": 6,
-      "name": "Nike Air Max 90",
-      "details": "Enfilez-la et entrez dans la légende. Avec sa conception à la croisée de l'art, de la musique et de la culture, cette chaussure de running vedette a contribué à forger le style des années 90. Portée par des présidents, révolutionnée par différentes collaborations et célébrée à travers des coloris rares, elle présente des touches visuelles saisissantes, une semelle extérieure gaufrée et un amorti Air visible pour une chaussure qui sait se renouveler et rester dans l'air du temps.",
-      "brand": 1,
-      "colors": "Blanc,Orange,Gris",
-      "release_date": "20/1/09",
-      "price": 150.0,
-      "profileImage": "Nike_Air_Max_90_profile.png",
-      "images": [
-        "Nike_Air_Max_90_1.png",
-        "Nike_Air_Max_90_2.png",
-        "Nike_Air_Max_90_3.png"
-      ]
+      "image": "Yeezy_Desert_Boot_Rock.jpg",
+      "name": "YEEZY DESERT BOOT 'ROCK'",
+      "price": "166",
+      "description": "La Yeezy Desert Boot 'Rock' emprunte des éléments à la Yeezy 500. La botte trois-quarts est finie dans un Rock monochrome, avec une base en mesh recouverte de daim sur la pointe, les œillets et le talon. Un garde-boue exagéré et des lacets en corde soutiennent l'ajustement, tandis que sous le pied, une semelle intercalaire en mousse épaisse offre un amorti. Une semelle extérieure robuste est incluse pour la traction, avec un logo adidas en relief sur le bas pour le seul hit de la marque.",
+      "color": "Rocher/Rocher/Rocher",
+      "release": "4/13/19"
     },
     {
-      "id": 7,
-      "name": "Asics UB4S Gel 1130",
-      "details": "Résultat d'une conception en constante évolution depuis des décennies, la GEL-1130 est un hommage à la neuvième version de la série GEL-1000. La chaussure de running stabilité de 2008 maintient parfaitement vos pieds où que votre esprit vous mène.",
-      "brand": 4,
-      "colors": "Bleu,Blanc,Gris",
-      "release_date": "1/7/22",
-      "price": 120.0,
-      "profileImage": "Asics_UB4S_Gel_1130_profile.jpg",
-      "images": [
-        "Asics_UB4S_Gel_1130_1.jpg",
-        "Asics_UB4S_Gel_1130_2.jpg",
-        "Asics_UB4S_Gel_1130_3.jpg"
-      ]
+      "image": "Samba_Og_White_Black_Gum.jpg",
+      "name": "SAMBA OG 'WHITE BLACK GUM'",
+      "price": "46",
+      "description": "L'adidas Samba OG est une version moderne d'un style classique. Cette version « Cloud White » présente une tige en cuir avec du daim sur l'empiècement contrasté du talon, le bout en T et les emblématiques trois bandes dentelées. Les touches rétro incluent les logos bluebird et foil. Sous le pied, la tige basse repose sur une semelle extérieure en caoutchouc gomme avec un motif de bande de roulement idéal pour les mouvements multidirectionnels.",
+      "color": "Blanc nuage/Noir noyau/Gomme",
+      "release": "5/9/18"
     },
     {
-      "id": 8,
-      "name": "Asics Gel Lyte III",
-      "details": "ASICS et la boutique japonaise atmos ont uni leurs forces pour créer cette itération unique de la silhouette classique Gel-Lyte 3 qui présente un design à languette fendue. La tige en mesh balistique noir de la sneaker est recouverte de panneaux à motifs Duck Camo, avec des touches d'orange pour une touche de couleur. Le co-marquage personnalisé atmos et ASICS apparaît sur la semelle intérieure, tandis que la technologie Gel assure l'amorti.",
-      "brand": 4,
-      "colors": "Noir",
-      "release_date": "25/6/16",
-      "price": 130.0,
-      "profileImage": "Asics_Gel_Lyte_III_profile.jpg",
-      "images": [
-        "Asics_Gel_Lyte_III_1.jpg",
-        "Asics_Gel_Lyte_III_2.jpg",
-        "Asics_Gel_Lyte_III_3.jpg"
-      ]
+      "image": "Yeezy_Boost_350_V2_Cream_White_Triple_White.jpg",
+      "name": "YEEZY BOOST 350 V2 'CREAM WHITE / TRIPLE WHITE'",
+      "price": "208",
+      "description": "Le Yeezy 350 V2 « Cream White » combine une tige Primeknit impeccable avec la marque SPLY 350 crème ton sur ton et une semelle intercalaire blanche translucide abritant Boost sur toute la longueur. Lancée pour la première fois en 2017, une autre sortie en 2018 a contribué à réaliser le mantra souvent répété de Kanye West « Yeezys pour tout le monde », alors qu'Adidas a organisé la plus grande sortie de l'histoire de Yeezy en promettant une prévente à toute personne s'inscrivant sur le site Web.",
+      "color": "Blanc crème/blanc crème/blanc noyau",
+      "release": "4/29/17"
     },
     {
-      "id": 9,
-      "name": "Asics Gel Sonoma 15-50",
-      "details": "La basket GEL-SONOMA 15-50 est ancrée dans le concept d'exploration en plein air.Ce style tire son inspiration de l'empeigne de la chaussure de course de fond 15-50. Elle a été conçue à l'origine pour les coureurs et les coureuses de compétition évoluant sur des terrains très variés. Elle est désormais retravaillée pour vous permettre de marcher dans les rues de la ville et les sentiers de montagne.",
-      "brand": 4,
-      "colors": "Noir",
-      "release_date": "5/11/22",
-      "price": 120.0,
-      "profileImage": "Asics_Gel_Sonoma_15-50_profile.jpg",
-      "images": [
-        "Asics_Gel_Sonoma_15-50_1.jpg",
-        "Asics_Gel_Sonoma_15-50_2.jpg",
-        "Asics_Gel_Sonoma_15-50_3.jpg"
-      ]
+      "image": "Yeezy_Boost_700_Mnvn_Triple_Black.jpg",
+      "name": "YEEZY BOOST 700 MNVN 'TRIPLE BLACK'",
+      "price": "61",
+      "description": "Le Yeezy Boost 700 MNVN 'Triple Black' sorti en février 2020 avec un look noirci sur sa construction emblématique. La tige de la chaussure présente une construction en nylon soutenue par des panneaux thermosoudés, accentuée par la marque réfléchissante 3M sur le côté latéral. Abandonnant les trois bandes habituelles, la chaussure est soutenue sous le pied par une semelle intercalaire Boost fermée et un motif de traction à chevrons sur la semelle extérieure.",
+      "color": "Noir/Noir/Noir",
+      "release": "2/8/20"
     },
     {
-      "id": 10,
-      "name": "Asics Gel 1090 V2",
-      "details": "La basket GEL-1090™ V2 de 2003 a été repensée avec une touche moderne. Elle est retravaillée avec des superpositions en daim et des boucles à l'arrière pour un look plus contemporain.",
-      "brand": 4,
-      "colors": "Gris",
-      "release_date": "31/05/23",
-      "price": 120.0,
-      "profileImage": "Asics_Gel_1090_V2_profile.jpg",
-      "images": [
-        "Asics_Gel_1090_V2_1.jpg",
-        "Asics_Gel_1090_V2_2.jpg",
-        "Asics_Gel_1090_V2_3.jpg"
-      ]
+      "image": "Yeezy_Boost_700_V2_Tephra.jpg",
+      "name": "YEEZY BOOST 700 V2 'TEPHRA'",
+      "price": "111",
+      "description": "Le Yeezy Boost 700 V2 'Tephra' apporte un coloris sobre à la deuxième itération de la gamme Yeezy 700. La tige de la chaussure est construite avec un mélange superposé de maille et de daim, fini dans des teintes neutres. Un look plus sombre émerge sur la semelle volumineuse emblématique, qui abrite une semelle intercalaire Boost sur toute la longueur pour un amorti. Sous le pied, une semelle extérieure en caoutchouc gomme offre une traction tout en offrant une finition surélevée.",
+      "color": "Téphra/Téphra/Téphra",
+      "release": "6/14/19"
     },
     {
-      "id": 11,
-      "name": "Nike Air Max 95",
-      "details": "S'inspirant du corps humain et du style sportif des années 90, son design ondulé culte marie haute performance et style dynamique. Cette version présente un mélange de matières et un amorti Max Air visible. Un look superposé incroyablement confortable.",
-      "brand": 1,
-      "colors": "Noir",
-      "release_date": "21/4/23",
-      "price": 190.0,
-      "profileImage": "Nike_Air_Max_95_profile.png",
-      "images": [
-        "Nike_Air_Max_95_1.png",
-        "Nike_Air_Max_95_2.png",
-        "Nike_Air_Max_95_3.png"
-      ]
+      "image": "Yeezy_500_Utility_Black_2018.jpg",
+      "name": "YEEZY 500 'UTILITY BLACK' 2018",
+      "price": "148",
+      "description": "En juillet 2018, Kanye West et adidas sortaient la Yeezy 500' Utility Black. La silhouette d'inspiration rétro contrebalance un design élégant entièrement noir avec sa forme volumineuse. Ce qui distingue ce coloris de la finition triple noir standard est une utilisation unique du ton – c'est un noir semi-décoloré qui recouvre la combinaison de maille et de daim supérieur, par opposition à la variété noire plus courante dans le firmament de la sneaker.",
+      "color": "Noir utilitaire/Noir utilitaire",
+      "release": "11/30/20"
     },
     {
-      "id": 12,
-      "name": "Adidas NMD V3",
-      "details": "Le futur est déjà là. Inspirée du running, la chaussure adidas NMD_R1 est un remix stylé de la sneaker adidas classique, conçu avec une technologie tactique. Les empiècements métallisés et le TPU semi-transparent ajoutent une touche brillante et futuriste. Les longs trajets et les trottoirs glissants ne sont plus un problème, grâce à la semelle extérieure en caoutchouc adhérent et à l'amorti BOOST sous tes pieds.",
-      "brand": 5,
-      "colors": "Noir",
-      "release_date": "28/8/22",
-      "price": 140.0,
-      "profileImage": "Adidas_NMD_V3_profile.jpg",
-      "images": [
-        "Adidas_NMD_V3_1.jpg",
-        "Adidas_NMD_V3_2.jpg",
-        "Adidas_NMD_V3_3.jpg"
-      ]
+      "image": "Yeezy_Boost_350_V2_Zyon.jpg",
+      "name": "YEEZY BOOST 350 V2 'ZYON'",
+      "price": "89",
+      "description": "Le Yeezy Boost 350 V2 'Zyon' émerge avec un look stylisé sur un coloris neutre. Construite en Primeknit, la tige est divisée en deux par une bande monofilament plus foncée, tandis que le col arbore un gris uni pour ajouter à l'esthétique. Sous le pied, une semelle intercalaire en caoutchouc semi-translucide recouvre une semelle intercalaire Boost sur toute la longueur, cédant la place à une semelle extérieure en caoutchouc gomme pour la traction.",
+      "color": "Zyon/Zyon/Zyon",
+      "release": "7/18/20"
     },
     {
-      "id": 13,
-      "name": "Adidas ZX 22 Boost",
-      "details": "Épurée, simple, confortable. Cette chaussure adidas junior transforme une icône d'inspiration running en une sneaker stylée et confortable à porter en toute occasion. Les inserts JET BOOST sur la semelle intermédiaire en EVA offrent un retour d'énergie supplémentaire.",
-      "brand": 5,
-      "colors": "Blanc",
-      "release_date": "5/1/22",
-      "price": 110.0,
-      "profileImage": "Adidas_ZX_22_Boost_profile.jpg",
-      "images": [
-        "Adidas_ZX_22_Boost_1.jpg",
-        "Adidas_ZX_22_Boost_2.jpg",
-        "Adidas_ZX_22_Boost_3.jpg"
-      ]
+      "image": "Yeezy_700_V3_Arzareth.jpg",
+      "name": "YEEZY 700 V3 'ARZARETH'",
+      "price": "78",
+      "description": "La Yeezy 700 V3 'Arzareth' apporte une série de teintes bleues à son look progressif audacieux. Construite en tricot respirant, la chaussure est recouverte d'une cage RPU semi-translucide pour plus de soutien. Le col de style bottillon contraste avec le look en noir, tandis que sous le pied, la semelle intercalaire en EVA est encapsulée par du PU. Une semelle extérieure en caoutchouc à chevrons offre une traction.",
+      "color": "Arzareth/Arzareth/Arzareth",
+      "release": "9/1/20"
     },
     {
-      "id": 14,
-      "name": "Adidas 4D Futurecraft",
-      "details": "Avec sa semelle intermédiaire en treillis imprimée en 3D, l'adidas Futurecraft 4D « Crystal White » offre une compression d'impact optimale grâce à une combinaison révolutionnaire de résine liquide, d'oxygène et de lumière. La tige présente un coloris neutre en Primeknit blanc sur une semelle extérieure en caoutchouc noire pour une traction optimale. La zone des orteils perforée assure la ventilation et le logo apparaît via trois bandes ivoire sur le panneau latéral.",
-      "brand": 5,
-      "colors": "Blanc,Gris",
-      "release_date": "7/9/21",
-      "price": 220.0,
-      "profileImage": "Adidas_4D_Futurecraft_profile.jpg",
-      "images": [
-        "Adidas_4D_Futurecraft_1.jpg",
-        "Adidas_4D_Futurecraft_2.jpg",
-        "Adidas_4D_Futurecraft_3.jpg"
-      ]
+      "image": "Yeezy_Boost_350_V2_Yecheil_Nonreflective.jpg",
+      "name": "YEEZY BOOST 350 V2 'YECHEIL NON-REFLECTIVE'",
+      "price": "73",
+      "description": "Avec un coloris réfléchissant, le Yeezy Boost 350 V2 « Yecheil Non-Reflective » émerge avec un look vibrant. La tige est construite en Primeknit, intégrant une série de teintes vives dans sa construction. Contrastée par une bande monofilament noire qui traverse le design, une semelle intercalaire en TPU noir sous le pied abrite une unité Boost, avec une semelle extérieure en caoutchouc pour la traction.",
+      "color": "Yecheil/Yecheil/Yecheil",
+      "release": "12/20/19"
     },
     {
-      "id": 15,
-      "name": "Adidas Oznova",
-      "details": "Outrageusement confortable. Impertinente et audacieuse. La chaussure adidas OZNOVA ne fait pas les choses à moitié. Elle offre encore plus de confort grâce à l'amorti Adiplus qui est si doux que tu auras l'impression de marcher sur un nuage. Avec ses proportions exagérées et ses lignes fluides, elle crée la surprise. Tu peux la porter avec toutes tes tenues, partout où tu vas.",
-      "brand": 5,
-      "colors": "Bleu,Noir",
-      "release_date": "2/2/23",
-      "price": 110.0,
-      "profileImage": "Adidas_Oznova_profile.jpg",
-      "images": [
-        "Adidas_Oznova_1.jpg",
-        "Adidas_Oznova_2.jpg",
-        "Adidas_Oznova_2.jpg"
-      ]
+      "image": "Yeezy_Boost_350_V2_Israfil.jpg",
+      "name": "YEEZY BOOST 350 V2 'ISRAFIL'",
+      "price": "119",
+      "description": "Le Yeezy Boost 350 V2 'Israfil' émerge avec un design patchwork sur sa construction Primeknit. Mais avec un mélange de fils beiges et gris, la tige est mise en valeur par la bande monofilament emblématique à travers la construction. Sous le pied, une semelle intermédiaire Boost sur toute la longueur offre un amorti, enveloppée dans une coque en caoutchouc semi-translucide qui mène à une semelle extérieure en caoutchouc gomme sous le pied.",
+      "color": "Israfil/Israfil/Israfil",
+      "release": "8/22/20"
     },
     {
-      "id": 16,
-      "name": "Adidas Ultraboost Web DNA",
-      "details": "Créée pour les runners, convoitée par les sneakerheads. Cette chaussure Ultraboost DNA reste fidèle à l'originale avec des détails qui vont au-delà de la piste. Sa tige adidas PRIMEKNIT ajustée est ornée d'un motif original pour un look stylé. Le renfort moulé au talon ajoute une touche iconique, tandis que l'amorti BOOST assure un confort ultime.",
-      "brand": 5,
-      "colors": "Blanc,Gris",
-      "release_date": "5/3/22",
-      "price": 170.0,
-      "profileImage": "Adidas_Ultraboost_Web_DNA_profile.jpg",
-      "images": [
-        "Adidas_Ultraboost_Web_DNA_1.jpg",
-        "Adidas_Ultraboost_Web_DNA_2.jpg",
-        "Adidas_Ultraboost_Web_DNA_3.jpg"
-      ]
+      "image": "Yeezy_Boost_350_Pirate_Black_2016.jpg",
+      "name": "YEEZY BOOST 350 'PIRATE BLACK' 2016",
+      "price": "121",
+      "description": "Sorti le 15 février 2016, le Yeezy Boost 350 « Pirate Black » 2016 est identique au lancement 2015 du Yeezy Boost 350 « Pirate Black », à l'exception de son rembourrage intérieur de talon amélioré et du daim plus doux sur ses patchs médiaux de marque. Le design combine une tige Primeknit noir/gris foncé avec des lacets en corde gris foncé à motifs, des languettes de talon rouges et une semelle extérieure noire.",
+      "color": "Pirate Noir/Bleu Gris/Core Noir",
+      "release": "2/19/16"
     },
     {
-      "id": 17,
-      "name": "Adidas Ultra4D",
-      "details": "Parfaite pour te promener dans le parc ou pour un run entre amis le week-end, cette chaussure adidas Ultraboost 1.0 est conçue pour t'offrir un confort supérieur. Sa tige adidas PRIMEKNIT épouse les formes du pied et la technologie BOOST dans la semelle intermédiaire assure un amorti exceptionnel de la première foulée jusqu'au dernier kilomètre. La semelle extérieure Stretchweb s'adapte aux mouvements du pied pour une foulée dynamique tandis que la gomme Continental™ garantit l'accroche dont tu as besoin pour rester énergique.",
-      "brand": 5,
-      "colors": "Gris,Gold",
-      "release_date": "15/8/23",
-      "price": 220.0,
-      "profileImage": "Adidas_Ultra4D_profile.jpg",
-      "images": [
-        "Adidas_Ultra4D_1.jpg",
-        "Adidas_Ultra4D_2.jpg",
-        "Adidas_Ultra4D_3.jpg"
-      ]
+      "image": "Yeezy_Boost_350_V2_Black_Reflective.jpg",
+      "name": "YEEZY BOOST 350 V2 'BLACK REFLECTIVE'",
+      "price": "194",
+      "description": "Le Yeezy Boost 350 V2 « Black Reflective » présente un look largement monochrome avec un accent unique partout. La tige Primeknit de la chaussure apparaît en noir, avec une bande monofilament ton sur ton sur tout le design. Des éléments réfléchissants sont cousus dans la construction, tandis que la boucle du talon comprend des touches de rouge pour la seule couleur. Sous le pied, une semelle intermédiaire Boost sur toute la longueur offre un amorti, enveloppée par une coque en TPU qui se poursuit sur la semelle extérieure.",
+      "color": "Noir réfléchissant/Noir réfléchissant/Noir réfléchissant",
+      "release": "6/4/19"
     },
     {
-      "id": 18,
-      "name": "Nike Air Max 96 II",
-      "details": "Reprenant l'esthétique sportive rétro imaginée par un célèbre designer Nike, cette version revisitée de la Nike Air Max 96 II s'impose d'elle-même.La conception classique des années 90 revêt des couleurs hivernales, associant style sophistiqué et détails dynamiques, inspirés de la piste.La grande unité Nike Air apporte une touche de style décontracté parfaite, tout en offrant un confort longue durée.",
-      "brand": 1,
-      "colors": "Blanc,Noir",
-      "release_date": "9/4/22",
-      "price": 170.0,
-      "profileImage": "Nike_Air_Max_96_II_profile.jpg",
-      "images": [
-        "Nike_Air_Max_96_II_1.jpg",
-        "Nike_Air_Max_96_II_2.jpg",
-        "Nike_Air_Max_96_II_3.jpg"
-      ]
+      "image": "Yeezy_Boost_350_V2_Beluga_20.jpg",
+      "name": "YEEZY BOOST 350 V2 'BELUGA 2.0'",
+      "price": "252",
+      "description": "Le Yeezy Boost 350 V2 « Beluga 2.0 » est sorti le 25 novembre 2017 et son nom vient du coloris du premier Yeezy Boost 350 V2. Au lieu de la couleur orange vif que l'on retrouve sur la sneaker initiale « Beluga », la chaussure affiche une couleur grise silencieuse sur le côté. Le Yeezy Boost 350 V2 « Beluga 2.0 » contient également une languette de talon avec coutures orange et un logo inversé « SPLY-350 » sur les côtés.",
+      "color": "Gris/Orange vif/Gris uni foncé",
+      "release": "11/25/17"
     },
     {
-      "id": 19,
-      "name": "Asics Gel Nimbus 9",
-      "details": "La GEL-NIMBUS 9 a été initialement pensée comme une chaussure pour les longues distances pour les coureurs aux pieds neutres et supinés.Sortie pour la première fois en 2007, cette chaussure refait surface avec des matériaux originaux et des détails clés. Son aspect industriel des années 2000 est également compensé par un contraste audacieux et des blocs de couleur",
-      "brand": 4,
-      "colors": "Blanc,Noir",
-      "release_date": "1/1/24",
-      "price": 150.0,
-      "profileImage": "Asics_Gel_Nimbus_9_profile.jpg",
-      "images": [
-        "Asics_Gel_Nimbus_9_1.jpg",
-        "Asics_Gel_Nimbus_9_2.jpg",
-        "Asics_Gel_Nimbus_9_3.jpg"
-      ]
+      "image": "Yeezy_Boost_350_V2_Semi_Frozen_Yellow.jpg",
+      "name": "YEEZY BOOST 350 V2 'SEMI FROZEN YELLOW'",
+      "price": "203",
+      "description": "Le Yeezy Boost 350 V2 de Kanye West en Semi Frozen Yellow est arrivé pour la première fois dans les magasins en novembre 2017, avec un réapprovisionnement le 14 décembre 2018. Habillé de Primeknit, le coureur lifestyle est complété dans une teinte jaune vif énergique, qui s'étend jusqu'aux lacets, à la languette du talon et à la semelle intercalaire en caoutchouc nervuré infusé de boost.",
+      "color": "Jaune semi-gelé/Acier brut/Rouge",
+      "release": "11/18/17"
     },
     {
-      "id": 20,
-      "name": "Jordan Delta 2",
-      "details": "La Jordan Delta 2 revisite de manière innovante et audacieuse les fonctionnalités que vous aimez : durabilité, confort et un style 100 % Jordan.Nous avons réimaginé la silhouette et remplacé certains éléments, mais cette nouvelle version reste fidèle à la Delta d'origine.Elle reprend la même combinaison de matières résistantes et futuristes jouant avec les textures et des coutures visibles pour créer un look contrasté, à la fois original et emblématique.",
-      "brand": 3,
-      "colors": "Noir,Vert",
-      "release_date": "2/9/22",
-      "price": 130.0,
-      "profileImage": "Jordan_Delta_2_profile.png",
-      "images": [
-        "Jordan_Delta_2_1.jpeg",
-        "Jordan_Delta_2_2.jpeg",
-        "Jordan_Delta_2_3.png"
-      ]
+      "image": "Yeezy_Boost_750_Triple_Black.jpg",
+      "name": "YEEZY BOOST 750 'TRIPLE BLACK'",
+      "price": "717",
+      "description": "Dans une interview accordée en février 2015 à Power 105.1 FM à New York, Kanye a dévoilé le coloris Yeezy Boost 750 « Black ». Plus tard, il a été retrouvé lors d'une Fashion Week de New York avec une version en daim noir/semelle en gomme. Sortie le 19 décembre 2015, la sneaker « Black » présente une tige entièrement en daim, une casquette perforée et une fermeture éclair à la cheville, comme deuxième coloris de la ligne Yeezy Boost 750.",
+      "color": "Noir noyau/Noir noyau/Noir noyau",
+      "release": "12/19/15"
+    },
+    {
+      "image": "Yeezy_Boost_750_Grey_Gum.jpg",
+      "name": "YEEZY BOOST 750 'GREY GUM'",
+      "price": "676",
+      "description": "Le Yeezy Boost 750 « Glow in the Dark » est sorti le 11 juin 2016 et comporte un dessus en nubuck gris clair avec une sangle élastique au milieu du pied. Il est également équipé d'une fermeture éclair pour une entrée facile, d'une empeigne perforée et d'une semelle intercalaire Boost en gomme qui brille dans le noir.",
+      "color": "Gris clair/Gris clair/Gomme",
+      "release": "6/11/16"
+    },
+    {
+      "image": "Yeezy_Boost_350_V2_Cinder_Nonreflective.jpg",
+      "name": "YEEZY BOOST 350 V2 'CINDER NON-REFLECTIVE'",
+      "price": "113",
+      "description": "Le Yeezy Boost 350 V2 'Cinder' présente un look neutre sur sa construction emblématique. Construite en Primeknit, la tige Cinder comprend une bande monofilament ton sur ton sur le côté latéral. Une boucle de traction au talon permet un enfilage et un retrait faciles, tandis qu'une finition similaire marque la cage autour de la semelle intermédiaire Boost. Une semelle extérieure en caoutchouc gomme offre une traction.",
+      "color": "Cendre/Cendre/Cendre",
+      "release": "3/21/20"
+    },
+    {
+      "image": "Yeezy_Boost_700_Analog.jpg",
+      "name": "YEEZY BOOST 700 'ANALOG'",
+      "price": "79",
+      "description": "Le Yeezy Boost 700 'Analog' est sorti en avril 2019, plus de deux ans après les débuts de la silhouette. La chaussure émerge avec un coloris neutre qui intègre diverses nuances de blanc cassé dans sa construction. Construit avec un mélange de cuir, de maille et de daim, des détails réfléchissants émergent près du talon. Sous le pied, la semelle intercalaire volumineuse emblématique abrite une unité d'amorti Boost sur toute la longueur, cédant la place à une semelle extérieure en caoutchouc noir pour la traction et le contraste.",
+      "color": "Analogique/Analogique/Analogique",
+      "release": "4/27/19"
+    },
+    {
+      "image": "Yeezy_Boost_350_V2_Carbon.jpg",
+      "name": "YEEZY BOOST 350 V2 'CARBON'",
+      "price": "47",
+      "description": "La Yeezy Boost 350 V2 'Carbon' apporte un look neutre à sa construction classique. La tige de la chaussure est construite en Primeknit, finie dans un mélange de noir et de gris tissé dans le design. Une bande monofilament post-teinte traverse la paroi latérale, tandis que des lacets élastiques sans nœud soutiennent l'ajustement. Sous le pied, une cage en caoutchouc recouvre la semelle intercalaire Boost sur toute la longueur, qui offre un amorti.",
+      "color": "Asriel/Asriel/Asriel",
+      "release": "10/2/20"
+    },
+    {
+      "image": "Yeezy_Boost_350_V2_Beluga.jpg",
+      "name": "YEEZY BOOST 350 V2 'BELUGA'",
+      "price": "112",
+      "description": "Dévoilé lors de la présentation Yeezy Saison 3 au Madison Square Garden, le Yeezy Boost 350 V2 « Beluga » est sorti le 24 septembre 2016. La silhouette évoluée du Yeezy Boost 350 V2 présente un Primeknit gris bicolore et une bande rouge solaire de marque latérale avec SPLY-350. Le panneau en daim du milieu du pied a été retiré sur le côté médial et la languette de traction a été remplacée par un nouvel ajustement élastique.",
+      "color": "Gris Acier/Béluga/Rouge Solaire",
+      "release": "9/24/16"
+    },
+    {
+      "image": "Yeezy_Boost_350_V2_Black_Nonreflective.jpg",
+      "name": "YEEZY BOOST 350 V2 'BLACK NON-REFLECTIVE'",
+      "price": "134",
+      "description": "Le Yeezy Boost 350 V2 « Black Non-Reflective » émerge avec un look presque monochrome sur sa construction signature. La tige de la chaussure est construite en Primeknit, finie en noir et complétée par une bande monofilament ton sur ton à travers le design. Une touche de rouge apporte de la couleur à la boucle du talon, tandis que sous le pied, une semelle intercalaire Boost assure un amorti. La coque en TPU qui recouvre la semelle intermédiaire continue jusqu'à la semelle extérieure en caoutchouc pour plus de traction.",
+      "color": "Noir/Noir/Noir",
+      "release": "6/7/19"
+    },
+    {
+      "image": "Yeezy_Boost_700_Inertia.jpg",
+      "name": "YEEZY BOOST 700 'INERTIA'",
+      "price": "256",
+      "description": "Faisant partie de la gamme Yeezy Saison 8 lancée en mars 2019, la Yeezy Boost 700 « Inertia » présente la tige de la 700 originale. La construction à nombreux panneaux de la chaussure comprend un mélange de daim de qualité supérieure, de maille et de cuir lisse, fini dans une série de teintes bleues. La semelle intercalaire volumineuse emblématique est accentuée par des touches d'orange au talon, avec une semelle intercalaire Boost sur toute la longueur offrant un amorti. Sous le pied, une semelle extérieure à motifs avec une bande de roulement à chevrons offre une traction.",
+      "color": "Inertie/Inertie/Inertie",
+      "release": "3/9/19"
+    },
+    {
+      "image": "Yeezy_700_V3_Azael_2019.jpg",
+      "name": "YEEZY 700 V3 'AZAEL' 2019",
+      "price": "91",
+      "description": "S'écartant audacieusement de son précédent design old-school, Kanye West s'étend vers un style avant-gardiste avec l'adidas Yeezy Boost 700 V3. Lancée en décembre 2019, cette interprétation d'Azael comprend un chausson en néoprène noir avec un col cranté et des couches de textile rayées dans une cage moulée et ajourée. Le laçage dynamique offre un verrouillage sécurisé. Tout cela est soutenu par un amorti Boost et une semelle extérieure en caoutchouc robuste.",
+      "color": "Azaël/Azaël/Azaël",
+      "release": "12/23/19"
+    },
+    {
+      "image": "Yeezy_Boost_350_V2_Sesame.jpg",
+      "name": "YEEZY BOOST 350 V2 'SESAME'",
+      "price": "83",
+      "description": "La Yeezy Boost 350 V2 « Sesame » présente une palette de couleurs sobres qui correspond à la construction minimaliste de la chaussure. La tige aérée en Primeknit conserve la languette du talon et les détails distincts de la couture centrale, mais supprime la marque « SPLY-350 » en miroir. Une semelle intercalaire en caoutchouc semi-translucide en dessous englobe un amorti Boost sur toute la longueur, tandis qu'une semelle extérieure en caoutchouc gomme offre une traction améliorée.",
+      "color": "Sésame/Sésame/Sésame",
+      "release": "11/23/18"
+    },
+    {
+      "image": "Yeezy_Boost_350_V2_Static_Nonreflective_2018.jpg",
+      "name": "YEEZY BOOST 350 V2 'STATIC NON-REFLECTIVE' 2018",
+      "price": "91",
+      "description": "La Yeezy Boost 350 V2 ‘Static Non-Reflective’ 2018 est faite pour se démarquer, grâce à l’apport de fonctionnalités exclusives. La chaussure présente une bande latérale translucide et des accents réfléchissants 3M sur les lacets en corde de la chaussure, la tige Primeknit et la marque Three-Stripes sur le talon intérieur. La semelle intermédiaire est équipée de parois latérales striées en TPU aux propriétés semi-translucides, affichant un amorti adidas Boost sur toute la longueur à l'intérieur.",
+      "color": "Statique/Statique/Statique",
+      "release": "12/27/18"
+    },
+    {
+      "image": "Yeezy_Boost_350_Oxford_Tan.jpg",
+      "name": "YEEZY BOOST 350 'OXFORD TAN'",
+      "price": "495",
+      "description": "L'adidas Yeezy Boost 350 'Oxford Tan' présente une tige Primeknit oxford/light stone avec des lacets oxford ton sur ton, des patchs en daim et une semelle extérieure Boost. Porté pour la première fois par Kanye aux MTV VMA en août 2015, le quatrième coloris Yeezy 350 est sorti le 29 décembre 2015 dans certains magasins adidas Originals Retail.",
+      "color": "Pierre claire/Oxford Tan/Pierre claire",
+      "release": "12/29/15"
+    },
+    {
+      "image": "Yeezy_700_V3_Alvah.jpg",
+      "name": "YEEZY 700 V3 'ALVAH'",
+      "price": "115",
+      "description": "La Yeezy 700 V3 'Alvah' apporte un aspect noirci à sa construction sculptée. Construite en mesh noir et gris, la tige est recouverte d'un exosquelette RPU brillant dans le noir pour soutenir l'ajustement. La base de la languette arbore des détails réfléchissants, tandis que sous le pied, la semelle intercalaire en EVA de la chaussure est encapsulée par du PU.",
+      "color": "Alvah/Alvah/Alvah",
+      "release": "4/11/20"
+    },
+    {
+      "image": "Yeezy_Boost_750_Og.jpg",
+      "name": "YEEZY BOOST 750 'OG'",
+      "price": "2689",
+      "description": "La toute première chaussure adidas de Kanye West, la Yeezy Boost 750 « OG », lancée en quantités très restreintes dans le monde en février 2015. La construction imposante en forme de botte montre un changement radical par rapport aux modèles précédents de West, avec une casquette entièrement en daim marron clair montée sur une semelle intercalaire en caoutchouc partiellement nervurée et équipée d'un boost dans une subtile couleur blanc cassé.",
+      "color": "Marron clair/blanc carbone/marron clair",
+      "release": "2/14/15"
+    },
+    {
+      "image": "Pharrell_X_Nmd_Human_Race_Black.jpg",
+      "name": "PHARRELL X NMD HUMAN RACE 'BLACK'",
+      "price": "52",
+      "description": "Faisant partie d'une collaboration avec Pharrell Williams, la Pharrell x NMD Human Race « Black » est sortie en novembre 2020. La tige Primeknit de la chaussure apparaît en noir, avec des caractères japonais qui lisent « Human Race » sur l'empeigne. Des lacets enveloppants sont intégrés aux empiècements sur la paroi latérale, tandis que le talon en cuir comprend un trèfle. Sous le pied, la Boost sur toute la longueur fonctionne avec des bouchons EVA à l'avant-pied et au talon pour offrir amorti et stabilité.",
+      "color": "Noir noyau/Noir noyau/Noir noyau",
+      "release": "11/19/20"
+    },
+    {
+      "image": "Yeezy_Boost_700_Kids_Wave_Runner.jpg",
+      "name": "YEEZY BOOST 700 KIDS 'WAVE RUNNER'",
+      "price": "117",
+      "description": "Le Yeezy Boost 700 Kids 'Wave Runner', initialement révélé lors du défilé de la saison 5, apparaît ici dans des tailles pour enfants. La chaussure conserve le look de ses homologues pleine grandeur, avec une tige en mesh en gris uni et bleu sarcelle recouverte de daim et de cuir en gris uni et noir. La construction respirante est accentuée par des lacets fluo, tandis que sous le pied, la semelle intercalaire colorée abrite une unité Boost pour l'amorti. Un motif à chevrons sur la semelle extérieure assure la traction.",
+      "color": "Gris uni/blanc craie/noir noyau",
+      "release": "8/11/19"
+    },
+    {
+      "image": "Handball_Spezial_Collegiate_Navy_Clear_Sky.jpg",
+      "name": "HANDBALL SPEZIAL 'COLLEGIATE NAVY CLEAR SKY'",
+      "price": "61",
+      "description": "L'adidas Handball Spezial 'Collegiate Navy Clear Sky' ramène une paire de 1979 conçue pour les meilleurs joueurs de handball. Ces chaussures présentent une tige en daim bleu marine avec des touches bleu poudré sur les trois bandes de cuir et la languette arrière. Une feuille d'or « Spezial » est gravée sur le panneau latéral pour mettre en valeur le modèle. Les semelles intérieures Ortholite gardent chaque pas léger, tandis qu'une semelle plate en caoutchouc vous permet de garder le pied sûr.",
+      "color": "Marine collégiale/Ciel clair/Gomme",
+      "release": "8/26/20"
+    },
+    {
+      "image": "Yeezy_Boost_350_V2_Sand_Taupe.jpg",
+      "name": "YEEZY BOOST 350 V2 'SAND TAUPE'",
+      "price": "133",
+      "description": "La Yeezy Boost 350 V2 'Sand Taupe' apparaît avec un look neutre. Construite en Primeknit, la tige de la chaussure apparaît en marron et orange clair, avec un col renforcé et des lacets sans nœuds soutenant l'ajustement. La paroi latérale comprend la bande monofilament post-teinte emblématique, tandis que sous le pied, une cage en caoutchouc semi-translucide abrite une semelle intercalaire Boost sur toute la longueur, qui offre un amorti.",
+      "color": "Taupe Sable/Taupe Sable/Taupe Sable",
+      "release": "12/19/20"
+    },
+    {
+      "image": "Yeezy_Boost_350_V2_Fade.jpg",
+      "name": "YEEZY BOOST 350 V2 'FADE'",
+      "price": "46",
+      "description": "Le Yeezy Boost 350 V2 'Fade' présente un look à motifs sur sa construction emblématique. La tige de la chaussure est construite en Primeknit, finie dans un mélange de marron et de beige et divisée en deux par une bande monofilament traversant la paroi latérale. Sous le pied, une semelle intercalaire Boost sur toute la longueur offre un amorti, recouverte par une cage en caoutchouc qui cède la place à une semelle extérieure en caoutchouc pour la traction.",
+      "color": "",
+      "release": "11/11/20"
+    },
+    {
+      "image": "Stan_Smith_Lush_Red.jpg",
+      "name": "STAN SMITH 'LUSH RED'",
+      "price": "87",
+      "description": "La Stan Smith 'Lush Red' apporte des accents vibrants à sa construction de tennis classique. Plutôt que de vert, la tige en cuir pleine fleur blanche de la chaussure est mise en valeur par Lush Red sur la languette et le talon. Les trois bandes perforées assurent la respirabilité sur la paroi latérale, tandis que les œillets en métal peint soutiennent le système de laçage. Sous le pied, la semelle cuvette en caoutchouc comprend un motif de traction circulaire sur la semelle extérieure.",
+      "color": "Chaussures Blanc/Rouge Lush",
+      "release": "12/23/19"
+    },
+    {
+      "image": "Yeezy_Boost_700_Mauve.jpg",
+      "name": "YEEZY BOOST 700 'MAUVE'",
+      "price": "242",
+      "description": "La palette de couleurs sombres du Yeezy Boost 700 « Mauve » mélange le noir et le gris violacé sur sa tige multicouche emblématique. L'agencement complexe présente différentes variétés de maille complétées par des panneaux en daim et en cuir texturé, le tout s'élevant au-dessus d'une semelle intercalaire sculptée ton sur ton égayée de touches de vert fluo. La marque extérieure se limite à trois bandes discrètes sur le panneau latéral et à un logo adidas en relief sur la semelle extérieure.",
+      "color": "Mauve/Mauve/Mauve",
+      "release": "10/27/18"
+    },
+    {
+      "image": "Yeezy_Boost_350_V2_Linen.jpg",
+      "name": "YEEZY BOOST 350 V2 'LINEN'",
+      "price": "184",
+      "description": "D'apparence neutre, la Yeezy Boost 350 V2 'Linen' est mise en valeur par des détails réfléchissants sur sa bande monofilament post-teinte emblématique. Le reste de la tige apparaît en Lin sur sa construction Primeknit. Le contraste est assuré par le col, tandis que sous le pied, une cage en caoutchouc semi-translucide recouvre la semelle intercalaire Boost. Une semelle extérieure en caoutchouc gomme offre une traction.",
+      "color": "Lin/Lin/Lin",
+      "release": "4/18/20"
+    },
+    {
+      "image": "Yeezy_Boost_350_V2_Earth.jpg",
+      "name": "YEEZY BOOST 350 V2 'EARTH'",
+      "price": "230",
+      "description": "D'un look totalement neutre, la Yeezy Boost 350 V2 'Earth' présente une finition Earth tout au long de sa construction emblématique. La tige Primeknit de la chaussure comprend une bande monofilament post-teinte à travers le design, tandis qu'une boucle de traction en textile au talon permet un enfilage et un retrait faciles. Sous le pied, le look ton sur ton se poursuit sur l'outillage, qui comprend une semelle intercalaire Boost encapsulée et une semelle extérieure en caoutchouc gomme.",
+      "color": "Terre/Terre/Terre",
+      "release": "2/22/20"
+    },
+    {
+      "image": "Yeezy_950_Boot_Chocolate.jpg",
+      "name": "YEEZY 950 BOOT 'CHOCOLATE'",
+      "price": "1200",
+      "description": "La Yeezy 950 Boot « Chocolate » sortie dans le cadre de la saison 1 de Yeezy en octobre 2015 présente une silhouette qui combine une botte de canard avec une botte militaire enveloppée dans un design monochrome. Les matériaux sont du caoutchouc, du maillage balistique et du daim, le tout dans la même palette marron foncé. La marque extérieure est limitée aux mots-symboles adidas et Yeezy de la semelle extérieure, ainsi qu'aux étiquettes de langue qui ne correspondent pas.",
+      "color": "Chocolat/Chocolat/Chocolat",
+      "release": "10/29/15"
+    },
+    {
+      "image": "Nmdr1_V2_United_By_Sneakers_Mexico_City.jpg",
+      "name": "NMD_R1 V2 'UNITED BY SNEAKERS - MEXICO CITY'",
+      "price": "100",
+      "description": "Tirée du pack United by Sneakers qui fait un clin d'œil aux villes qui ont accueilli les Jeux olympiques, la NMD_R1 V2 'United By Sneakers - Mexico City' rend hommage à la capitale du Mexique. Le coloris rouge, blanc et vert de la chaussure est tiré du drapeau du pays, tandis que la boucle de talon griffée indique « La marque aux 3 bandes » en espagnol. La semelle intercalaire aux couleurs contrastées est renforcée par des bouchons en EVA, avec une légende directe de Mexico sur l'élément de l'avant-pied.",
+      "color": "Blanc nuage/Noir noyau/Vert audacieux",
+      "release": "5/28/20"
+    },
+    {
+      "image": "Wmns_Nmdr1_Sand.jpg",
+      "name": "WMNS NMD_R1 'SAND'",
+      "price": "40",
+      "description": "La Wmns NMD_R1 'Sand', exclusive aux femmes, adopte un coloris sobre, avec un beige clair sur toute la tige en tricot. Les trois bandes arborent des détails réfléchissants, tandis qu'une semelle intercalaire Boost blanche avec des bouchons en EVA complète le look discret du haut.",
+      "color": "Talc/OBlanc/FtwWht",
+      "release": "6/10/16"
+    },
+    {
+      "image": "White_Mountaineering_X_Nmdr1_Trail_Primeknit_Core_Black.jpg",
+      "name": "WHITE MOUNTAINEERING X NMD_R1 TRAIL PRIMEKNIT 'CORE BLACK'",
+      "price": "100",
+      "description": "Le groupe japonais White Mountaineering s'associe à adidas sur le NMD_R1 Trail Primeknit. La coentreprise qui en résulte trouve le coureur lifestyle fini dans un design bicolore noir et blanc, utilisant un mélange de cuir et de Primeknit respirant. Des bouchons en EVA noir sur une semelle intercalaire Boost blanche conservent l'esthétique classique du NMD, tandis qu'une semelle extérieure en caoutchouc à haute traction offre une assise sûre sur n'importe quelle surface.",
+      "color": "Noir Noyau/Blanc Chaussures/Blanc Chaussures",
+      "release": "7/15/17"
+    },
+    {
+      "image": "Yeezy_Boost_700_Teal_Blue.jpg",
+      "name": "YEEZY BOOST 700 'TEAL BLUE'",
+      "price": "148",
+      "description": "Le Yeezy Boost 700 « Teal Blue » offre un coloris subtil de la silhouette remarquable, avec une tige en maille grise avec des empiècements en daim bleu marine et bleu sarcelle. Une semelle intermédiaire Boost sur toute la longueur offre un amorti léger, tandis que les détails réfléchissants ajoutent de la visibilité dans des conditions de faible luminosité. Une semelle extérieure en caoutchouc gomme offre une traction durable sous le pied.",
+      "color": "Bleu sarcelle/Bleu sarcelle/Bleu sarcelle",
+      "release": "10/26/19"
+    },
+    {
+      "image": "D_Rose_1_Retro_Concrete.jpg",
+      "name": "D ROSE 1 RETRO 'CONCRETE'",
+      "price": "123",
+      "description": "La D Rose 1 Retro 'Concrete' a ramené la première chaussure signature de Derrick Rose pour le All-Star Game 2020 à Chicago. Construit entièrement en daim gris perforé, le panneau latéral médial reflète sa mentalité « rose du béton » avec un graphique de rose rouge. Les œillets supérieurs et la signature de Derrick Rose sur la semelle intermédiaire ajoutent encore plus de couleur au look.",
+      "color": "Gris Un/Gris Deux/Blanc Cristal",
+      "release": "2/15/20"
+    },
+    {
+      "image": "Yeezy_Boost_350_V2_Antlia_Nonreflective.jpg",
+      "name": "YEEZY BOOST 350 V2 'ANTLIA NON-REFLECTIVE'",
+      "price": "113",
+      "description": "La Yeezy Boost 350 V2 « Antlia Non-Reflective » apporte un look neutre à la silhouette qui a fait ses débuts lors du défilé de mode Yeezy Saison 3. La tige Primeknit de la chaussure apparaît dans un mélange de motifs de jaune et de gris, avec la bande monofilament habituelle au milieu de la construction. Le revêtement du talon a été retiré, mais sous le pied, l'amorti Boost reste intact, recouvert d'une coque en TPU qui se poursuit sur la semelle extérieure. Une version exclusive à la région, la chaussure a été lancée aux côtés d'un modèle « Reflective » de style similaire.",
+      "color": "Antlia/Antlia/Antlia",
+      "release": "6/21/19"
+    },
+    {
+      "image": "Yeezy_Boost_350_Turtle_Dove_2015.jpg",
+      "name": "YEEZY BOOST 350 'TURTLE DOVE' 2015",
+      "price": "288",
+      "description": "La Yeezy Boost 350 « Turtle Dove » était la deuxième chaussure de la collection adidas Yeezy après la Yeezy Boost 750 « OG ». Vu pour la première fois sur Kanye et ses modèles lors du défilé de mode Yeezy Saison 1 en février 2015, ce coloris a été sacré chaussure de l'année 2015 lors de la 29e édition des Footwear News. La Yeezy 350 'Turtle Dove' sera réapprovisionnée en avril 2022.",
+      "color": "Tourterelle/Bleu Gris/Blanc Noyau",
+      "release": "6/27/15"
+    },
+    {
+      "image": "Ultraboost_Clima_Limited_Carbon.jpg",
+      "name": "ULTRABOOST CLIMA LIMITED 'CARBON'",
+      "price": "57",
+      "description": "L'UltraBoost Clima Limited « Carbon » associe l'amorti Boost d'adidas à la technologie de refroidissement Clima, en utilisant une tige à tissage ouvert avec des fibres évacuant l'humidité qui permettent au pied de rester au sec et au frais. La construction Primeknit noire de la chaussure de course est assortie à une cage flexible au milieu du pied et à un contrefort de talon moulé, ainsi qu'à une semelle intercalaire Boost recouverte de noir.",
+      "color": "Noir noyau/Noir noyau/Noir noyau",
+      "release": "4/13/18"
+    },
+    {
+      "image": "Parley_X_Ultraboost_30_Limited_Night_Navy.jpg",
+      "name": "PARLEY X ULTRABOOST 3.0 LIMITED 'NIGHT NAVY'",
+      "price": "175",
+      "description": "La Parley x UltraBoost 3.0 Limited « Night Navy » poursuit le partenariat d’adidas avec Parley for the Oceans, une organisation environnementale dédiée à la réduction de la pollution plastique des océans. La chaussure de course présente une tige Primeknit bleu marine, avec certains fils fabriqués à partir de déchets océaniques recyclés. Une semelle intercalaire Boost blanche contrastante sur toute la longueur offre un amorti réactif sous le pied.",
+      "color": "Bleu marine nuit/Bleu noyau/Bleu intense",
+      "release": "5/10/17"
+    },
+    {
+      "image": "Yeezy_700_V3_Clay_Brown.jpg",
+      "name": "YEEZY 700 V3 'CLAY BROWN'",
+      "price": "82",
+      "description": "L'Adidas Yeezy 700 V3 « Clay Brown » présente une tige en maille monofilament technique principalement noire avec des rayures brunes audacieuses le long des panneaux latéraux. Ces rayures sont accentuées par le design ouvert de la cage RPU, qui ajoute de la structure et un look moderne au design en forme de bottillon de la sneaker. La semelle intermédiaire robuste en EVA est protégée par une enveloppe en PU résistante et soutenue par une semelle extérieure en caoutchouc avec une bande de roulement à chevrons pour une traction accrue.",
+      "color": "Éremiel/Éremiel/Éremiel",
+      "release": "12/21/20"
+    },
+    {
+      "image": "Run_Dmc_X_Superstar_Jam_Master_Jay.jpg",
+      "name": "RUN D.M.C. X SUPERSTAR 'JAM MASTER JAY'",
+      "price": "80",
+      "description": "Célébrant les 50 ans de la silhouette emblématique, la Run D.M.C. x Superstar « Jam Master Jay » a été créée en collaboration avec le groupe hip-hop qui portait cette chaussure sans lacets. La tige de la chaussure est construite avec une base en cuir noir, contrastée par le blanc des trois bandes et du patch au talon. La languette comprend un hommage au regretté Jam Master Jay, tandis que la marque Superstar apparaît sur la paroi latérale. Une semelle cuvette en caoutchouc ancre la construction sous le pied.",
+      "color": "Noir/Blanc chaussures/Rouge haute résolution",
+      "release": "10/30/20"
+    },
+    {
+      "image": "Nmdr1_White_Reflective.jpg",
+      "name": "NMD_R1 'WHITE REFLECTIVE'",
+      "price": "300",
+      "description": "Sorti aux côtés d'un « Black réfléchissant », le NMD_R1 « White Reflective » met en valeur son design monochrome avec des détails réfléchissants 3M. Sinon, le look blanc se retrouve dans toute la tige en mesh, avec un contrefort de talon assorti et trois bandes. Une semelle intercalaire Boost avec des bouchons EVA ton sur ton maintient la palette unicolore, bien que de légères touches de noir soient présentées sur la boucle de traction du talon et les lacets.",
+      "color": "Blanc/Blanc",
+      "release": "8/18/16"
+    },
+    {
+      "image": "Star_Wars_X_Stan_Smith_Luke_Skywalker.jpg",
+      "name": "STAR WARS X STAN SMITH 'LUKE SKYWALKER'",
+      "price": "41",
+      "description": "Le Star Wars x Stan Smith 'Luke Skywalker' est sorti dans le cadre d'une collection plus large. Faisant un clin d'œil au héros emblématique de la franchise, la tige de la chaussure est construite avec une base en toile blanche, mise en valeur par Bright Blue sur le patch du talon et l'étiquette de la languette. L'étiquette de la languette arbore également l'effigie de Luke Skywalker, assortie à la semelle intérieure. La semelle cuvette en caoutchouc sous le pied révèle « Nooooo !!! » sur la semelle extérieure.",
+      "color": "Blanc craie/blanc nuage/bleu vif",
+      "release": "7/23/20"
+    },
+    {
+      "image": "Adizero_Rose_2_Windy_City.jpg",
+      "name": "ADIZERO ROSE 2 'WINDY CITY'",
+      "price": "300",
+      "description": "",
+      "color": "Rouge/Noir/Bleu Intense",
+      "release": "12/15/11"
+    },
+    {
+      "image": "Yeezy_Boost_350_Moonrock.jpg",
+      "name": "YEEZY BOOST 350 'MOONROCK'",
+      "price": "358",
+      "description": "Vu pour la première fois sur Instagram par Kim Kardashian, le Yeezy Boost 350 « Moonrock » présente une tige Primeknit gris moonrock/agate et une semelle extérieure Moonrock Boost. Après les coloris « Turtle Dove » et « Pirate », le Yeezy Boost 350 « Moon Rock » a été vendu exclusivement dans les magasins proposant des vêtements Yeezy Season One.",
+      "color": "Gris Agate/Moonrock/Gris Agate",
+      "release": "11/14/15"
+    },
+    {
+      "image": "Human_Made_X_Rivalry_Low_Scarlet_Aqua.jpg",
+      "name": "HUMAN MADE X RIVALRY LOW 'SCARLET AQUA'",
+      "price": "42",
+      "description": "adidas s'est associé à la marque de vêtements pour hommes de Nigo pour créer la Human Made x Rivalry Low « Scarlet Aqua ». La tige en cuir de la chaussure apparaît dans un mélange vibrant de teintes color-block, le côté latéral arborant des perforations en forme de cœur entre les trois bandes. Les trois bandes elles-mêmes incluent « Gears for Human Teens », tandis que le côté médial comprend le logo en forme de cœur de Human Made. Une semelle plateforme bicolore ancre la coupe sous le pied.",
+      "color": "Night Marine/Chaussures Blanc/Bold Aqua",
+      "release": "8/6/20"
+    },
+    {
+      "image": "Kid_Cudi_X_Torsion_Artillery_High_Crystal_White_Core_Black.jpg",
+      "name": "KID CUDI X TORSION ARTILLERY HIGH 'CRYSTAL WHITE CORE BLACK'",
+      "price": "120",
+      "description": "",
+      "color": "Blanc cristal/noir noyau/blanc cassé",
+      "release": "10/9/20"
+    }
+  ],
+  "jordan": [
+    {
+      "image": "Jordan_11_Retro_Bred_2019.jpg",
+      "name": "JORDAN 11 RETRO 'BRED' 2019",
+      "price": "198",
+      "description": "Ramenant un coloris OG, la Air Jordan 11 Retro 'Bred' 2019 présente un look familier des Chicago Bulls. La tige de la chaussure est construite avec un mélange de maille et de cuir verni, le tout fini en noir, à l'exception du Varsity Red Jumpman et du blanc « 23 ». Sous le pied, une semelle intercalaire blanche contrastée abrite Air et une plaque au milieu du pied, tandis qu'une semelle extérieure en caoutchouc Varsity Red offre une traction et complète le look.",
+      "color": "Noir/Blanc/Rouge universitaire",
+      "release": "12/14/19"
+    },
+    {
+      "image": "Jordan_6_Retro_Infrared_2019.jpg",
+      "name": "JORDAN 6 RETRO 'INFRARED' 2019",
+      "price": "220",
+      "description": "La Air Jordan 6 Retro 'Infrared' 2019 est une réédition 2019 du coloris OG. La tige en nubuck noir de la chaussure comprend une couche réfléchissante 3M, avec des perforations partout pour la respirabilité. Le talon, la languette et le verrou à lacets arborent des accents infrarouges, la couleur étant également présente sur les détails emblématiques de la semelle intercalaire. Visible Air dans le talon offre un amorti, tandis que les sections translucides continuent jusqu'à la semelle extérieure pour plus de traction.",
+      "color": "Noir/Infrarouge 23-Noir",
+      "release": "2/16/19"
+    },
+    {
+      "image": "Jordan_11_Retro_Concord_2018.jpg",
+      "name": "JORDAN 11 RETRO 'CONCORD' 2018",
+      "price": "284",
+      "description": "La version 2018 de la Air Jordan 11 Retro « Concord » présente le « 45 » imprimé sur la languette noire du talon en l'honneur du numéro de maillot que Michael Jordan portait à son retour en NBA après sa première retraite. Les autres détails emblématiques de la chaussure restent intacts, notamment une tige en maille balistique blanche, des empiècements en cuir verni noir et une semelle extérieure translucide glacée.",
+      "color": "Blanc/Noir-Dark Concord",
+      "release": "12/8/18"
+    },
+    {
+      "image": "Jordan_4_Retro_Og_Bred_2019.jpg",
+      "name": "JORDAN 4 RETRO OG 'BRED' 2019",
+      "price": "336",
+      "description": "La Air Jordan 4 Retro OG 'Bred' 2019 est sortie pour célébrer le 30e anniversaire de la silhouette. Présentant le même coloris OG que Michael Jordan portait lors de son lancement de « The Shot » en 1989, la chaussure présente une tige en nubuck noir complétée par des touches de Cement Grey. Des accents Fire Red apparaissent sur la languette et la semelle extérieure, tandis que l'Air dans le talon offre un amorti.",
+      "color": "Noir/Gris Ciment/Blanc Sommet/Rouge Feu",
+      "release": "5/4/19"
+    },
+    {
+      "image": "Jordan_12_Retro_Gamma_Blue.jpg",
+      "name": "JORDAN 12 RETRO 'GAMMA BLUE'",
+      "price": "600",
+      "description": "Faisant suite à la Air Jordan 11 Retro « Gamma Blue », la Air Jordan 12 Retro « Gamma Blue » présente la couleur vive de son garde-boue, de sa semelle intermédiaire et de sa semelle extérieure à texture de basket-ball. La tige emblématique Rising Sun Flag de la chaussure est finie en nubuck noir, avec des accents Gym sur la languette du talon, la marque et une plaque en fibre de carbone sous le pied.",
+      "color": "Noir/Rouge Gym/Bleu Gamma",
+      "release": "12/26/13"
+    },
+    {
+      "image": "Jordan_13_Retro_Flint_2020.jpg",
+      "name": "JORDAN 13 RETRO 'FLINT' 2020",
+      "price": "180",
+      "description": "La Air Jordan 13 Retro 'Flint' 2020 sortie en 2020 avec un look tiré de la fin des années 90. La superposition emblématique de la chaussure apparaît en bleu, accentuée par des détails réfléchissants. Le talon arbore du daim Flint Grey, tandis qu'un logo hologramme ressort sur la cheville. Sous le pied, la semelle intermédiaire en forme de patte de panthère abrite Air pour l'amorti, avec une semelle extérieure à chevrons pour la traction.",
+      "color": "Bleu marine/Bleu Caroline/Gris silex/Blanc",
+      "release": "5/30/20"
+    },
+    {
+      "image": "Jordan_11_Retro_Gamma_Blue.jpg",
+      "name": "JORDAN 11 RETRO 'GAMMA BLUE'",
+      "price": "315",
+      "description": "Sortie en 2013, la Air Jordan 11 Retro « Gamma Blue » était une sortie de vacances. Construite avec un mélange de maille balistique et de cuir verni, la tige de la chaussure apparaît en noir, avec Gamma Blue mettant en valeur le Jumpman sur le talon latéral. Le patch au talon et le lit en dentelle ajoutent à la place Varsity Maize au look, tandis que l'Air sur toute la longueur sous le pied dans la semelle intercalaire en phylon ton sur ton offre un amorti. Une plaque à ressort en fibre de carbone offre la stabilité, avec une semelle extérieure en caoutchouc translucide arborant des cosses à chevrons pour offrir une traction.",
+      "color": "Noir/Bleu Gamma/Noir/Maïs Varsity",
+      "release": "12/21/13"
+    },
+    {
+      "image": "Jordan_11_Retro_Space_Jam_2016.jpg",
+      "name": "JORDAN 11 RETRO 'SPACE JAM' 2016",
+      "price": "277",
+      "description": "La réédition 2016 de la Air Jordan 11 Retro « Space Jam » a connu un tel succès qu’elle a dépassé toutes les versions précédentes de l’histoire de Nike pour devenir la sneaker la plus rentable de la marque à ce jour. Le lancement rétro, marquant le 20e anniversaire du film homonyme de la chaussure, présente un design fidèle au coloris PE original de Michael Jordan, y compris le « 45 » imprimé en blanc sur la languette du talon.",
+      "color": "Noir/Concord-Blanc",
+      "release": "12/9/16"
+    },
+    {
+      "image": "Jordan_1_Retro_High_Og_Black_Metallic_Gold.jpg",
+      "name": "JORDAN 1 RETRO HIGH OG 'BLACK METALLIC GOLD'",
+      "price": "138",
+      "description": "La Air Jordan 1 Retro High OG « Black Metallic Gold » apporte une construction surélevée pour accompagner son coloris surélevé. La tige de la chaussure est fabriquée en cuir verni, finie en noir et soulignée par de l'or métallique sur le logo « Wings », la marque Swoosh, le col et l'étiquette de languette. Les perforations sur la pointe assurent la respirabilité, tandis que sous le pied, davantage d'or métallique marque les coutures autour de la semelle intermédiaire Air.",
+      "color": "Noir/Noir/Or métallique",
+      "release": "11/30/20"
+    },
+    {
+      "image": "Off-White_X_Wmns_Jordan_4_Retro_Sp_Sail.jpg",
+      "name": "OFF-WHITE X WMNS JORDAN 4 RETRO SP 'SAIL'",
+      "price": "506",
+      "description": "La OFF-WHITE x Wmns Air Jordan 4 Retro SP 'Sail' est sortie dans le cadre d'une collaboration entre la marque de luxe de Virgil Abloh et Jordan Brand. La silhouette de basket-ball classique émerge avec une construction en cuir déconstruite, finie en blanc cassé et complétée par du TPU semi-translucide sur les œillets, les ailes et le panneau du talon. Une fermeture éclair ton sur ton et « Air » au-dessus du rembourrage visible complètent le look.",
+      "color": "Voile/Mousseline/Blanc/Noir",
+      "release": "7/25/20"
+    },
+    {
+      "image": "Travis_Scott_X_Jordan_4_Retro_Cactus_Jack.jpg",
+      "name": "TRAVIS SCOTT X JORDAN 4 RETRO 'CACTUS JACK'",
+      "price": "768",
+      "description": "La Travis Scott x Air Jordan 4 Retro « Cactus Jack » rend hommage à la ville natale du rappeur, Houston. Sa palette emprunte aux couleurs de l’ancienne équipe de football des Oilers de la ville et présente une tige en cuir Durabuck de couleur University Blue, tandis que sa semelle intérieure et sa marque sont habillées de Varsity Red. Le look est complété par une cage en dentelle noire et un panneau de talon bleu clair moucheté.",
+      "color": "Bleu université/Rouge universitaire/Noir",
+      "release": "6/9/18"
+    },
+    {
+      "image": "Off-White_X_Jordan_5_Sp_Sail.jpg",
+      "name": "OFF-WHITE X JORDAN 5 SP 'SAIL'",
+      "price": "270",
+      "description": "Jordan Brand s'est associé à la marque streetwear de luxe de Virgil Abloh pour créer la Off-White x Air Jordan 5 Retro « Fire Red » en octobre 2020. Faisant suite à une collaboration Air Jordan 5 début 2020, la tige de la chaussure présente une construction textile blanc cassé, avec le milieu du pied, le col et la languette argentée réfléchissante arborant des découpes circulaires. Le texte Helvetica marque le côté médial, tandis que sous le pied, une semelle intercalaire noire contrastée abrite Air dans le talon pour un amorti. Une finition pré-jaunie sur la semelle extérieure, qui assure la traction, complète le look.",
+      "color": "Voile/Rouge Feu/Mousseline/Noir",
+      "release": "10/29/20"
+    },
+    {
+      "image": "Jordan_13_Retro_Chicago_2017.jpg",
+      "name": "JORDAN 13 RETRO 'CHICAGO' 2017",
+      "price": "182",
+      "description": "La Air Jordan 13 Retro 'Chicago' 2017 a ramené le coloris OG 'Chicago' à la silhouette Jordan 13. Doté d'une tige en cuir blanc de qualité supérieure avec des empiècements matelassés, le daim Team Red apporte de la couleur au talon, au milieu du pied et à la semelle intercalaire. Le noir sur la marque Jumpman et la semelle complètent le look des Chicago Bulls.",
+      "color": "Blanc/Noir/Équipe rouge",
+      "release": "2/18/17"
+    },
+    {
+      "image": "Jordan_11_Retro_Cap_And_Gown.jpg",
+      "name": "JORDAN 11 RETRO 'CAP AND GOWN'",
+      "price": "350",
+      "description": "La Air Jordan 11 Retro « Cap and Gown » a finalement été rendue publique en 2018, car elle était auparavant un échantillon de la collection Air Jordan Blackout en 2011. Le nom fait référence à son look officiel, destiné à des occasions comme les cérémonies de remise des diplômes – ses lacets sont même influencés par les cordons de remise des diplômes. Le modèle entièrement noir présente, sur une semelle extérieure bleu glacier, une tige en cuir verni et en nubuck de qualité supérieure.",
+      "color": "Noir/Noir-Noir",
+      "release": "5/26/18"
+    },
+    {
+      "image": "Jordan_1211_Retro_Countdown_Pack.jpg",
+      "name": "JORDAN 12/11 RETRO 'COUNTDOWN PACK'",
+      "price": "1011",
+      "description": "Le « Countdown Pack » d’Air Jordan 12/11 est sorti en 2008 dans le cadre d’une série rétrospective qui a précédé le lancement de l’Air Jordan 23. Comme les autres Countdown Packs, celui-ci rassemble deux modèles Jordan qui totalisent 23. Ils prennent la forme de deux coloris OG très convoités, la Air Jordan 12 « Taxi » et la Air Jordan 11 « Bred », qui ont été emballées dans une boîte dépliante spéciale.",
+      "color": "Multicolore/Multicolore",
+      "release": "12/20/08"
+    },
+    {
+      "image": "Off-White_X_Jordan_5_Retro_Sp_Muslin.jpg",
+      "name": "OFF-WHITE X JORDAN 5 RETRO SP 'MUSLIN'",
+      "price": "341",
+      "description": "Fruit d'une collaboration entre Virgil Abloh et Jordan Brand, la OFF-WHITE x Air Jordan 5 SP « Muslin » est une version stylisée de la silhouette. Construite en textile noir délavé, la tige comprend des détails argentés réfléchissants sur la languette. Les lacets et le côté médial arborent le texte signature d'Abloh, tandis que sous le pied, la semelle extérieure arbore une esthétique pré-jaunie.",
+      "color": "Noir/Rouge Feu/Mousseline",
+      "release": "2/15/20"
+    },
+    {
+      "image": "Jordan_4_Retro_Og_Fire_Red_2020.jpg",
+      "name": "JORDAN 4 RETRO OG 'FIRE RED' 2020",
+      "price": "240",
+      "description": "La Air Jordan 4 Retro OG 'Fire Red' 2020 sortie en 2020, ramenant le coloris OG de la silhouette. La tige de la chaussure est construite en cuir blanc, accentuée par des touches de rouge feu partout, y compris les œillets emblématiques. Sous le pied, la semelle intermédiaire abrite de l'Air visible dans le talon pour un amorti, tandis qu'un logo Nike Air sur le talon complète le look rétro.",
+      "color": "Blanc/Noir/Gris Tech/Rouge Feu",
+      "release": "11/28/20"
+    },
+    {
+      "image": "Jordan_7_Retro_Bordeaux_2015.jpg",
+      "name": "JORDAN 7 RETRO 'BORDEAUX' 2015",
+      "price": "350",
+      "description": "La Air Jordan 7 « Bordeaux » est considérée comme le plus distinctif des cinq coloris initiaux sortis en 1992. La sneaker n’a été rétro qu’une seule fois en 2011 avant la Retro 2015. Faisant partie de la collection « Remastered » de Nike, la version rétro 2015 redonne à la chaussure sa gloire initiale. La sneaker présente un dessus en nubuck noir et gris aux couleurs contrastées qui rencontre une combinaison noire fidèle à l'originale sur une semelle intermédiaire/semelle extérieure noire.",
+      "color": "Noir/Bordeaux-Graphite clair-Brouillard de minuit",
+      "release": "7/18/15"
+    },
+    {
+      "image": "Jordan_11_Retro_Jubilee_25th_Anniversary.jpg",
+      "name": "JORDAN 11 RETRO 'JUBILEE / 25TH ANNIVERSARY'",
+      "price": "212",
+      "description": "Sortie pour célébrer les 25 ans de la silhouette emblématique, la Air Jordan 11 Retro « Jubilee / 25th Anniversary » émerge avec un look classique. La tige de la chaussure est construite avec une base en maille balistique, recouverte de cuir verni, les deux éléments étant finis en noir. Le Jumpman métallique 3D et la marque « 23 » au talon accentuent le look en argent, avec une finition similaire sur le « Jordan » qui marque les œillets. Sous le pied, une semelle intercalaire Air blanche offre amorti et contraste, cédant la place à une semelle extérieure en caoutchouc translucide pour la traction.",
+      "color": "Noir/Clair/Blanc/Argent Métallisé",
+      "release": "12/12/20"
+    },
+    {
+      "image": "Jordan_11_Retro_7210.jpg",
+      "name": "JORDAN 11 RETRO '72-10'",
+      "price": "234",
+      "description": "La Air Jordan 11 Retro '72-10' fait un clin d'œil à la légendaire saison 1995-96 des Bulls, celle qui a vu Michael et co. amassant un record historique de 72-10 en saison régulière en route vers un quatrième championnat. La silhouette emblématique est ici mise à jour avec une tige en cuir foulonné noir, complétée par une superposition en cuir verni noir assortie et une touche contrastée de Varsity Red sur le logo Jumpman.",
+      "color": "Noir/Noir-Varsity Rouge",
+      "release": "12/12/15"
+    },
+    {
+      "image": "Off-White_X_Jordan_1_Retro_High_Og_Unc.jpg",
+      "name": "OFF-WHITE X JORDAN 1 RETRO HIGH OG 'UNC'",
+      "price": "722",
+      "description": "Inspirée de l'alma mater de Michael Jordan, la Off-White x Air Jordan 1 Retro High OG « UNC » présente une structure classique de deux tons, filtrée à travers le prisme de design distinctif de Virgil Abloh. La méthode consiste à prendre un fond de teint en cuir blanc avec des superpositions bleues de poudre foncée et à ajouter des embellissements qui expriment une valeur expressive et artisanale. Ils comprennent des ailes séparées, un Swoosh flottant et des lignes de texte sur le panneau central du côté médial délimitant la taxonomie de la chaussure.",
+      "color": "Blanc/Bleu Poudre Foncé-Cône",
+      "release": "5/22/18"
+    },
+    {
+      "image": "Jordan_11_Retro_Gs_Gamma.jpg",
+      "name": "JORDAN 11 RETRO GS 'GAMMA'",
+      "price": "449",
+      "description": "Lancée en décembre 2013, la Air Jordan 11 Retro GS « Gamma Blue » associe une maille textile flexible à un garde-boue en cuir verni brillant sur la tige, un clin d'œil au design emblématique de l'AJ 11. Fabriquée par Tinker Hatfield et lancée en 1995, cette chaussure emblématique a introduit l'utilisation pionnière du cuir verni, un matériau jusqu'alors rare sur les chaussures de basket-ball.",
+      "color": "Noir/Bleu Gamma/Noir/Maïs Varsity",
+      "release": "12/21/13"
+    },
+    {
+      "image": "Jordan_5_Retro_Fire_Red_2020.jpg",
+      "name": "JORDAN 5 RETRO 'FIRE RED' 2020",
+      "price": "193",
+      "description": "Sortie en mai 2020, la Air Jordan 5 Retro 'White Fire Red' 2020 revisite un look OG pour les 30 ans de la silhouette. Construite en cuir blanc, la tige comprend une languette argentée réfléchissante et un insert en mesh sur le panneau latéral. Des accents rouge feu émergent partout, y compris sur les détails en dents de requin sous le pied, tandis que l'air visible dans le talon offre un amorti.",
+      "color": "Blanc véritable/rouge feu/noir/argent métallique",
+      "release": "5/2/20"
+    },
+    {
+      "image": "Jordan_9_Retro_Og_Space_Jam_2016.jpg",
+      "name": "JORDAN 9 RETRO OG 'SPACE JAM' 2016",
+      "price": "359",
+      "description": "La Air Jordan 9 Retro OG 'Space Jam' 2016 est sortie pour célébrer le 20e anniversaire de Space Jam. Le look recrée les chaussures prises dans la maison de Michael Jordan par Daffy Duck et Bugs Bunny dans le film, que Jordan a ensuite portées lors du montage d'entraînement du film. Le design noir et blanc est accentué par True Red sur le branding, notamment sur le talon.",
+      "color": "Blanc/Vrai Rouge-Noir",
+      "release": "12/3/16"
+    },
+    {
+      "image": "Union_La_X_Jordan_4_Retro_Off_Noir.jpg",
+      "name": "UNION LA X JORDAN 4 RETRO 'OFF NOIR'",
+      "price": "417",
+      "description": "Sortie en août 2020, l'Union LA x Air Jordan 4 Retro fait suite à une collaboration Air Jordan 1 de 2018. Construite en daim noir, la tige comprend du mesh sur la pointe et le col. Des ailes translucides marquent le panneau latéral, tandis que les œillets classiques apparaissent en noir et blanc. Des coutures contrastées émergent partout, tandis que l'étiquette de languette Air Jordan arbore une esthétique à l'envers. La paroi latérale comprend la marque « UN/LA », tandis que sous le pied, une semelle intercalaire jaunie contribue au look rétro, avec de l'Air visible dans le talon offrant un amorti.",
+      "color": "Off Noir/Bleu Brigade/Gris Fumée Foncé/Rouge Fusion Clair",
+      "release": "10/16/20"
+    },
+    {
+      "image": "Jordan_3_Retro_Og_True_Blue_2016.jpg",
+      "name": "JORDAN 3 RETRO OG 'TRUE BLUE' 2016",
+      "price": "271",
+      "description": "L'édition 2016 de la Air Jordan 3 Retro OG « True Blue » ramène l'un des coloris OG de la silhouette de 1988. Cette édition remasterisée de l'emblématique mi-haute est fidèle à l'original, mise en valeur par une tige en cuir blanc avec des touches True Blue sur les œillets, la doublure du col et la marque Nike Air au talon. Des détails imprimés d'éléphant et un logo Jumpman rouge sur la langue constituent la touche finale.",
+      "color": "Blanc/Vrai Bleu",
+      "release": "11/25/16"
+    },
+    {
+      "image": "Jordan_4_Retro_Black_Cat_2020.jpg",
+      "name": "JORDAN 4 RETRO 'BLACK CAT' 2020",
+      "price": "601",
+      "description": "En s'inspirant de l'un des surnoms les plus anciens de Michael Jordan, la Air Jordan 4 Retro « Black Cat » 2020 ramène un coloris de 2006. Construite en daim, la tige apparaît entièrement en noir, à l'exception d'une touche de Light Graphite sur la marque de la languette. Sous le pied, la semelle intermédiaire Air poursuit le look ton sur ton, cédant la place à une semelle extérieure en caoutchouc pour la traction.",
+      "color": "Noir/Noir/Graphite clair",
+      "release": "1/22/20"
+    },
+    {
+      "image": "Travis_Scott_X_Jordan_1_Low_Mocha.jpg",
+      "name": "TRAVIS SCOTT X JORDAN 1 LOW 'MOCHA'",
+      "price": "1618",
+      "description": "La Travis Scott x Air Jordan 1 Low 'Mocha' est le résultat d'une collaboration entre Jordan Brand et Travis Scott. La construction supérieure en nubuck de la chaussure apparaît en noir et Dark Mocha, accentuée par des touches de University Red. La caractéristique remarquable est le Swoosh latéral, qui arbore une application vers l'arrière. Un Swoosh standard apparaît sur le côté médial, tandis que la languette, le panneau latéral médial et la semelle intérieure comportent la marque Cactus Jack. Les talons arborent un logo « Wings » sur la chaussure droite et le visage grossièrement dessiné de Scott sur la gauche pour compléter le look collaboratif.",
+      "color": "Noir/Moka Foncé-University Red-Sail",
+      "release": "7/19/19"
+    },
+    {
+      "image": "Travis_Scott_X_Jordan_1_Retro_High_Og_Mocha.jpg",
+      "name": "TRAVIS SCOTT X JORDAN 1 RETRO HIGH OG 'MOCHA'",
+      "price": "950",
+      "description": "Fruit d'une collaboration entre Travis Scott et la marque Jordan, la Travis Scott x Air Jordan 1 Retro High OG 'Mocha' présente un Swoosh arrière surdimensionné sur le côté latéral. La construction en cuir blanc foulonné et en daim Dark Mocha est accentuée par le logo University Red Cactus Jack et Nike sur la languette, tandis que le talon arbore le logo du visage de Scott en creux.",
+      "color": "Voile/Moka Foncé-Rouge Université-Noir",
+      "release": "5/11/19"
+    },
+    {
+      "image": "Jordan_14_Retro_Candy_Cane_2019.jpg",
+      "name": "JORDAN 14 RETRO 'CANDY CANE' 2019",
+      "price": "110",
+      "description": "Sortie en avril 2019, la Air Jordan 14 Retro 'Candy Cane' 2019 est la deuxième rétro du coloris festif. La tige en cuir de la chaussure comprend des finitions polies et lisses ainsi que des perforations pour la respirabilité, tandis que des accents Varsity Red émergent sur la languette, le talon et la semelle intermédiaire. Zoom Air offre un amorti, avec une plaque de tige pour la stabilité, cédant la place à une semelle extérieure avec un motif de traction à chevrons.",
+      "color": "Blanc/Rouge universitaire/Argent métallique/Noir",
+      "release": "4/6/19"
+    },
+    {
+      "image": "Jordan_5_Retro_Dmp_Raging_Bull_Pack.jpg",
+      "name": "JORDAN 5 RETRO DMP 'RAGING BULL PACK'",
+      "price": "750",
+      "description": "La Air Jordan 5 Retro DMP « Raging Bull Pack » sortie en 2009 dans le cadre d'une collection rendant hommage aux moments emblématiques de Michael Jordan. Les deux chaussures, la dernière silhouette que portait Jordan avant de remporter son premier titre, apparaissent dans un mélange classique de couleurs des Chicago Bulls. Un modèle apparaît en rouge, construit en daim, contrasté par du noir et mis en valeur par de l'argent réfléchissant sur la languette. L'autre modèle arbore une construction synthétique, finie en noir et soulignée par des accents rouges. Les chaussures partagent les inserts emblématiques du quarter panel, avec de l'Air visible sous le pied amortissant les deux modèles dans la semelle intermédiaire. Les semelles extérieures en caoutchouc partiellement translucides offrent une traction.",
+      "color": "Multicolore/Multicolore",
+      "release": "5/30/09"
+    },
+    {
+      "image": "Jordan_6_Retro_Infrared_2014.jpg",
+      "name": "JORDAN 6 RETRO 'INFRARED' 2014",
+      "price": "231",
+      "description": "En 1991, la Air Jordan 6 « Infrared » est sortie parmi cinq coloris originaux. Les versions rétro ont été abandonnées pour commémorer l'anniversaire de la date de sortie initiale de la chaussure en 2000, 2010 et 2014. Le design présente une tige en cuir nubuck perforé entièrement noir avec des accents infrarouges et un retour à la sous-couche supérieure réfléchissante, un détail qui n'a pas été vu depuis le lancement initial de la chaussure.",
+      "color": "Noir/Infrarouge 23/Noir",
+      "release": "11/28/14"
+    },
+    {
+      "image": "Jordan_13_Retro_He_Got_Game_2018.jpg",
+      "name": "JORDAN 13 RETRO 'HE GOT GAME' 2018",
+      "price": "314",
+      "description": "La Air Jordan 13 Retro 'He Got Game' 2018 présente le coloris porté par Denzel Washington dans He Got Game. La tige noire avec des superpositions matelassées blanches est accentuée par True Red sur la semelle extérieure et la marque, avec le logo hologramme emblématique pour recréer fidèlement le look. L'air dans la semelle intermédiaire amortit le design rétro.",
+      "color": "Blanc/Noir/Vrai Rouge",
+      "release": "8/4/18"
+    },
+    {
+      "image": "Jordan_11_Retro_Gs_Concord_2018.jpg",
+      "name": "JORDAN 11 RETRO GS 'CONCORD' 2018",
+      "price": "147",
+      "description": "La Air Jordan 11 Retro GS « Concord » 2018 reprend les mêmes caractéristiques de design que le modèle de taille adulte, à commencer par la tige en maille balistique blanche. La tige cède la place à un garde-boue en cuir verni noir, qui se transforme ensuite en une semelle extérieure en caoutchouc translucide équipée des inserts à chevrons Concord qui informent le nom de la sneaker.",
+      "color": "Blanc/Noir-Dark Concord",
+      "release": "12/8/18"
+    },
+    {
+      "image": "Jordan_12_Retro_Gym_Red.jpg",
+      "name": "JORDAN 12 RETRO 'GYM RED'",
+      "price": "211",
+      "description": "La Air Jordan 12 Retro « Gym Red » émerge avec un mélange de teintes des Chicago Bulls. Construite en cuir foulonné, la tige de la chaussure apparaît en Gym Red, avec une finition métallique sur les œillets ton sur ton. Un garde-boue blanc texturé de basket-ball contraste le look tout en soutenant l'ajustement, avec du noir sur la doublure intérieure et la boucle de traction au talon. Sous le pied, le Zoom Air sur toute la longueur dans la semelle intermédiaire en phylon offre un amorti, cédant la place aux cosses à chevrons sur la semelle extérieure en caoutchouc pour la traction.",
+      "color": "Rouge Gym/Noir-Blanc",
+      "release": "7/2/16"
+    },
+    {
+      "image": "Jordan_8_Retro_Chrome_2015.jpg",
+      "name": "JORDAN 8 RETRO 'CHROME' 2015",
+      "price": "260",
+      "description": "Mieux connue pour avoir été portée par Kobe Bryant lors des séries éliminatoires de 2003, la Air Jordan 8 Retro « Chrome » 2015 a été rétro-éditée en 2015 dans le cadre de la collection Holiday 2015 de Nike. La tige entièrement noire ressort en nubuck lisse et perforé, avec du chrome sur la boucle de la bride de cheville. La tige et la semelle intercalaire arborent un gris et un argent plus complémentaires.",
+      "color": "Noir/Chrome",
+      "release": "12/19/15"
+    },
+    {
+      "image": "Jordan_1_Retro_High_Og_Dark_Mocha.jpg",
+      "name": "JORDAN 1 RETRO HIGH OG 'DARK MOCHA'",
+      "price": "245",
+      "description": "Présentant un look similaire à la collaboration Air Jordan 1 2019 de Travis Scott, la Air Jordan 1 Retro High OG 'Dark Mocha' sortie en octobre 2020. La tige de la chaussure est construite en cuir, arborant une base blanche recouverte de cuir noir. Le talon et le col sont en nubuck Dark Mocha, tandis qu'une languette en nylon et des perforations sur la pointe conservent l'esthétique classique. L'air dans le talon de la semelle intermédiaire assure un amorti.",
+      "color": "Voile/Moka foncé/Noir/Noir",
+      "release": "10/31/20"
+    },
+    {
+      "image": "Jordan_6_Infrared_Pack.jpg",
+      "name": "JORDAN 6 'INFRARED PACK'",
+      "price": "580",
+      "description": "L'Air Jordan 6 'Infrared Pack' présente deux coloris OG, y compris les itérations blanches et noires du look 'Infrared'. Sorti en juin 2010, le look blanc/infrarouge marque la première fois que le coloris a été rétrogradé, tandis que le coloris noir avait été rétrogradé pour la première fois en 2000. Des touches infrarouges marquent la languette, la languette du talon et la semelle intermédiaire des deux chaussures, avec une semelle extérieure translucide et un Air visible offrant un soutien sous le pied.",
+      "color": "Multicolore/Multicolore",
+      "release": "6/18/10"
+    },
+    {
+      "image": "Jordan_13_Retro_Bred_2017.jpg",
+      "name": "JORDAN 13 RETRO 'BRED' 2017",
+      "price": "300",
+      "description": "L'édition 2017 de la Air Jordan 13 Retro « Bred » ramène le coloris OG classique de 1998. Cette réédition est fidèle à l'original, avec des empiècements en mesh réfléchissant 3M sur une tige construite avec une combinaison de cuir foulonné noir et de daim synthétique rouge. Des touches supplémentaires de True Red apparaissent sur la semelle intermédiaire et le logo Jumpman brodé sur la languette.",
+      "color": "Noir/Vrai Rouge/Blanc",
+      "release": "8/18/17"
+    },
+    {
+      "image": "Jordan_11_Retro_Win_Like_82.jpg",
+      "name": "JORDAN 11 RETRO 'WIN LIKE '82'",
+      "price": "184",
+      "description": "Bien avant que son tir décisif ne fasse de lui une légende de la NBA, Michael Jordan a coulé le sauteur gagnant pour décrocher le titre NCAA 1982 pour l'Université de Caroline du Nord. La Air Jordan 11 Retro « Win Like ’82 » célèbre cette saison de championnat avec un coloris inspiré des Tar Heels qui est plus subtil que la plupart de ses homologues similaires. La tige en maille balistique blanche est complétée par un garde-boue en cuir verni de couleur Midnight Navy, tandis que le bleu clair de style UNC marque la marque Jumpman et la plaque de semelle intermédiaire sous le pied.",
+      "color": "Blanc/Marine Minuit-Bleu Université",
+      "release": "11/11/17"
+    },
+    {
+      "image": "Jordan_3_Retro_Og_Black_Cement_2018.jpg",
+      "name": "JORDAN 3 RETRO OG 'BLACK CEMENT' 2018",
+      "price": "203",
+      "description": "Lorsque l’Air Jordan 3 est sortie en 1988, c’était la première Air Jordan à présenter l’imprimé éléphant, le logo Air Unit et Jumpman visible, et c’était la première chaussure signature de MJ conçue par Tinker Hatfield. En 2018, pour célébrer le 30e anniversaire, la sneaker a été rééditée dans son coloris emblématique « Black Cement » avec les mêmes détails de marque, comme la tige en cuir foulonné noir, dont nous nous souvenons tous avec tendresse.",
+      "color": "Noir/Gris Ciment-Blanc-Rouge Feu",
+      "release": "2/17/18"
+    },
+    {
+      "image": "Union_La_X_Jordan_4_Retro_Guava_Ice.jpg",
+      "name": "UNION LA X JORDAN 4 RETRO 'GUAVA ICE'",
+      "price": "480",
+      "description": "Fruit d'une collaboration entre Jordan Brand et Union LA, la Union LA x Air Jordan 4 Retro « Guava Ice » est sortie en 2020 dans le prolongement de l'effort commun des marques en 2018. Construite en daim rose, la tige comprend du mesh au niveau des orteils, du quartier et du col pour assurer la respirabilité. L'aile en TPU arbore une finition semi-translucide, tandis que le panneau latéral latéral comprend un drapeau Union LA. Sous le pied, la semelle intercalaire jaunie abrite Max Air visible dans le talon pour un amorti.",
+      "color": "Goyave Glace/Os Clair/Bleu Brigade/Rouge Fusion Clair",
+      "release": "8/29/20"
+    },
+    {
+      "image": "Jordan_11_Retro_Gg_Heiress_Velvet.jpg",
+      "name": "JORDAN 11 RETRO GG HEIRESS 'VELVET'",
+      "price": "450",
+      "description": "Chaussure pour fille, la Air Jordan 11 GG Heiress 'Velvet' présente un coloris surélevé pour accompagner sa construction surélevée. La chaussure apparaît avec une tige en nubuck, recouverte de velours écrasé et finie en Night Maroon. La marque met en valeur le design en or métallisé, tandis que sous le pied, une semelle intercalaire en phylon sur toute la longueur en blanc offre amorti et contraste, cédant la place à une semelle extérieure en caoutchouc semi-translucide pour la traction.",
+      "color": "Marron nuit/Or métallique-Marron nuit",
+      "release": "12/17/16"
+    },
+    {
+      "image": "Jordan_3_Retro_Unc.jpg",
+      "name": "JORDAN 3 RETRO 'UNC'",
+      "price": "282",
+      "description": "La Air Jordan 3 Retro « UNC » s'inspire des années universitaires de Michael Jordan. En conséquence, la tige en cuir blanc de la chaussure est accentuée par des touches de Valor Blue, tandis que la pointe et le talon arborent des superpositions à imprimé éléphant. Sous le pied, davantage de Valor Blue émerge sur la semelle intermédiaire au-dessus de l’unité Air visible.",
+      "color": "Blanc/Bleu Valor/Gris Tech",
+      "release": "3/7/20"
+    },
+    {
+      "image": "Jordan_11_Retro_Win_Like_96.jpg",
+      "name": "JORDAN 11 RETRO 'WIN LIKE '96'",
+      "price": "275",
+      "description": "L'importance historique de la Air Jordan 11 Retro « Win Like 96 » sera parfaitement évidente pour les fans des Chicago Bulls. En 1996, les Bulls ont terminé la saison régulière avec un record de 72 victoires en route vers un quatrième titre NBA. Au cours de cette course magique, Michael portait la Jordan 11, et cette version de décembre 2017, vêtue d'une teinte rouge vif, rend hommage à l'équipe de 1996 qui ne pouvait pas perdre.",
+      "color": "Rouge Gym/Noir-Blanc",
+      "release": "12/9/17"
+    },
+    {
+      "image": "Jordan_9_Retro_Bred.jpg",
+      "name": "JORDAN 9 RETRO 'BRED'",
+      "price": "358",
+      "description": "La Air Jordan 9 Retro « Bred » est influencée par les coloris Player Exclusive du passé, un clin d'œil à l'héritage de Jordan Brand. La silhouette haute présente une tige en cuir noir avec des lacets correspondants et une tirette au talon. Les détails incluent une marque sur la semelle intermédiaire, la languette et la semelle intérieure au University Red Jumpman, ainsi qu'un « 23 » ton sur ton sur le talon.",
+      "color": "Noir/Anthracite-Rouge Universitaire",
+      "release": "3/10/18"
+    },
+    {
+      "image": "Jordan_7_Retro_Raptor_2012.jpg",
+      "name": "JORDAN 7 RETRO 'RAPTOR' 2012",
+      "price": "400",
+      "description": "La Nike Air Jordan 7 « Raptor » 2012 propose une version rétro du coloris OG 1992. Le design combine une tige en nubuck noir avec des accents de True Red et Club Purple. Le coloris tire son surnom de sa ressemblance avec les couleurs de l'équipe des Raptors de Toronto.",
+      "color": "Noir/Tr Rd-Drk Chrcl-Clb Prpl",
+      "release": "8/31/12"
+    },
+    {
+      "image": "Jordan_12_Retro_Grey_University_Blue.jpg",
+      "name": "JORDAN 12 RETRO 'GREY UNIVERSITY BLUE'",
+      "price": "228",
+      "description": "Émergeant avec des accents de l'Université de Caroline du Nord, la Air Jordan 12 Retro « University Blue » présente par ailleurs un look neutre. La tige de la chaussure est construite avec une base en cuir foulonné, finie en Wolf Grey et contrastée par du blanc sur le garde-boue texturé de basket-ball. Des accents University Blue émergent partout, avec Midnight Navy ajoutant encore plus de couleur au look. Sous le pied, une plaque de tige en fibre de carbone et une semelle intermédiaire Air ancrent la construction.",
+      "color": "Wlf Gris/Unvrsty Bl-Wht-Mdnght",
+      "release": "6/25/16"
+    },
+    {
+      "image": "Jordan_10_Double_Nickel.jpg",
+      "name": "JORDAN 10 'DOUBLE NICKEL'",
+      "price": "208",
+      "description": "Sortie en 2015, la Air Jordan 10 « Double Nickel » recrée le look porté par Michael Jordan à son retour au basket-ball, tandis que le nom rend hommage au 20e anniversaire de la défaite de 55 points de Jordan contre les Knicks de New York au Madison Square Garden. Son numéro de maillot de l'époque, 45, est cousu sur la cheville, tandis que la tige en cuir foulonné blanc est complétée par du noir et du Varsity Red pour compléter un look des Chicago Bulls.",
+      "color": "Blanc/Varsity Rouge-Noir",
+      "release": "3/28/15"
+    },
+    {
+      "image": "Dior_X_Jordan_1_High.jpg",
+      "name": "DIOR X JORDAN 1 HIGH",
+      "price": "3476",
+      "description": "Faisant partie d'une collection entre la maison de couture et Jordan Brand, la Dior x Air Jordan 1 High est sortie en avril 2020. La tige en cuir italien de la chaussure apparaît dans un mélange de blanc et de gris, avec un Swoosh jacquard Dior Oblique contrastant sur la paroi latérale. L'étiquette de languette et le logo « Wings » arborent un co-marquage, avec une marque supplémentaire révélée par la semelle extérieure translucide glacée.",
+      "color": "Gris loup/Voile/Poussière de photons/Blanc",
+      "release": "6/25/20"
+    },
+    {
+      "image": "Jordan_13_Retro_Hyper_Royal.jpg",
+      "name": "JORDAN 13 RETRO 'HYPER ROYAL'",
+      "price": "200",
+      "description": "Rappelant l'Orlando Magic PE de Quentin Richardson de 2012, la Air Jordan 13 Retro « Hyper Royal » présente un coloris riche. Construite en cuir foulonné noir, la tige comprend du daim Hyper Royal, avec des empiècements en mesh réfléchissant accentuant le look. Un logo hologramme marque la cheville, tandis que sous le pied, l'outillage en forme de patte de panthère comprend une semelle extérieure à chevrons pour la traction.",
+      "color": "Noir/Noir/Blanc/Hyper Royal",
+      "release": "12/19/20"
+    },
+    {
+      "image": "Travis_Scott_X_Jordan_6_Retro_Olive.jpg",
+      "name": "TRAVIS SCOTT X JORDAN 6 RETRO 'OLIVE'",
+      "price": "329",
+      "description": "La Travis Scott x Air Jordan 6 Retro « Olive » présente la version unique du rappeur de Houston de la silhouette classique. Habillé de nubuck vert militaire, ce modèle mi-haut comporte une poche cachée en toile sur le col latéral et des semelles extérieures translucides qui brillent dans le noir. Les coups de pied sont ornés de la marque Cactus Jack sur le verrou de lacet et de la broderie au talon de la chaussure droite, tous deux rendus dans une teinte rouge vif.",
+      "color": "Olive moyen/Noir-Voile-Rouge université",
+      "release": "10/11/19"
+    },
+    {
+      "image": "Jordan_1_Retro_High_Tokyo_Bio_Hack.jpg",
+      "name": "JORDAN 1 RETRO HIGH 'TOKYO BIO HACK'",
+      "price": "169",
+      "description": "La Air Jordan 1 Retro High OG 'Tokyo Bio Hack' s'inspire de la capitale japonaise. La tige de la chaussure est construite avec un mélange de cuir et de daim, finie dans un look color-block qui rappelle la collaboration Nike Dunk High NL d'Undefeated de 2005. Sous le pied, la semelle intercalaire Air peinte offre un amorti, cédant la place à une semelle extérieure concentrique pour la traction.",
+      "color": "Marron baroque/noir/orange laser/rose coureur",
+      "release": "9/4/20"
+    },
+    {
+      "image": "Wmns_Jordan_8_Retro_Valentines_Day.jpg",
+      "name": "WMNS JORDAN 8 RETRO 'VALENTINE'S DAY'",
+      "price": "216",
+      "description": "Conçue pour célébrer sa fête titulaire, la Wmns Air Jordan 8 Retro 'Valentine's Day' arbore une tige en daim et nubuck en Gym Red, Team Red et Ember Glow, et présente des semelles intérieures ornées de graphismes roses et de lanières croisées sur lesquelles on peut lire « Loves Me » et « Loves Me Not ». La sneaker est également accompagnée d’une carte de Saint-Valentin de Jordan Brand.",
+      "color": "Rouge Gym/Ember Glow-Team Rouge",
+      "release": "2/9/18"
+    },
+    {
+      "image": "Dior_X_Jordan_1_Low.jpg",
+      "name": "DIOR X JORDAN 1 LOW",
+      "price": "5211",
+      "description": "La Dior x Air Jordan 1 Low sortie dans le cadre d'une collaboration avec la maison de couture parisienne. Construite en cuir italien, la tige apparaît dans un mélange de blanc et de gris, contrastée par un Swoosh jacquard Dior Oblique. Dior Air apparaît sur l'étiquette de la languette, tandis que Dior « Wings » apparaît sur le talon. Sous le pied, la semelle extérieure translucide révèle une autre marque.",
+      "color": "Gris loup/Voile/Poussière de photons/Blanc",
+      "release": "6/25/20"
+    },
+    {
+      "image": "Off-White_X_Jordan_1_Retro_High_Og_Chicago.jpg",
+      "name": "OFF-WHITE X JORDAN 1 RETRO HIGH OG 'CHICAGO'",
+      "price": "3110",
+      "description": "La OFF-WHITE x Air Jordan 1 est créée par le designer Virgil Abloh dans le coloris classique de Chicago. Certaines des caractéristiques semi-finies de la sneaker incluent une fermeture éclair OFF-WHITE sur le col, un Swoosh lié à la chaussure avec des coutures bleues visibles, « Air » imprimé sur la semelle intermédiaire. La boîte est déconstruite car elle est tournée vers l'intérieur, l'intérieur étant constitué d'une structure noire et d'un logo Jumpman doré, tandis que l'extérieur est en carton ordinaire avec les mots « Jumpman » imprimés dessus. La collection Virgil OFF-WHITE comprenait des itérations remixées Air VaporMax, Air Presto, Air Max 90, Blazer, Air Max 97, Hyperdunk 2017, Air Force 1, Zoom Fly et Chuck Taylor.",
+      "color": "Blanc/Noir-Varsity Rouge-Noir",
+      "release": "9/6/17"
+    },
+    {
+      "image": "Jordan_13_Retro_Black_Cat.jpg",
+      "name": "JORDAN 13 RETRO 'BLACK CAT'",
+      "price": "438",
+      "description": "Faisant un clin d'œil à l'un des surnoms les moins connus de Michael Jordan, la Air Jordan 13 Retro « Black Cat » émerge avec un coloris adapté à son surnom. La tige de la chaussure est construite en daim, finie en noir et recouverte de mesh, qui arbore une finition réfléchissante. Les lacets en corde assurent l'ajustement, tandis que le logo hologramme habituel marque le talon. Sous le pied, Zoom Air à l'avant-pied et au talon de la semelle intermédiaire en phylon offre un amorti, cédant la place à une semelle extérieure en forme de patte de panthère à chevrons pour la traction.",
+      "color": "Noir/Anthracite/Noir",
+      "release": "1/21/17"
+    },
+    {
+      "image": "Jordan_7_Retro_Olympic_2012.jpg",
+      "name": "JORDAN 7 RETRO 'OLYMPIC' 2012",
+      "price": "490",
+      "description": "La Air Jordan 7 « Olympic » 2012 est une version rétro de la chaussure de Michael Jordan aux Jeux olympiques de 1992 en route vers une médaille d'or avec la Dream Team. Le design présente une partie supérieure blanche et métallique argentée avec des accents d'obsidienne, d'or métallique et de True Red. La sneaker est sortie en juillet 2012 et comprend également le numéro de maillot olympique « 9 » sur le talon. Le « Olympic » est sorti à l'origine en 2004 et a également été lancé dans un coloris « Tinker Alternate » de 2016 combinant une tige blanc/bleu marine avec une semelle intercalaire à pois.",
+      "color": "Blanc/Or métallique/Obsidienne/Rouge",
+      "release": "7/21/12"
+    },
+    {
+      "image": "Kaws_X_Jordan_4_Retro_Cool_Grey.jpg",
+      "name": "KAWS X JORDAN 4 RETRO 'COOL GREY'",
+      "price": "1869",
+      "description": "La KAWSx Air Jordan 4 Retro est une collaboration entre l'artiste de rue de Brooklyn KAWS, alias Brian Donnelly, et Jordan Brand. Le design supprime les accents de plastique traditionnels de la silhouette et s'habille d'un daim gris de qualité supérieure sur toute la tige et la semelle intermédiaire. La sneaker porte également la marque « XX » de KAWS sur la languette du talon. Les chaussures sont sorties en mars 2017 avec une petite collection capsule comprenant une veste, un sweat à capuche, un t-shirt et un chapeau. Le battage médiatique autour de cette sortie était si intense que la police a lu l'acte anti-émeute lors de la tombola en magasin à Patta à Londres et que les sneakerheads ont piraté le site Web de Donnelly pour avoir une opportunité.",
+      "color": "Gris froid/blanc",
+      "release": "3/31/17"
+    }
+  ],
+  "new-balance": [
+    {
+      "image": "New_Balance_2002r_Marblehead.jpg",
+      "name": "NEW BALANCE 2002R 'MARBLEHEAD'",
+      "price": "70",
+      "description": "",
+      "color": "Tête de marbre/aluminium clair",
+      "release": "11/11/20"
+    },
+    {
+      "image": "New_Balance_530_Silver_White.jpg",
+      "name": "NEW BALANCE 530 'SILVER WHITE'",
+      "price": "64",
+      "description": "",
+      "color": "Munsell Blanc/Argent Métallisé",
+      "release": "12/8/20"
+    },
+    {
+      "image": "New_Balance_Bodega_X_997s_No_Bad_Days.jpg",
+      "name": "NEW BALANCE BODEGA X 997S 'NO BAD DAYS'",
+      "price": "146",
+      "description": "La Bodega x New Balance 997S « No Bad Days » a été lancée en septembre 2019 dans le prolongement de la collaboration New Balance « No Days Off » du détaillant de Boston. Cette paire présente une tige en maille grise avec une superposition en cuir gris et un col en néoprène à fossettes turquoise sur le côté latéral. Le côté opposé présente du daim gris et du néoprène lisse dans les mêmes zones, le tout reposant sur une semelle intercalaire bicolore avec un double amorti ABZORB et ENCAP.",
+      "color": "Brise fraîche",
+      "release": "9/28/19"
+    },
+    {
+      "image": "New_Balance_Aries_X_327_Invincible_Ii_White.jpg",
+      "name": "NEW BALANCE ARIES X 327 'INVINCIBLE II - WHITE'",
+      "price": "208",
+      "description": "La marque de mode londonienne s'est associée à New Balance pour créer l'Aries x 327 « INVINCIBLE II - White » en octobre 2020. Construite en cuir, la tige de la chaussure apparaît en blanc, mise en valeur par des détails argentés réfléchissants. Les tirettes de la languette et du talon ajoutent de la couleur rouge, assortie au logo Bélier sur la paroi latérale. Sous le pied, une semelle extérieure en caoutchouc gomme est incluse pour la traction.",
+      "color": "Blanc",
+      "release": "10/30/20"
+    },
+    {
+      "image": "New_Balance_850_Grey.jpg",
+      "name": "NEW BALANCE 850 'GREY'",
+      "price": "44",
+      "description": "",
+      "color": "Gris/Gris",
+      "release": "9/9/20"
+    },
+    {
+      "image": "New_Balance_990v5_Made_In_Usa_White_Carbon_Red.jpg",
+      "name": "NEW BALANCE 990V5 MADE IN USA 'WHITE CARBON RED'",
+      "price": "97",
+      "description": "",
+      "color": "Blanc/Carbone/Rouge équipe",
+      "release": "11/1/20"
+    },
+    {
+      "image": "New_Balance_Wmns_452_Triple_Black.jpg",
+      "name": "NEW BALANCE WMNS 452 'TRIPLE BLACK'",
+      "price": "56",
+      "description": "",
+      "color": "Noir/Noir",
+      "release": "12/23/20"
+    },
+    {
+      "image": "New_Balance_Limited_Edt_X_Sbtg_X_327_Urban_Islander.jpg",
+      "name": "NEW BALANCE LIMITED EDT X SBTG X 327 'URBAN ISLANDER'",
+      "price": "80",
+      "description": "Faisant partie d'une plus grande collection tropicale inspirée de Singapour, patrie de Limited Edt et artiste de baskets Mark Ong (alias SBTG), la Limited Edt x SBTG x 327 « Urban Islander » est sortie en octobre 2020. La tige de la chaussure comprend des panneaux divisés, avec un motif d'ananas sur le côté médial de la chaussure droite et l'imprimé camouflage emblématique de SBTG sur la gauche. Les côtés latéraux des deux chaussures sont en nylon noir et en daim olive, tandis qu'une semelle extérieure avec un motif proéminent offre une traction sous le pied.",
+      "color": "Vert militaire/noir",
+      "release": "10/15/20"
+    },
+    {
+      "image": "New_Balance_992_Made_In_Usa_Grey_2020.jpg",
+      "name": "NEW BALANCE 992 MADE IN USA 'GREY' 2020",
+      "price": "250",
+      "description": "L'édition 2020 de la New Balance 992 Made in USA « Grey » a une tige en maille et en daim gris, ainsi qu'un logo « N » réfléchissant conçu pour capter la lumière. Ces chaussures utilisent une semelle intermédiaire ENCAP et C-CAP avec une unité d'amorti ABZORB à l'avant-pied et au talon. La semelle extérieure en caoutchouc NDurance de New Balance vous permet de rester sûr tout au long de la journée.",
+      "color": "Gris",
+      "release": "3/15/20"
+    },
+    {
+      "image": "New_Balance_Bodega_X_997s_Better_Days.jpg",
+      "name": "NEW BALANCE BODEGA X 997S 'BETTER DAYS'",
+      "price": "129",
+      "description": "La Bodega x New Balance 997S 'Better Days' combine une selle en cuir beige avec une pointe en maille blanc cassé, renforcée par une superposition de l'avant-pied en daim poilu gris. Un rouge flashy enveloppe le collier en néoprène, qui présente une texture nubby sur le côté latéral. « 997S » est brodé sur la languette du talon en daim bordeaux, tandis qu'une signature Bodega orne la languette et la semelle intérieure. Ces chaussures ont une semelle intercalaire ENCAP Reveal qui contient un amorti ABZORB dans le talon.",
+      "color": "",
+      "release": "9/25/20"
+    },
+    {
+      "image": "New_Balance_Wmns_327_Oak_Leaf_Green.jpg",
+      "name": "NEW BALANCE WMNS 327 'OAK LEAF GREEN'",
+      "price": "60",
+      "description": "Inspirée des 320, 355 et Supercomp, la Wmns 327 « Oak Leaf Green » est sortie en juillet 2020. Construite en nylon, la tige est recouverte de daim, finie dans un mélange de teintes neutres. La marque blanche « N » se démarque sur le côté latéral, avec un contraste vibrant offert par les œillets du côté médial. Sous le pied, une semelle intercalaire en EVA cède la place à une semelle extérieure en caoutchouc gomme pour la traction.",
+      "color": "Vert feuille de chêne/violet mystique",
+      "release": "7/25/20"
+    },
+    {
+      "image": "New_Balance_990v5_Made_In_Usa_Castlerock.jpg",
+      "name": "NEW BALANCE 990V5 MADE IN USA 'CASTLEROCK'",
+      "price": "176",
+      "description": "Le 990v5 Made In USA « Castlerock » apporte un look neutre à sa construction de course performante. La tige de la chaussure présente une base en maille grise avec des superpositions en daim léger, accentuées par des détails réfléchissants partout. Un insert OrthoLite est inclus pour plus de confort, travaillant en conjonction avec une semelle intercalaire Encap, qui contraste avec le look en blanc. Une semelle extérieure noire assure la traction.",
+      "color": "Gris/Castlerock",
+      "release": "4/6/19"
+    },
+    {
+      "image": "New_Balance_997_Made_In_Usa_Pastel.jpg",
+      "name": "NEW BALANCE 997 MADE IN USA 'PASTEL'",
+      "price": "224",
+      "description": "",
+      "color": "",
+      "release": "2/10/20"
+    },
+    {
+      "image": "New_Balance_Aim_Leon_Dore_X_827_White.jpg",
+      "name": "NEW BALANCE AIMÉ LEON DORE X 827 'WHITE'",
+      "price": "450",
+      "description": "New Balance s'est associé à la marque de streetwear new-yorkaise pour créer la Aimé Leon Dore x 827 'White'. La tige en mesh de la chaussure est recouverte de daim synthétique, avec des accents colorés émergeant partout. Le talon arbore la marque « ALD », tandis que sous le pied, une semelle intercalaire Abzorb offre un amorti, travaillant avec une bande en TPU pour la stabilité au milieu du pied.",
+      "color": "",
+      "release": "3/13/20"
+    },
+    {
+      "image": "New_Balance_Jjjjound_X_992_Made_In_Usa_Mossy_Green.jpg",
+      "name": "NEW BALANCE JJJJOUND X 992 MADE IN USA 'MOSSY GREEN'",
+      "price": "812",
+      "description": "Le JJJJound x 992 'Mossy Green' est sorti dans le cadre d'une collaboration avec le studio de design. Construite avec un mélange de mesh et de daim, la tige apparaît en vert mousse et vert foncé, avec des détails réfléchissants sur la sous-couche « USA » sur le talon. La marque JJJJound apparaît sur le talon, tandis que sous le pied, une semelle intercalaire blanche Encap et Abzorb offre amorti et contraste.",
+      "color": "Vert mousse/Vert foncé",
+      "release": "7/31/20"
+    },
+    {
+      "image": "New_Balance_Aim_Leon_Dore_X_550_Evergreen.jpg",
+      "name": "NEW BALANCE AIMÉ LEON DORE X 550 'EVERGREEN'",
+      "price": "185",
+      "description": "",
+      "color": "Persistant/Blanc",
+      "release": "10/9/20"
+    },
+    {
+      "image": "New_Balance_530_Moonbeam_Sea_Salt.jpg",
+      "name": "NEW BALANCE 530 'MOONBEAM SEA SALT'",
+      "price": "57",
+      "description": "La New Balance 530 « Moonbeam Sea Salt » propose ce coureur de style de vie d'inspiration rétro en maille respirante de couleur sable sur la tige avec des détails du logo « N » au contour noir et des empiècements en cuir beige clair. Il y a des languettes au niveau du talon pour un port facile et la semelle intermédiaire ENCAP avec amorti au talon ABZORB repose sur une semelle extérieure en caoutchouc durable pour une meilleure adhérence.",
+      "color": "Rayon de Lune/Sel Marin",
+      "release": "3/5/20"
+    },
+    {
+      "image": "New_Balance_Bodega_X_997s_No_Days_Off.jpg",
+      "name": "NEW BALANCE BODEGA X 997S 'NO DAYS OFF'",
+      "price": "350",
+      "description": "La Bodega x 997S 'No Days Off' émerge avec une construction haut de gamme. Fruit d'une collaboration avec Bodega, le coureur de New Balance est construit avec un chausson en néoprène et des empiècements en daim poilu vieilli, avec un avant-pied en mesh pour la respirabilité et un contrefort de talon à motif losange ajoutant de la stabilité. Une marque unique marque la languette, tandis que sous le pied, une combinaison des technologies Abzorb et Encap offre un amorti.",
+      "color": "Gris/Violet",
+      "release": "4/4/19"
+    },
+    {
+      "image": "New_Balance_Jjjjound_X_992_Made_In_Usa_Grey.jpg",
+      "name": "NEW BALANCE JJJJOUND X 992 MADE IN USA 'GREY'",
+      "price": "710",
+      "description": "Le JJJJound x 992 sorti dans le cadre d'une collaboration avec le studio de création de Montréal. Présentant un look neutre, la tige de la chaussure est construite avec un mélange de mesh et de daim, contrastée par des lacets blancs qui assurent l'ajustement. Les œillets, la doublure intérieure et le logo complètent le design en noir, avec le logo « N » classique intégré sur la paroi latérale. Sous le pied, la semelle intermédiaire rassemble Encap et Abzorb pour l'amorti.",
+      "color": "Gris",
+      "release": "7/31/20"
+    },
+    {
+      "image": "New_Balance_530_White_Black.jpg",
+      "name": "NEW BALANCE 530 'WHITE BLACK'",
+      "price": "291",
+      "description": "",
+      "color": "Noir/Blanc",
+      "release": "2/9/20"
+    },
+    {
+      "image": "New_Balance_Kith_X_Nonnative_X_997s_Fusion_Dune.jpg",
+      "name": "NEW BALANCE KITH X NONNATIVE X 997S FUSION 'DUNE'",
+      "price": "5000",
+      "description": "La Kith x nonnative x 997S Fusion « Dune » réunit trois partenaires créatifs sur une silhouette hybride, dont l’une est inspirée de la collaboration New Balance 997.5 « Dune » avec nonnative de 2011. Construite en maille et en daim de porc, la chaussure arbore un logo « N » à triple pile pour représenter les trois marques partenaires de New Balance.",
+      "color": "Beige/Bleu",
+      "release": "11/21/18"
+    },
+    {
+      "image": "New_Balance_993_Made_In_Usa_Black_White.jpg",
+      "name": "NEW BALANCE 993 MADE IN USA 'BLACK WHITE'",
+      "price": "200",
+      "description": "Lancée pour la première fois en 2008, la New Balance 993 s'inspire des prédécesseurs 991 et 992, en commençant par une tige en mesh ornée de superpositions en cuir de porc pour ajouter une certaine structure à une construction respirante. La semelle intermédiaire ABZORB DTS est un système de transition dynamique qui offre amorti et stabilité pour absorber les chocs à chaque pas.",
+      "color": "Noir/Blanc",
+      "release": "11/20/19"
+    },
+    {
+      "image": "New_Balance_Wmns_990v5_Made_In_Usa_Castlerock.jpg",
+      "name": "NEW BALANCE WMNS 990V5 MADE IN USA 'CASTLEROCK'",
+      "price": "132",
+      "description": "",
+      "color": "Gris/Castlerock",
+      "release": "11/16/19"
+    },
+    {
+      "image": "New_Balance_Joe_Freshgoods_X_Dont_Be_Mad_X_992_Made_In_Usa_Anatomy_Of_A_Heart.jpg",
+      "name": "NEW BALANCE JOE FRESHGOODS X DON'T BE MAD X 992 MADE IN USA 'ANATOMY OF A HEART'",
+      "price": "1599",
+      "description": "Le Joe Freshgoods x Don't Be Mad x 992 « Anatomy of a Heart » est sorti dans le cadre d'une collection plus large. Sorti le jour de la Saint-Valentin 2020, le look thématique de la chaussure comprend une construction en maille, cuir et daim dans une série de teintes rouges, tandis que sous le pied, une semelle intercalaire en mousse noire et blanche plus neutre offre un amorti.",
+      "color": "Rose/Rouge/Bourgogne",
+      "release": "2/14/20"
+    },
+    {
+      "image": "New_Balance_990v5_Made_In_Usa_Black.jpg",
+      "name": "NEW BALANCE 990V5 MADE IN USA 'BLACK'",
+      "price": "150",
+      "description": "Faisant partie du premier pack de trois coloris de la cinquième itération de la silhouette 990, la 990v5 Made In USA « Black » a été fabriquée dans une usine New Balance en Nouvelle-Angleterre. La tige en maille respirante et en daim de la chaussure apparaît en noir, accentuée par la marque « N » sur la paroi latérale. La languette arbore un drapeau semi-transparent « Made in the USA », tandis que les accents réfléchissants 3M ajoutent un éclat au look. Une semelle intérieure OrthoLite est incluse pour plus de confort, tandis qu'une semelle intermédiaire Encap offre un amorti sous le pied.",
+      "color": "Noir/Argent",
+      "release": "5/5/19"
+    },
+    {
+      "image": "New_Balance_530_Black.jpg",
+      "name": "NEW BALANCE 530 'BLACK'",
+      "price": "170",
+      "description": "",
+      "color": "Noir/Argent",
+      "release": "12/24/20"
+    },
+    {
+      "image": "New_Balance_Wmns_990v5_Made_In_Usa_Black.jpg",
+      "name": "NEW BALANCE WMNS 990V5 MADE IN USA 'BLACK'",
+      "price": "95",
+      "description": "",
+      "color": "Noir/Argent",
+      "release": "5/4/19"
+    },
+    {
+      "image": "New_Balance_992_Made_In_Usa_Colorblock.jpg",
+      "name": "NEW BALANCE 992 MADE IN USA 'COLORBLOCK'",
+      "price": "167",
+      "description": "",
+      "color": "Gris/Vert",
+      "release": "11/13/20"
+    },
+    {
+      "image": "New_Balance_2002_Bone.jpg",
+      "name": "NEW BALANCE 2002 'BONE'",
+      "price": "92",
+      "description": "",
+      "color": "Os/aluminium clair",
+      "release": "10/23/20"
+    },
+    {
+      "image": "New_Balance_550_White_Team_Red.jpg",
+      "name": "NEW BALANCE 550 'WHITE TEAM RED'",
+      "price": "48",
+      "description": "Le 550 « White Red » apporte un mélange classique de teintes à sa construction de basket-ball vintage. Construite en cuir, la tige de la chaussure apparaît en blanc, noir et rouge, avec des microperforations pour la respirabilité. La languette tissée comprend un graphisme de basket-ball, avec un logo « N » ressortant sur la paroi latérale. Sous le pied, la semelle extérieure en caoutchouc, qui poursuit le look triton, intègre des rainures de flexion pour la traction.",
+      "color": "Blanc/Équipe Rouge",
+      "release": "11/30/20"
+    },
+    {
+      "image": "New_Balance_Bodega_X_Xracer_All_Terrain.jpg",
+      "name": "NEW BALANCE BODEGA X X-RACER 'ALL TERRAIN'",
+      "price": "94",
+      "description": "Le Bodega x X-Racer 'All Terrain' est sorti dans le cadre d'une collaboration entre Bodega et New Balance. La construction extérieure de la chaussure, inspirée de la fin des années 90 et du début des années 2000, est composée de ripstop, de superpositions en daim et de sangles en nylon. Arborant une base neutre soulignée par des accents vibrants, la chaussure est amortie sous le pied par une semelle intercalaire Abzorb. Une languette en nylon à pression contribue à l'esthétique.",
+      "color": "Gravier",
+      "release": "6/25/20"
+    },
+    {
+      "image": "New_Balance_997s_Purple_Pink.jpg",
+      "name": "NEW BALANCE 997S 'PURPLE PINK'",
+      "price": "150",
+      "description": "La New Balance 997S « Purple Pink » applique des tons vibrants à une mise à jour moderne et sportive de la silhouette classique 997 de la marque. La tige à prédominance violette, construite à partir d'un mélange de Cordura durable avec du daim poilu sur le panneau latéral, est accentuée par un logo « N » argenté métallisé et une pointe fuchsia. Une semelle intercalaire ENCAP Reveal noire mouchetée combine une mousse légère avec un bord en polyuréthane à détails fendus pour un amorti léger.",
+      "color": "Violet/Rose/Turquoise",
+      "release": "9/5/19"
+    },
+    {
+      "image": "New_Balance_Stray_Rats_X_827_Sewer_Stompers.jpg",
+      "name": "NEW BALANCE STRAY RATS X 827 'SEWER STOMPERS'",
+      "price": "330",
+      "description": "Les Stray Rats x 827 'Sewer Stompers' sont sortis dans le cadre d'une collaboration entre New Balance et la marque de streetwear de Miami. La chaussure émerge avec un coloris boueux sur sa construction en maille et en daim, avec une base marron accentuée par des touches de vert. La marque « N » ajoute encore de la couleur, tandis que les talons incluent « Swamp Rats » sur les deux chaussures.",
+      "color": "Loutre",
+      "release": "5/15/20"
+    },
+    {
+      "image": "New_Balance_Bait_X_Hasbro_Gi_Joe_X_580_Arashikage_Snake_Eyes.jpg",
+      "name": "NEW BALANCE BAIT X HASBRO G.I. JOE X 580 ARASHIKAGE 'SNAKE EYES'",
+      "price": "235",
+      "description": "Le magasin de baskets californien Bait s'est associé à Hasbro pour ce G.I. Pack New Balance 580 Arashikage sur le thème de Joe, qui comprenait le coloris « Snake Eyes ». Le cuir, le daim Wolverine et le nylon ripstop s'associent sur la tige noire, tandis que les coutures contrastées rouges accentuent le look. La technologie Red Rollbar dans la semelle intercalaire et les trigrammes Bagua rouges, symbole du clan Arashikage Ninja, ornent les serrures à lacets et la zone du talon.",
+      "color": "Noir/Rouge Arashikage",
+      "release": "10/10/15"
+    },
+    {
+      "image": "New_Balance_Aim_Leon_Dore_X_997_Canary_Yellow.jpg",
+      "name": "NEW BALANCE AIMÉ LEON DORE X 997 'CANARY YELLOW'",
+      "price": "225",
+      "description": "",
+      "color": "Jaune canari",
+      "release": "4/25/19"
+    },
+    {
+      "image": "New_Balance_990v4_Made_In_Usa_Pink_Ribbon.jpg",
+      "name": "NEW BALANCE 990V4 MADE IN USA 'PINK RIBBON'",
+      "price": "200",
+      "description": "La New Balance 990v4 Made In USA 'Pink Ribbon' apporte des touches rose pastel sur la tige en mesh, accentuées par des superpositions en daim de porc. Un logo « N » blanc en relief orne le côté, tandis qu'une légende Made in the USA est signée sur la languette. La semelle intermédiaire ENCAP de New Balance s'associe à une semelle extérieure en caoutchouc soufflé pour un amorti moelleux et une traction robuste sous le pied.",
+      "color": "Rose fanée",
+      "release": "12/31/18"
+    },
+    {
+      "image": "New_Balance_Sneaker_Freaker_X_9975_Tassie_Tiger.jpg",
+      "name": "NEW BALANCE SNEAKER FREAKER X 997.5 'TASSIE TIGER'",
+      "price": "3000",
+      "description": "La marque australienne Sneaker Freaker s'est associée à New Balance sur la 997.5 « Tassie Tiger », lancée en 2016 comme suite de la 998 « Tassie Devil » de 2012. Mélangeant la semelle intercalaire de la New Balance 998 avec la tige de la 997, la silhouette hybride s'inspire du tigre de Tasmanie, disparu, avec une tige en daim habillée de teintes contrastées noires et terre cuite.",
+      "color": "Noir/Rose",
+      "release": "7/15/16"
+    },
+    {
+      "image": "New_Balance_Aim_Leon_Dore_X_550_Silver.jpg",
+      "name": "NEW BALANCE AIMÉ LEON DORE X 550 'SILVER'",
+      "price": "128",
+      "description": "L'Aimé Leon Dore x 550 'Silver' est sorti dans le cadre d'une collaboration avec la marque de vêtements pour hommes new-yorkaise. Ramenant la silhouette de basket-ball de 1989, la tige de la chaussure est construite avec une base en cuir blanc cassé, soulignée par des accents argentés partout, y compris sur la marque « N ». La superposition du milieu du pied comprend des détails microperforés, tandis que l'étiquette de la languette et le talon gauche comportent la marque Aimé Leon Dore. Sous le pied, une semelle intercalaire pré-jaunie ancre la construction.",
+      "color": "Argent/Blanc",
+      "release": "10/9/20"
+    },
+    {
+      "image": "New_Balance_992_Made_In_Usa_Tan.jpg",
+      "name": "NEW BALANCE 992 MADE IN USA 'TAN'",
+      "price": "299",
+      "description": "La construction lifestyle du 992 émerge avec un look neutre sur le 992 Made in the USA « Tan ». Construite en mesh, la tige est recouverte de daim, finie en beige et accentuée par des détails réfléchissants sur l'avant-pied, le talon et la marque « N ». Sous le pied, une semelle intercalaire Abzorb bicolore offre un amorti, cédant la place à une semelle extérieure en caoutchouc pour la traction.",
+      "color": "Brun/Blanc",
+      "release": "3/1/20"
+    },
+    {
+      "image": "New_Balance_Ronnie_Fieg_X_530_Central_Park.jpg",
+      "name": "NEW BALANCE RONNIE FIEG X 530 'CENTRAL PARK'",
+      "price": "197",
+      "description": "Basée sur les couleurs de Central Park, la Ronnie Fieg x New Balance 530 « Central Park » présente une étiquette de languette caoutchoutée basée sur le logo Y's Parks & Recreation, une tige en daim de porc bordeaux avec une empeigne matelassée, du nubuck blanc cassé sur le garde-boue et le logo Goldenrod 3M « N » sur les panneaux latéraux.",
+      "color": "Marron/Moutarde/Beige",
+      "release": "11/28/14"
+    },
+    {
+      "image": "New_Balance_Aim_Leon_Dore_X_1300_Pink.jpg",
+      "name": "NEW BALANCE AIMÉ LEON DORE X 1300 'PINK'",
+      "price": "237",
+      "description": "",
+      "color": "",
+      "release": "8/13/20"
+    },
+    {
+      "image": "New_Balance_990v5_Made_In_Usa_B_Wide_Black.jpg",
+      "name": "NEW BALANCE 990V5 MADE IN USA B WIDE 'BLACK'",
+      "price": "135",
+      "description": "",
+      "color": "Noir/Argent",
+      "release": "5/4/19"
+    },
+    {
+      "image": "New_Balance_997_Sport_Castlerock_Amazonite.jpg",
+      "name": "NEW BALANCE 997 SPORT 'CASTLEROCK AMAZONITE'",
+      "price": "218",
+      "description": "",
+      "color": "Châteauroche/Amazonite",
+      "release": "7/13/19"
+    },
+    {
+      "image": "New_Balance_1300_Made_In_Usa_Black_Grey.jpg",
+      "name": "NEW BALANCE 1300 MADE IN USA 'BLACK GREY'",
+      "price": "117",
+      "description": "Un coureur rétro, le 1300 Made In USA « Black Grey » émerge avec un coloris neutre. La tige de la chaussure est construite en mesh, recouverte de daim ton sur ton. Le logo « N » sur la paroi latérale accentue le design avec des détails réfléchissants, tandis qu'un contrefort de talon externe est inclus pour plus de stabilité. Sous le pied, une semelle intermédiaire Encap offre un amorti, cédant la place à une semelle extérieure en caoutchouc à haute traction.",
+      "color": "Noir/Gris",
+      "release": "4/9/20"
+    },
+    {
+      "image": "New_Balance_990v5_Made_In_Usa_6e_Wide_Black.jpg",
+      "name": "NEW BALANCE 990V5 MADE IN USA 6E WIDE 'BLACK'",
+      "price": "130",
+      "description": "",
+      "color": "Noir/Argent",
+      "release": "5/4/19"
+    },
+    {
+      "image": "New_Balance_998_Made_In_Usa_Brown_Teal.jpg",
+      "name": "NEW BALANCE 998 MADE IN USA 'BROWN TEAL'",
+      "price": "458",
+      "description": "Le 998 Made in USA « Brown Teal » est composé de superpositions superposées en daim et en toile, ornées d'un patch de languette repensé et du logo signature « N » sur le côté. La semelle intercalaire coussinée ABZORB garde chaque pas doux et élastique.",
+      "color": "Marron/Sarcelle/Gris",
+      "release": "1/16/19"
+    },
+    {
+      "image": "New_Balance_992_Made_In_Usa_Purple_Grey.jpg",
+      "name": "NEW BALANCE 992 MADE IN USA 'PURPLE GREY'",
+      "price": "220",
+      "description": "",
+      "color": "Violet/Gris",
+      "release": "9/15/20"
+    },
+    {
+      "image": "New_Balance_992_Made_In_Usa_Tropical.jpg",
+      "name": "NEW BALANCE 992 MADE IN USA 'TROPICAL'",
+      "price": "170",
+      "description": "Le 992 Made In USA « Tropical » présente un look vibrant digne de son nom. La tige de la chaussure est construite avec une base en mesh recouverte de daim, avec un col en textile inspiré du look d'un seersucker rayé. Le logo « N » se détache sur la paroi latérale, tandis que sous le pied, une semelle intermédiaire Encap offre un amorti, cédant la place à une semelle extérieure en caoutchouc pour la traction.",
+      "color": "Bleu/Sarcelle/Rose",
+      "release": "3/1/20"
+    },
+    {
+      "image": "New_Balance_990v5_Made_In_Usa_6e_Wide_Castlerock.jpg",
+      "name": "NEW BALANCE 990V5 MADE IN USA 6E WIDE 'CASTLEROCK'",
+      "price": "120",
+      "description": "",
+      "color": "Gris/Castlerock",
+      "release": "4/5/19"
+    },
+    {
+      "image": "New_Balance_574_Core_Grey.jpg",
+      "name": "NEW BALANCE 574 CORE 'GREY'",
+      "price": "99",
+      "description": "La New Balance 574 Core « Grey » reprend les meilleurs éléments des modèles 575 et 576, à commencer par une tige en daim avec des panneaux en mesh aéré et un logo « N » sur le côté. Ces chaussures ont une semelle intercalaire ENCAP qui associe une mousse souple à un bord plus rigide. Une semelle extérieure à crampons en caoutchouc de carbone sous-tend le design.",
+      "color": "Gris",
+      "release": "8/28/20"
+    },
+    {
+      "image": "New_Balance_Eat_X_Shoe_City_X_990v5_Made_In_Usa.jpg",
+      "name": "NEW BALANCE EAT X SHOE CITY X 990V5 MADE IN USA",
+      "price": "332",
+      "description": "Sortie en exclusivité chez Shoe City en novembre 2019, la EAT x New Balance 990v5 refait surface dans les couleurs iconiques de la marque Baltimore. La tige en mesh mène à des éléments en daim de porc dans des teintes primaires, des rayures synthétiques sculptées et un clip de talon pour plus de stabilité. Des badges « N » bicolores ornent les côtés tandis qu'une marque personnalisée apparaît sur la languette et le contrefort. La palette de couleurs unique se répète sur la semelle intermédiaire Encap et la semelle extérieure en caoutchouc.",
+      "color": "",
+      "release": "11/22/19"
+    },
+    {
+      "image": "New_Balance_Shoe_Palace_X_997s_Great_White.jpg",
+      "name": "NEW BALANCE SHOE PALACE X 997S 'GREAT WHITE'",
+      "price": "260",
+      "description": "La Shoe Palace x 997S 'Great White' est sortie dans le cadre d'une collaboration avec le détaillant de Californie du Nord. Inspirée du Triangle Rouge, une région infestée de requins au large des côtes californiennes, la tige de la chaussure apparaît dans un mélange de bleu sarcelle noir sur sa construction en maille. Des superpositions en daim noir apparaissent partout, tandis que le logo « N » translucide comprend un graphique en forme de vague. Les dents de requin marquent le talon, avec l'outillage intégrant Encap Reveal pour fournir un amorti.",
+      "color": "Noir/Bleu Sarcelle/Blanc",
+      "release": "11/5/20"
+    },
+    {
+      "image": "New_Balance_550_White_Team_Royal.jpg",
+      "name": "NEW BALANCE 550 'WHITE TEAM ROYAL'",
+      "price": "59",
+      "description": "Ramenant la chaussure de basket vintage des années 80, la 550 « White Blue » sortie en décembre 2020. Présentant un coloris classique, la tige de la chaussure est construite avec une base en cuir blanc, soulignée de bleu et contrastée par du noir. La maille sur le col et les perforations assurent la respirabilité, tandis qu'un graphisme de basket-ball apparaît sur l'étiquette de la languette. Sous les pieds, les trois couleurs se rejoignent sur l'outillage.",
+      "color": "Blanc/Équipe Royale",
+      "release": "12/1/20"
+    },
+    {
+      "image": "New_Balance_Aim_Leon_Dore_X_990v2_Made_In_Usa_Heritage_Meets_Contemporary.jpg",
+      "name": "NEW BALANCE AIMÉ LEON DORE X 990V2 MADE IN USA 'HERITAGE MEETS CONTEMPORARY'",
+      "price": "370",
+      "description": "",
+      "color": "Vert Botanique",
+      "release": "11/15/19"
+    },
+    {
+      "image": "New_Balance_574_Ecru_Tint_Mahogany.jpg",
+      "name": "NEW BALANCE 574 'ECRU TINT MAHOGANY'",
+      "price": "139",
+      "description": "",
+      "color": "Teinte Écru/Blanc/Acajou",
+      "release": "9/1/20"
+    },
+    {
+      "image": "New_Balance_978_Brown.jpg",
+      "name": "NEW BALANCE 978 'BROWN'",
+      "price": "150",
+      "description": "",
+      "color": "Brun",
+      "release": "9/2/19"
+    },
+    {
+      "image": "New_Balance_Ronnie_Fieg_X_Dover_Street_Market_X_574_Sport_Grey_Special_Box.jpg",
+      "name": "NEW BALANCE RONNIE FIEG X DOVER STREET MARKET X 574 SPORT 'GREY SPECIAL BOX'",
+      "price": "335",
+      "description": "",
+      "color": "Gris",
+      "release": "7/7/17"
+    },
+    {
+      "image": "New_Balance_2002r_Hook_Loop_Little_Kid_Wide_Grey_Natural_Indigo.jpg",
+      "name": "NEW BALANCE 2002R HOOK & LOOP LITTLE KID WIDE 'GREY NATURAL INDIGO'",
+      "price": "75",
+      "description": "",
+      "color": "Gris/Argent métallique/Indigo naturel",
+      "release": "4/25/19"
     }
   ]
 }
