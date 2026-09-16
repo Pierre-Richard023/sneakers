@@ -2,14 +2,7 @@ import { registerReactControllerComponents } from '@symfony/ux-react';
 import './bootstrap.js';
 
 
-import './styles/admin.css';
-import DataTable from 'datatables.net-dt';
+import './styles/admin.css' 
 
-let table = new DataTable('#table', {
-    responsive: true,
-    "paging": true,
-    "ordering": true,
-    "searching": true,
-});
 
 registerReactControllerComponents(require.context('./react/controllers', true, /\.(j|t)sx?$/));

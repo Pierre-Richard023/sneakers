@@ -1,4 +1,4 @@
-const Encore = require('@symfony/webpack-encore');
+import Encore from '@symfony/webpack-encore';
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -6,21 +6,7 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
     Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev');
 }
 
-// var CopyWebpackPlugin = require('copy-webpack-plugin');
-
 Encore
-
-
-    .copyFiles([
-        {from: './node_modules/ckeditor4/', to: 'ckeditor/[path][name].[ext]', pattern: /\.(js|css)$/, includeSubdirectories: false},
-        {from: './node_modules/ckeditor4/adapters', to: 'ckeditor/adapters/[path][name].[ext]'},
-        {from: './node_modules/ckeditor4/lang', to: 'ckeditor/lang/[path][name].[ext]'},
-        {from: './node_modules/ckeditor4/plugins', to: 'ckeditor/plugins/[path][name].[ext]'},
-        {from: './node_modules/ckeditor4/skins', to: 'ckeditor/skins/[path][name].[ext]'},
-        {from: './node_modules/ckeditor4/vendor', to: 'ckeditor/vendor/[path][name].[ext]'}
-    ])
-
-
     // directory where compiled assets will be stored
     .setOutputPath('public/build/')
     // public path used by the web server to access the output path
@@ -35,16 +21,9 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('app', './assets/app.js')
-    .addEntry('admin','./assets/admin.js')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
-
-    // enables the Symfony UX Stimulus bridge (used in assets/stimulus_bootstrap.js)
-    .enableStimulusBridge('./assets/controllers.json')
-
-    // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
-    .enableStimulusBridge('./assets/controllers.json')
 
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
@@ -66,33 +45,23 @@ Encore
     // enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
 
-    // configure Babel
-    // .configureBabel((config) => {
-    //     config.plugins.push('@babel/a-babel-plugin');
+    // Configure JS and CSS minimizers
+    // .configureJsMinimizerPlugin((options, MinimizerPlugin) => {
+    //     options.minify = MinimizerPlugin.esbuildMinify
+    // })
+    // .configureCssMinimizerPlugin((options, MinimizerPlugin) => {
+    //     options.minify = MinimizerPlugin.lightningCssMinify;
     // })
 
-    // enables and configure @babel/preset-env polyfills
-    .configureBabelPresetEnv((config) => {
-        config.useBuiltIns = 'usage';
-        config.corejs = '3.38';
+    // configure Babel
+    .configureBabel((config) => {
+        config.plugins.push(['polyfill-corejs3', { method: 'usage-global', version: '3.49' }]);
     })
 
-    .copyFiles({
-        from: './assets/fonts',
-        to: 'fonts/[path][name].[ext]',
-    })
-
-    .configureFontRule(() => ({
-        type: 'asset',
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        generator: {
-            filename: 'fonts/[name][ext][query]',
-        },
-    }))
-
+    .enablePostCssLoader()
 
     // enables Sass/SCSS support
-    .enableSassLoader()
+    //.enableSassLoader()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
@@ -100,13 +69,12 @@ Encore
     // uncomment if you use React
     .enableReactPreset()
 
-    .enablePostCssLoader()
     // uncomment to get integrity="..." attributes on your script & link tags
     // requires WebpackEncoreBundle 1.4 or higher
     //.enableIntegrityHashes(Encore.isProduction())
 
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
-;
+    ;
 
-module.exports = Encore.getWebpackConfig();
+export default await Encore.getWebpackConfig();

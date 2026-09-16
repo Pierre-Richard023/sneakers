@@ -1487,16 +1487,6 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     generate_final_classes?: bool|Param, // Default: true
  *     generate_final_entities?: bool|Param, // Default: false
  * }
- * @psalm-type WebpackEncoreConfig = array{
- *     output_path?: scalar|Param|null, // The path where Encore is building the assets - i.e. Encore.setOutputPath()
- *     crossorigin?: false|"anonymous"|"use-credentials"|Param, // crossorigin value when Encore.enableIntegrityHashes() is used, can be false (default), anonymous or use-credentials // Default: false
- *     preload?: bool|Param, // preload all rendered script and link tags automatically via the http2 Link header. // Default: false
- *     cache?: bool|Param, // Enable caching of the entry point file(s) // Default: false
- *     strict_mode?: bool|Param, // Throw an exception if the entrypoints.json file is missing or an entry is missing from the data // Default: true
- *     builds?: array<string, scalar|Param|null>,
- *     script_attributes?: array<string, scalar|Param|null>,
- *     link_attributes?: array<string, scalar|Param|null>,
- * }
  * @psalm-type LiipImagineConfig = array{
  *     resolvers?: array<string, array{ // Default: []
  *         web_path?: array{
@@ -1655,49 +1645,6 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     controllers_path?: scalar|Param|null, // The path to the directory where React controller components are stored - relevant only when using symfony/asset-mapper. // Default: "%kernel.project_dir%/assets/react/controllers"
  *     name_glob?: list<scalar|Param|null>,
  * }
- * @psalm-type FosCkEditorConfig = array{
- *     enable?: bool|Param, // Default: true
- *     async?: bool|Param, // Default: false
- *     auto_inline?: bool|Param, // Default: true
- *     inline?: bool|Param, // Default: false
- *     autoload?: bool|Param, // Default: true
- *     jquery?: bool|Param, // Default: false
- *     require_js?: bool|Param, // Default: false
- *     input_sync?: bool|Param, // Default: false
- *     base_path?: scalar|Param|null, // Default: "bundles/fosckeditor/"
- *     js_path?: scalar|Param|null, // Default: "bundles/fosckeditor/ckeditor.js"
- *     jquery_path?: scalar|Param|null, // Default: "bundles/fosckeditor/adapters/jquery.js"
- *     default_config?: scalar|Param|null, // Default: null
- *     configs?: array<string, array<string, mixed>>,
- *     plugins?: array<string, array{ // Default: []
- *         path?: scalar|Param|null,
- *         filename?: scalar|Param|null,
- *     }>,
- *     styles?: array<string, list<array{ // Default: []
- *         name?: scalar|Param|null,
- *         type?: scalar|Param|null,
- *         widget?: scalar|Param|null,
- *         element?: mixed,
- *         styles?: array<string, scalar|Param|null>,
- *         attributes?: array<string, scalar|Param|null>,
- *     }>>,
- *     templates?: array<string, array{ // Default: []
- *         imagesPath?: scalar|Param|null,
- *         templates?: list<array{ // Default: []
- *             title?: scalar|Param|null,
- *             image?: scalar|Param|null,
- *             description?: scalar|Param|null,
- *             html?: scalar|Param|null,
- *             template?: scalar|Param|null,
- *             template_parameters?: array<string, scalar|Param|null>,
- *         }>,
- *     }>,
- *     filebrowsers?: array<string, scalar|Param|null>,
- *     toolbars?: array{
- *         configs?: array<string, list<mixed>>,
- *         items?: array<string, list<mixed>>,
- *     },
- * }
  * @psalm-type KnpPaginatorConfig = array{
  *     default_options?: array{
  *         sort_field_name?: scalar|Param|null, // Default: "sort"
@@ -1778,6 +1725,16 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     },
  *     default_transport?: scalar|Param|null, // Default: "default"
  * }
+ * @psalm-type WebpackEncoreConfig = array{
+ *     output_path?: scalar|Param|null, // The path where Encore is building the assets - i.e. Encore.setOutputPath()
+ *     crossorigin?: false|"anonymous"|"use-credentials"|Param, // crossorigin value when Encore.enableIntegrityHashes() is used, can be false (default), anonymous or use-credentials // Default: false
+ *     preload?: bool|Param, // preload all rendered script and link tags automatically via the http2 Link header. // Default: false
+ *     cache?: bool|Param, // Enable caching of the entry point file(s) // Default: false
+ *     strict_mode?: bool|Param, // Throw an exception if the entrypoints.json file is missing or an entry is missing from the data // Default: true
+ *     builds?: array<string, scalar|Param|null>,
+ *     script_attributes?: array<string, scalar|Param|null>,
+ *     link_attributes?: array<string, scalar|Param|null>,
+ * }
  * @psalm-type ConfigType = array{
  *     imports?: ImportsConfig,
  *     parameters?: ParametersConfig,
@@ -1789,18 +1746,17 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     twig_extra?: TwigExtraConfig,
  *     security?: SecurityConfig,
  *     monolog?: MonologConfig,
- *     webpack_encore?: WebpackEncoreConfig,
  *     liip_imagine?: LiipImagineConfig,
  *     vich_uploader?: VichUploaderConfig,
  *     symfonycasts_verify_email?: SymfonycastsVerifyEmailConfig,
  *     symfonycasts_reset_password?: SymfonycastsResetPasswordConfig,
  *     stimulus?: StimulusConfig,
  *     react?: ReactConfig,
- *     fos_ck_editor?: FosCkEditorConfig,
  *     knp_paginator?: KnpPaginatorConfig,
  *     nelmio_cors?: NelmioCorsConfig,
  *     ux_icons?: UxIconsConfig,
  *     turbo?: TurboConfig,
+ *     webpack_encore?: WebpackEncoreConfig,
  *     "when@dev"?: array{
  *         imports?: ImportsConfig,
  *         parameters?: ParametersConfig,
@@ -1815,18 +1771,17 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         security?: SecurityConfig,
  *         monolog?: MonologConfig,
  *         maker?: MakerConfig,
- *         webpack_encore?: WebpackEncoreConfig,
  *         liip_imagine?: LiipImagineConfig,
  *         vich_uploader?: VichUploaderConfig,
  *         symfonycasts_verify_email?: SymfonycastsVerifyEmailConfig,
  *         symfonycasts_reset_password?: SymfonycastsResetPasswordConfig,
  *         stimulus?: StimulusConfig,
  *         react?: ReactConfig,
- *         fos_ck_editor?: FosCkEditorConfig,
  *         knp_paginator?: KnpPaginatorConfig,
  *         nelmio_cors?: NelmioCorsConfig,
  *         ux_icons?: UxIconsConfig,
  *         turbo?: TurboConfig,
+ *         webpack_encore?: WebpackEncoreConfig,
  *     },
  *     "when@prod"?: array{
  *         imports?: ImportsConfig,
@@ -1839,18 +1794,17 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         twig_extra?: TwigExtraConfig,
  *         security?: SecurityConfig,
  *         monolog?: MonologConfig,
- *         webpack_encore?: WebpackEncoreConfig,
  *         liip_imagine?: LiipImagineConfig,
  *         vich_uploader?: VichUploaderConfig,
  *         symfonycasts_verify_email?: SymfonycastsVerifyEmailConfig,
  *         symfonycasts_reset_password?: SymfonycastsResetPasswordConfig,
  *         stimulus?: StimulusConfig,
  *         react?: ReactConfig,
- *         fos_ck_editor?: FosCkEditorConfig,
  *         knp_paginator?: KnpPaginatorConfig,
  *         nelmio_cors?: NelmioCorsConfig,
  *         ux_icons?: UxIconsConfig,
  *         turbo?: TurboConfig,
+ *         webpack_encore?: WebpackEncoreConfig,
  *     },
  *     "when@test"?: array{
  *         imports?: ImportsConfig,
@@ -1864,18 +1818,17 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         twig_extra?: TwigExtraConfig,
  *         security?: SecurityConfig,
  *         monolog?: MonologConfig,
- *         webpack_encore?: WebpackEncoreConfig,
  *         liip_imagine?: LiipImagineConfig,
  *         vich_uploader?: VichUploaderConfig,
  *         symfonycasts_verify_email?: SymfonycastsVerifyEmailConfig,
  *         symfonycasts_reset_password?: SymfonycastsResetPasswordConfig,
  *         stimulus?: StimulusConfig,
  *         react?: ReactConfig,
- *         fos_ck_editor?: FosCkEditorConfig,
  *         knp_paginator?: KnpPaginatorConfig,
  *         nelmio_cors?: NelmioCorsConfig,
  *         ux_icons?: UxIconsConfig,
  *         turbo?: TurboConfig,
+ *         webpack_encore?: WebpackEncoreConfig,
  *     },
  *     ...<string, ExtensionType|array{ // extra keys must follow the when@%env% pattern or match an extension alias
  *         imports?: ImportsConfig,
