@@ -2,30 +2,42 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\Get;
 use App\Repository\ShippingRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Attribute\Groups;
 
+
+#[ApiResource(
+    operations: [
+        new GetCollection(),
+        new Get(),
+    ],
+    normalizationContext: ['groups' => ['read:transporter']],
+    denormalizationContext: ['groups' => ['write:transporter']],
+)]
 #[ORM\Entity(repositoryClass: ShippingRepository::class)]
 class Transporter
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(['transporter:list', 'transporter:item'])]
+    #[Groups(['read:transporter'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['transporter:list', 'transporter:item'])]
+    #[Groups(['read:transporter', 'write:transporter'])]
     private ?string $name = null;
 
     #[ORM\Column(type: Types::TEXT)]
-    #[Groups(['transporter:list', 'transporter:item'])]
+    #[Groups(['read:transporter', 'write:transporter'])]
     private ?string $description = null;
 
     #[ORM\Column]
-    #[Groups(['transporter:list', 'transporter:item'])]
+    #[Groups(['read:transporter', 'write:transporter'])]
     private ?float $price = null;
 
     public function getId(): ?int
@@ -74,7 +86,5 @@ class Transporter
         return $this->name . '[-br]'
             . $this->description . '[-br]'
             . $this->price . ' €';
-
     }
-
 }

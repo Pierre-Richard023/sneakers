@@ -2,6 +2,9 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\Get;
 use App\Entity\Trait\SlugTrait;
 use App\Repository\SneakerRepository;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -13,7 +16,14 @@ use Symfony\Component\Serializer\Attribute\Groups;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Attribute as Vich;
 
-
+#[ApiResource(
+    operations: [
+        new GetCollection(),
+        new Get(),
+    ],
+    normalizationContext: ['groups' => ['read:sneaker']],
+    denormalizationContext: ['groups' => ['write:sneaker']],
+)]
 #[ORM\Entity(repositoryClass: SneakerRepository::class)]
 #[Vich\Uploadable]
 class Sneaker
@@ -23,11 +33,11 @@ class Sneaker
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(['sneaker:list', 'sneaker:item'])]
+    #[Groups(['read:sneaker'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['sneaker:list', 'sneaker:item'])]
+    #[Groups(['read:sneaker', 'write:sneaker'])]
     private ?string $name = null;
 
     #[Vich\UploadableField(mapping: 'sneakerProfiles', fileNameProperty: 'imageName')]
@@ -44,23 +54,23 @@ class Sneaker
     private ?\DateTimeImmutable $updatedAt = null;
 
     #[ORM\Column]
-    #[Groups(['sneaker:list', 'sneaker:item'])]
+    #[Groups(['read:sneaker', 'write:sneaker'])]
     private ?float $price = null;
 
     #[ORM\Column(length: 40)]
-    #[Groups(['sneaker:list', 'sneaker:item'])]
+    #[Groups(['read:sneaker', 'write:sneaker'])]
     private ?string $article_number = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    #[Groups(['sneaker:list', 'sneaker:item'])]
+    #[Groups(['read:sneaker', 'write:sneaker'])]
     private ?\DateTimeInterface $release_date = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    #[Groups(['sneaker:list', 'sneaker:item'])]
+    #[Groups(['read:sneaker', 'write:sneaker'])]
     private ?string $details = null;
 
     #[ORM\OneToMany(mappedBy: 'sneaker', targetEntity: SneakersImages::class, orphanRemoval: true, cascade: ["persist"])]
-    #[Groups(['sneaker:list', 'sneaker:item'])]
+    #[Groups(['read:sneaker', 'write:sneaker'])]
     private Collection $images;
 
     /**
@@ -203,7 +213,7 @@ class Sneaker
         return $this->imageName;
     }
 
-    #[Groups(['sneaker:list', 'sneaker:item'])]
+    #[Groups(['read:sneaker', 'write:sneaker'])]
     public function getProfileImageUrl(): ?string
     {
         if ($this->imageName) {

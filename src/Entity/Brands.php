@@ -2,42 +2,36 @@
 
 namespace App\Entity;
 
-use App\Entity\Trait\SlugTrait;
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\Get;
 use App\Repository\BrandsRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Serializer\Attribute\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
-use Vich\UploaderBundle\Mapping\Attribute as Vich;
 
+#[ApiResource(
+    operations: [
+        new GetCollection(),
+        new Get(),
+    ],
+    normalizationContext: ['groups' => ['read:brand']],
+    denormalizationContext: ['groups' => ['write:brand']],
+
+)]
 #[ORM\Entity(repositoryClass: BrandsRepository::class)]
-#[Vich\Uploadable]
 class Brands
 {
-    use SlugTrait;
-
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(['brand:list'])]
+    #[Groups(['read:brand'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['brand:list'])]
+    #[Groups(['read:brand', 'write:brand'])]
+    #[Assert\NotBlank]
     private ?string $name = null;
-
-    #[Vich\UploadableField(mapping: 'brands', fileNameProperty: 'imageName')]
-    #[Assert\File(
-        extensions: ['jpg', 'jpeg', 'png'],
-        extensionsMessage: 'Veuillez insérer une image valide, s`\'il vous plaît.',
-    )]
-    private ?File $imageFile = null;
-
-    #[ORM\Column(nullable: true)]
-    private ?string $imageName = null;
-
-    #[ORM\Column(nullable: true)]
-    private ?\DateTimeImmutable $updatedAt = null;
 
     public function getId(): ?int
     {
@@ -55,31 +49,4 @@ class Brands
 
         return $this;
     }
-
-    public function setImageFile(?File $imageFile = null): void
-    {
-        $this->imageFile = $imageFile;
-
-        if (null !== $imageFile) {
-            // It is required that at least one field changes if you are using doctrine
-            // otherwise the event listeners won't be called and the file is lost
-            $this->updatedAt = new \DateTimeImmutable();
-        }
-    }
-
-    public function getImageFile(): ?File
-    {
-        return $this->imageFile;
-    }
-
-    public function setImageName(?string $imageName): void
-    {
-        $this->imageName = $imageName;
-    }
-
-    public function getImageName(): ?string
-    {
-        return $this->imageName;
-    }
-
 }
